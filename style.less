@@ -1,0 +1,36 @@
+@import "./styles/choiseComponent/style.less";
+@import "./styles/questionsComponent/style.less";
+@import "./styles/variables.less";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+html {
+  font-size: 10px;
+}
+body {
+  background: #f6f7f8;
+}
+button {
+  border: none;
+  background: none;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  min-width: 360px;
+  max-width: 1440px;
+  gap: 90px;
+  @media @tablet {
+    gap: 50px;
+  }
+  @media @mobile {
+    gap: 40px;
+  }
+}
