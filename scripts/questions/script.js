@@ -1,7 +1,7 @@
 window.addEventListener("load", function () {
-  let cardBtnExpand = document.getElementsByClassName("item__header__expand");
-  let cardHeader = document.getElementsByClassName("item__header");
-  let cardText = document.getElementsByClassName("item__text");
+  let cardBtnExpand = document.getElementsByClassName("questions-expand");
+  let cardHeader = document.getElementsByClassName("questions__header");
+  let cardText = document.getElementsByClassName("questions__text");
   for (let i = 0; i < cardHeader.length; i++) {
     cardHeader[i].addEventListener("click", function () {
       cardText[i].classList.toggle("is-visible");

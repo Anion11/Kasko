@@ -1,7 +1,7 @@
-@import "./styles/choiceComponent/style.less";
-@import "./styles/questionsComponent/style.less";
-@import "./styles/advantagesComponent/style.less";
 @import "./styles/variables.less";
+@import "./styles/choice/style.less";
+@import "./styles/questions/style.less";
+@import "./styles/advantages/style.less";
 * {
   margin: 0;
   padding: 0;
@@ -23,18 +23,27 @@ button {
 }
 .wrapper {
   margin: 0 auto;
-  .inner{
-    max-width: 1440px;
-    min-width: 320px;
-    padding: 0 20px; // variable
-    @media @mobile {
-      padding: 0 16px;
+  .main {
+    padding-bottom: 90px;
+    @media @tablet {
+      padding-bottom: 50px;
     }
-    margin: 0 auto;
+    @media @mobile {
+      padding-bottom: 40px;
+    }
+    .inner {
+      padding: 0 20px; // variable
+      @media @mobile {
+        padding: 0 16px;
+      }
+      max-width: 1440px;
+      min-width: 320px;
+      margin: 0 auto;
+    }
   }
 }
-.section{
-  &:not(:first-child){
+.section {
+  &:not(:first-child) {
     margin-top: 90px;
     @media @tablet {
       margin-top: 50px;
@@ -43,7 +52,7 @@ button {
       margin-top: 40px;
     }
   }
-  &__header{
+  &__header {
     margin-bottom: 35px;
     color: @base-black;
     font-family: "Unbounded";

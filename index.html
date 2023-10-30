@@ -11,85 +11,83 @@
     <link rel="stylesheet" type="text/css" href="./style.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./scripts/swiper.js"></script>
-    <script src="./scripts/questionsComponent/script.js"></script>
+    <script src="./scripts/questions/script.js"></script>
     <title>KASKO</title>
   </head>
   <body>
     <div class="wrapper">
-      <header>
-      </header>
-      <main>
+      <header></header>
+      <main class="main">
         <div class="inner">
           <!--Блок с выбором Программы КАСКО-->
           <section class="section choice">
             <div class="section__header">
               <h2 class="title">Выберите программу КАСКО</h2>
-              <span class="text">
-                Вы можете получить индивидуальное предложение либо выбрать одну из
-                наших программ — в зависимости от стажа, стиля вождения и
+              <div class="text">
+                Вы можете получить индивидуальное предложение либо выбрать одну
+                из наших программ — в зависимости от стажа, стиля вождения и
                 состояния автомобиля
-              </span>
+              </div>
             </div>
-            <div class="choice__content swiper"> <!--Посмотреть на названия-->
+            <div class="choice__content swiper">
               <div class="choice__wrapper swiper-wrapper">
-                <div class="card swiper-slide">
-                  <div class="card__image"> <!--Поменять название класса НЕ КАРД а итем-->
-                    <img src="assets/choiceComponent/classic.png" alt="classic" />
+                <div class="choice-item swiper-slide">
+                  <div class="choice-item__image">
+                    <img src="assets/choice/classic.png" alt="classic" />
                   </div>
-                  <h2 class="card__title">Классик</h2>
-                  <span class="card__text">
+                  <h4 class="choice-item__title">Классик</h4>
+                  <div class="choice-item__text">
                     Полная защита авто без ограничений по возрасту и стажу
                     вождения
-                  </span>
-                </div>
-                <div class="card swiper-slide">
-                  <div class="card__image">
-                    <img src="assets/choiceComponent/optima.png" alt="optima" />
                   </div>
-                  <h2 class="card__title">Оптима</h2>
-                  <span class="card__text">
+                </div>
+                <div class="choice-item swiper-slide">
+                  <div class="choice-item__image">
+                    <img src="assets/choice/optima.png" alt="optima" />
+                  </div>
+                  <h4 class="choice-item__title">Оптима</h4>
+                  <div class="choice-item__text">
                     Полная защита автомобиля с экономией до 30% для уверенных
                     водителей
-                  </span>
-                </div>
-                <div class="card swiper-slide">
-                  <div class="card__image">
-                    <img src="assets/choiceComponent/formula.png" alt="formula" />
                   </div>
-                  <h2 class="card__title">Формула 50+</h2>
-                  <span class="card__text">
-                    КАСКО с двумя платежами: вторую часть вносите при наступлении
-                    страхового случая
-                  </span>
                 </div>
-                <div class="card swiper-slide">
-                  <div class="card__image">
-                    <img src="assets/choiceComponent/profi.png" alt="profi" />
+                <div class="choice-item swiper-slide">
+                  <div class="choice-item__image">
+                    <img src="assets/choice/formula.png" alt="formula" />
                   </div>
-                  <h2 class="card__title">Профи</h2>
-                  <span class="card__text">
+                  <h4 class="choice-item__title">Формула 50+</h4>
+                  <div class="choice-item__text">
+                    КАСКО с двумя платежами: вторую часть вносите при
+                    наступлении страхового случая
+                  </div>
+                </div>
+                <div class="choice-item swiper-slide">
+                  <div class="choice-item__image">
+                    <img src="assets/choice/profi.png" alt="profi" />
+                  </div>
+                  <h4 class="choice-item__title">Профи</h4>
+                  <div class="choice-item__text">
                     Выгода до 70% для водителей со стажем
-                  </span>
-                </div>
-                <div class="card swiper-slide">
-                  <div class="card__image">
-                    <img
-                      src="assets/choiceComponent/lightKASKO.png"
-                      alt="lightKASKO"
-                    />
                   </div>
-                  <h2 class="card__title">Легкое КАСКО</h2>
-                  <span class="card__text">Базовые риски всего за 1900 ₽</span>
                 </div>
-                <div class="card swiper-slide">
-                  <div class="card__image">
-                    <img src="assets/choiceComponent/help.png" alt="help" />
+                <div class="choice-item swiper-slide">
+                  <div class="choice-item__image">
+                    <img src="assets/choice/lightKASKO.png" alt="lightKASKO" />
                   </div>
-                  <h2 class="card__title">Помощь</h2>
-                  <span cl  ass="card__text">
-                    Защита автомобиля по вине другого участника, даже если у того
-                    нет ОСАГО, всего от 1990 ₽
-                  </span>
+                  <h4 class="choice-item__title">Легкое КАСКО</h4>
+                  <div class="choice-item__text">
+                    Базовые риски всего за 1900 ₽
+                  </div>
+                </div>
+                <div class="choice-item swiper-slide">
+                  <div class="choice-item__image">
+                    <img src="assets/choice/help.png" alt="help" />
+                  </div>
+                  <h4 class="choice-item__title">Помощь</h4>
+                  <div class="choice-item__text">
+                    Защита автомобиля по вине другого участника, даже если у
+                    того нет ОСАГО, всего от 1990 ₽
+                  </div>
                 </div>
               </div>
               <div class="swiper-pagination"></div>
@@ -100,73 +98,75 @@
           </section>
           <!--Блок с преимуществами ЮГОРИИ-->
           <section class="section advantages">
-            <h2 class="section__header">Преимущества «Югории»</h2>
+            <div class="section__header"><h2>Преимущества «Югории»</h2></div>
             <div class="advantages__content">
-              <div class="card">
-                <div class="card__header">
-                  <span class="card__header-text">
-                       № 1
-                  </span>
+              <div class="advantages-item">
+                <div class="advantages-item__header">
+                  <h4>№ 1</h4>
                 </div>
-                <div class="card__main">
-                  <span class="card__main-text">
+                <div class="advantages-item__main">
+                  <div class="advantages-text">
                     По качеству урегулирования убытков
                     <a class="external-link" href="/#">
-                      <img src="./assets/advantagesComponent/external-link.png" alt="external-link">
+                      <img
+                        src="./assets/advantages/external-link.png"
+                        alt="external-link"
+                      />
                     </a>
-                  </span>
+                  </div>
                 </div>
               </div>
-              <div class="card"> <!--НЕ КАРД-->
-                <div class="card__header">
-                  <span class="card__header-text">
-                    ТОП 3
-                  </span>
+              <div class="advantages-item">
+                <div class="advantages-item__header">
+                  <h4>ТОП 3</h4>
                 </div>
-                <div class="card__main">
-                  <span class="card__main-text">По качеству сервиса
+                <div class="advantages-item__main">
+                  <div class="advantages-text">
+                    По качеству сервиса
                     <a class="external-link" href="/#">
-                      <img src="./assets/advantagesComponent/external-link.png" alt="external-link">
+                      <img
+                        src="./assets/advantages/external-link.png"
+                        alt="external-link"
+                      />
                     </a>
-                  </span>
+                  </div>
                 </div>
               </div>
-              <div class="card">
-                <div class="card__header">
-                  <span class="card__header-text">
+              <div class="advantages-item">
+                <div class="advantages-item__header">
+                  <h4>
                     21
                     <span>год +</span>
-                  </span>
+                  </h4>
                 </div>
-                <div class="card__main">
-                  <span class="card__main-text">Работаем для вас</span>
+                <div class="advantages-item__main">
+                  <div class="advantages-text">Работаем для вас</div>
                 </div>
               </div>
-              <div class="card">
-                <div class="card__header">
-                  <span class="card__header-text">
-                    24/7
-                  </span>
+              <div class="advantages-item">
+                <div class="advantages-item__header">
+                  <h4>24/7</h4>
                 </div>
-                <div class="card__main">
-                  <span class="card__main-text">Круглосуточная поддержка</span>
+                <div class="advantages-item__main">
+                  <div class="advantages-text">Круглосуточная поддержка</div>
                 </div>
               </div>
             </div>
-            <div class="advantages__main"></div>
           </section>
           <!--Блок с частыми вопросами по КАСКО-->
           <section class="section questions">
-            <h2 class="section__header">Частые вопросы по КАСКО</h2>
+            <div class="section__header"><h2>Частые вопросы по КАСКО</h2></div>
             <div class="questions__content">
-              <div class="item">
-                <div class="item__header">
-                  <h3 class="item__header-h3">Что нужно для оформления?</h3>
-                  <button class="item__header__expand">
-                    <img src="assets/questionsComponent/plus.png" alt="expand" />
+              <div class="questions__item">
+                <div class="questions__header">
+                  <div class="questions-title">
+                    <h5>Что нужно для оформления?</h5>
+                  </div>
+                  <button class="questions-expand">
+                    <img src="assets/questions/plus.png" alt="expand" />
                   </button>
                 </div>
-                <div class="item__text">
+                <div class="questions__text">
                   <ul>
                     <li>
                       <span>
@@ -182,7 +182,8 @@
                     </li>
                     <li>
                       <span>
-                        Если авто управлялось лицом, которое не имело на это прав
+                        Если авто управлялось лицом, которое не имело на это
+                        прав
                       </span>
                     </li>
                   </ul>
@@ -192,14 +193,14 @@
                   </p>
                 </div>
               </div>
-              <div class="item">
-                <div class="item__header">
-                  <h3 class="item__header-h3">Как продлить?</h3>
-                  <button class="item__header__expand">
-                    <img src="assets/questionsComponent/plus.png" alt="expand" />
+              <div class="questions__item">
+                <div class="questions__header">
+                  <div class="questions-title"><h5>Как продлить?</h5></div>
+                  <button class="questions-expand">
+                    <img src="assets/questions/plus.png" alt="expand" />
                   </button>
                 </div>
-                <div class="item__text">
+                <div class="questions__text">
                   <span>
                     Очень много текстаОчень много текстаОчень много текстаОчень
                     много текстаОчень много текстаОчень много текстаОчень много
@@ -253,92 +254,94 @@
                   </span>
                 </div>
               </div>
-              <div class="item">
-                <div class="item__header">
-                  <h3 class="item__header-h3">
-                    Вернут ли оставшуюся премию при продаже авто?
-                  </h3>
-                  <button class="item__header__expand">
-                    <img src="assets/questionsComponent/plus.png" alt="expand" />
+              <div class="questions__item">
+                <div class="questions__header">
+                  <div class="questions-title">
+                    <h5>Вернут ли оставшуюся премию при продаже авто?</h5>
+                  </div>
+                  <button class="questions-expand">
+                    <img src="assets/questions/plus.png" alt="expand" />
                   </button>
                 </div>
-                <div class="item__text">
+                <div class="questions__text">
                   <span>Какой-то текст</span>
                 </div>
               </div>
-              <div class="item">
-                <div class="item__header">
-                  <h3 class="item__header-h3">Когда не выплатят по Каско?</h3>
-                  <button class="item__header__expand">
-                    <img src="assets/questionsComponent/plus.png" alt="expand" />
+              <div class="questions__item">
+                <div class="questions__header">
+                  <div class="questions-title">
+                    <h5>Когда не выплатят по Каско?</h5>
+                  </div>
+                  <button class="questions-expand">
+                    <img src="assets/questions/plus.png" alt="expand" />
                   </button>
                 </div>
-                <div class="item__text">
+                <div class="questions__text">
                   <span>Какой-то текст</span>
                 </div>
               </div>
-              <div class="item">
-                <div class="item__header">
-                  <h3 class="item__header-h3">
-                    Как производится ремонт по Каско?
-                  </h3>
-                  <button class="item__header__expand">
-                    <img src="assets/questionsComponent/plus.png" alt="expand" />
+              <div class="questions__item">
+                <div class="questions__header">
+                  <div class="questions-title">
+                    <h5>Как производится ремонт по Каско?</h5>
+                  </div>
+                  <button class="questions-expand">
+                    <img src="assets/questions/plus.png" alt="expand" />
                   </button>
                 </div>
-                <div class="item__text">
+                <div class="questions__text">
                   <span>Какой-то текст</span>
                 </div>
               </div>
-              <div class="item">
-                <div class="item__header">
-                  <h3 class="item__header-h3">
-                    Сколько водителей можно вписать в полис Каско?
-                  </h3>
-                  <button class="item__header__expand">
-                    <img src="assets/questionsComponent/plus.png" alt="expand" />
+              <div class="questions__item">
+                <div class="questions__header">
+                  <div class="questions-title">
+                    <h5>Сколько водителей можно вписать в полис Каско?</h5>
+                  </div>
+                  <button class="questions-expand">
+                    <img src="assets/questions/plus.png" alt="expand" />
                   </button>
                 </div>
-                <div class="item__text">
+                <div class="questions__text">
                   <span>Какой-то текст</span>
                 </div>
               </div>
-              <div class="item">
-                <div class="item__header">
-                  <h3 class="item__header-h3">
-                    Как получить компенсацию по Каско?
-                  </h3>
-                  <button class="item__header__expand">
-                    <img src="assets/questionsComponent/plus.png" alt="expand" />
+              <div class="questions__item">
+                <div class="questions__header">
+                  <div class="questions-title">
+                    <h5>Как получить компенсацию по Каско?</h5>
+                  </div>
+                  <button class="questions-expand">
+                    <img src="assets/questions/plus.png" alt="expand" />
                   </button>
                 </div>
-                <div class="item__text">
+                <div class="questions__text">
                   <span>Какой-то текст</span>
                 </div>
               </div>
-              <div class="item">
-                <div class="item__header">
-                  <h3 class="item__header-h3">
-                    Максимальная сумма выплаты по Каско
-                  </h3>
-                  <button class="item__header__expand">
-                    <img src="assets/questionsComponent/plus.png" alt="expand" />
+              <div class="questions__item">
+                <div class="questions__header">
+                  <div class="questions-title">
+                    <h5>Максимальная сумма выплаты по Каско</h5>
+                  </div>
+                  <button class="questions-expand">
+                    <img src="assets/questions/plus.png" alt="expand" />
                   </button>
                 </div>
-                <div class="item__text">
+                <div class="questions__text">
                   <span>Какой-то текст</span>
                 </div>
               </div>
-              <div class="item">
-                <div class="item__header">
-                  <h3 class="item__header-h3">
-                    Выплата по Каско если сам виноват
-                  </h3>
-                  <button class="item__header__expand">
-                    <img src="assets/questionsComponent/plus.png" alt="expand" />
+              <div class="questions__item">
+                <div class="questions__header">
+                  <div class="questions-title">
+                    <h5>Выплата по Каско если сам виноват</h5>
+                  </div>
+                  <button class="questions-expand">
+                    <img src="assets/questions/plus.png" alt="expand" />
                   </button>
                 </div>
-                <div class="item__text">
+                <div class="questions__text">
                   <span>Какой-то текст</span>
                 </div>
               </div>

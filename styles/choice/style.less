@@ -1,23 +1,23 @@
 @import "../variables.less";
-.section{
-  &__header{
+.section {
+  &__header {
     width: 66%;
     @media @tablet {
       width: 100%;
     }
-    .title{
-        margin-bottom: 18px;
-        @media @tablet {
-          margin-bottom: 12px;
-        }
-      }
-    .text{
-        font-family: "Montserrat";
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 140%;
+    .title {
+      margin-bottom: 18px;
+      @media @tablet {
+        margin-bottom: 12px;
       }
     }
+    .text {
+      font-family: "Montserrat"; // sans-serif, Arial(запасной шрифт) + в переменную
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 140%;
+    }
+  }
 }
 .choice {
   &__content {
@@ -41,44 +41,45 @@
       display: flex;
       gap: 0;
     }
-    .card {
-      padding: 30px 55px 49px;
-      border-radius: 6px;
-      background: @base-white;
-      color: @base-black;
+  }
+  &-item {
+    text-align: center;
+    padding: 30px 55px 49px;
+    border-radius: 6px;
+    background: @base-white;
+    color: @base-black;
+    @media @tablet {
+      padding: 30px 22px;
+    }
+    @media @mobile {
+      text-align: left;
+      max-width: 302px;
+      padding: 20px 16px 30px;
+    }
+    &__title {
+      margin-bottom: 16px;
+      font-family: "Unbounded";
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 140%;
+    }
+    &__text {
+      font-family: "Montserrat";
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 140%;
+    }
+    &__image {
+      min-width: 130px;
+      max-width: 178px;
+      margin: 0 auto 38px;
       @media @tablet {
-        padding: 30px 22px;
+        margin-bottom: 30px;
       }
       @media @mobile {
-        text-align: left;
-        max-width: 302px;
-        padding: 20px 16px 30px;
-      }
-      &__title {
-        margin-bottom: 16px;
-        font-family: "Unbounded";
-        font-size: 24px;
-        font-weight: 600;
-        line-height: 140%;
-      }
-      &__text {
-        font-family: "Montserrat";
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 140%;
-      }
-      &__image {
-        min-width: 130px;
-        max-width: 178px;
-        margin: 0 auto 38px;
-        @media @tablet {
-          margin-bottom: 30px;
-        }
-        @media @mobile {
-          max-width: 130px;
-          margin: 0;
-          padding: 0;
-        }
+        max-width: 130px;
+        margin: 0;
+        padding: 0;
       }
     }
   }

@@ -64,49 +64,50 @@
     gap: 0;
   }
 }
-.choice__wrapper .card {
+.choice-item {
+  text-align: center;
   padding: 30px 55px 49px;
   border-radius: 6px;
   background: #fff;
   color: #272727;
 }
 @media screen and (max-width: 1440px) {
-  .choice__wrapper .card {
+  .choice-item {
     padding: 30px 22px;
   }
 }
 @media screen and (max-width: 768px) {
-  .choice__wrapper .card {
+  .choice-item {
     text-align: left;
     max-width: 302px;
     padding: 20px 16px 30px;
   }
 }
-.choice__wrapper .card__title {
+.choice-item__title {
   margin-bottom: 16px;
   font-family: "Unbounded";
   font-size: 24px;
   font-weight: 600;
   line-height: 140%;
 }
-.choice__wrapper .card__text {
+.choice-item__text {
   font-family: "Montserrat";
   font-size: 16px;
   font-weight: 500;
   line-height: 140%;
 }
-.choice__wrapper .card__image {
+.choice-item__image {
   min-width: 130px;
   max-width: 178px;
   margin: 0 auto 38px;
 }
 @media screen and (max-width: 1440px) {
-  .choice__wrapper .card__image {
+  .choice-item__image {
     margin-bottom: 30px;
   }
 }
 @media screen and (max-width: 768px) {
-  .choice__wrapper .card__image {
+  .choice-item__image {
     max-width: 130px;
     margin: 0;
     padding: 0;

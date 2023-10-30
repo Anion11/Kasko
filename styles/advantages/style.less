@@ -1,0 +1,68 @@
+@import "../variables.less";
+.advantages {
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    @media @tablet {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px 16px;
+    }
+    @media @mobile {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+  }
+  &-item {
+    position: relative;
+    background: @base-white;
+    padding: 30px 20px 55px;
+    border-radius: 6px;
+    &__header {
+      margin-bottom: 54px;
+      position: relative;
+      font-family: "Unbounded";
+      font-size: 40px;
+      font-weight: 500;
+      line-height: 120%;
+      background: @new-gradient-1,
+        linear-gradient(91deg, #5a6bff 0.89%, #0054e6 99.35%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      //-webkit-mask-image: url(../../assets/advantages/circle.png);
+      //mask-image: url(../../assets/advantages/circle.png);
+      //-webkit-mask-repeat: no-repeat;
+      //box-shadow: 0.2px 0.1px 1px 0px #fff inset;
+      //backdrop-filter: blur(2px);
+      span {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 140%;
+      }
+    }
+  }
+  &-text {
+    position: relative;
+    display: inline-block;
+    font-family: "Montserrat";
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 140%;
+    @media @tablet {
+      padding-right: 27px;
+    }
+    @media @tablet {
+      padding-right: 0;
+    }
+    .external-link {
+      display: inline-block;
+      position: absolute;
+      bottom: 0;
+      margin-left: 3px;
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
