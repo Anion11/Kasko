@@ -1,0 +1,85 @@
+@font-face {
+  font-family: "Unbounded";
+  src: url("fonts/Unbounded-Regular.woff2") format("woff2"), url("fonts/Unbounded-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("fonts/Montserrat-Regular.woff2") format("woff2"), url("fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+.advantages__content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+.advantages__content .card {
+  background: #fff;
+  padding: 30px 20px 55px;
+  border-radius: 6px;
+}
+.advantages__content .card__header {
+  margin-bottom: 54px;
+}
+.advantages__content .card__header-text {
+  position: relative;
+  font-family: "Unbounded";
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 120%;
+  background: linear-gradient(91deg, #5A6BFF 0.89%, #0054E6 99.35%), linear-gradient(91deg, #5A6BFF 0.89%, #0054E6 99.35%);
+  background-clip: text;
+  -webkit-mask-image: url(../../assets/advantagesComponent/circle.png);
+  mask-image: url(../../assets/advantagesComponent/circle.png);
+  -webkit-mask-repeat: no-repeat;
+  mask-size: 24px 24px;
+  mask-position: 0 100%, 25% 25%, 50% 50%, 75% 0, 100% 50%;
+  box-shadow: 0.2px 0.1px 1px 0px #FFF inset;
+  backdrop-filter: blur(2px);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.advantages__content .card__header-text .image {
+  display: inline-block;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+}
+.advantages__content .card__header-text #circle {
+  margin-top: -9px;
+  margin-left: -14px;
+}
+.advantages__content .card__header-text #mark {
+  margin-top: -7px;
+  margin-left: 82px;
+}
+.advantages__content .card__header-text #airplane {
+  margin-left: -13px;
+}
+.advantages__content .card__header-text #clock {
+  margin-left: 94px;
+}
+.advantages__content .card__header-text span {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 140%;
+}
+.advantages__content .card__main-text {
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 140%;
+  position: relative;
+}
+.advantages__content .card__main .external-link {
+  position: absolute;
+  bottom: 0;
+  margin-left: 5px;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}

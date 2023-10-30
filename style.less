@@ -1,5 +1,6 @@
-@import "./styles/choiseComponent/style.less";
+@import "./styles/choiceComponent/style.less";
 @import "./styles/questionsComponent/style.less";
+@import "./styles/advantagesComponent/style.less";
 @import "./styles/variables.less";
 * {
   margin: 0;
@@ -21,16 +22,40 @@ button {
   background: none;
 }
 .wrapper {
-  display: flex;
-  flex-direction: column;
   margin: 0 auto;
-  min-width: 360px;
-  max-width: 1440px;
-  gap: 90px;
-  @media @tablet {
-    gap: 50px;
+  .inner{
+    max-width: 1440px;
+    min-width: 320px;
+    padding: 0 20px; // variable
+    @media @mobile {
+      padding: 0 16px;
+    }
+    margin: 0 auto;
   }
-  @media @mobile {
-    gap: 40px;
+}
+.section{
+  &:not(:first-child){
+    margin-top: 90px;
+    @media @tablet {
+      margin-top: 50px;
+    }
+    @media @mobile {
+      margin-top: 40px;
+    }
+  }
+  &__header{
+    margin-bottom: 35px;
+    color: @base-black;
+    font-family: "Unbounded";
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 130%;
+    @media @tablet {
+      margin-bottom: 24px;
+      font-size: 24px;
+    }
+    @media @mobile {
+      font-size: 20px;
+    }
   }
 }

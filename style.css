@@ -1,123 +1,98 @@
-.choice {
-  margin: 0 20px;
-}
-@media screen and (max-width: 768px) {
-  .choice {
-    margin: 0 16px;
-  }
-}
-.choice__header {
+.section__header {
   width: 66%;
-  margin-bottom: 35px;
-  color: #272727;
 }
 @media screen and (max-width: 1440px) {
-  .choice__header {
+  .section__header {
     width: 100%;
   }
 }
-@media screen and (max-width: 768px) {
-  .choice__header {
-    margin-bottom: 24px;
-  }
-}
-.choice__header-title {
+.section__header .title {
   margin-bottom: 18px;
-  font-family: "Unbounded";
-  font-size: 30px;
-  font-weight: 600;
-  line-height: 130%;
 }
 @media screen and (max-width: 1440px) {
-  .choice__header-title {
-    font-size: 24px;
+  .section__header .title {
     margin-bottom: 12px;
   }
 }
-@media screen and (max-width: 768px) {
-  .choice__header-title {
-    font-size: 20px;
-  }
-}
-.choice__header-text {
+.section__header .text {
   font-family: "Montserrat";
   font-size: 16px;
   font-weight: 500;
   line-height: 140%;
 }
-.choice__main {
+.choice__content {
   padding-bottom: 40px;
 }
 @media screen and (max-width: 1440px) {
-  .choice__main {
+  .choice__content {
     padding-bottom: 30px;
   }
 }
 @media screen and (max-width: 768px) {
-  .choice__main {
+  .choice__content {
     padding-bottom: 43px;
   }
 }
-.choice__main__wrapper {
+.choice__wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px 30px;
 }
 @media screen and (max-width: 1440px) {
-  .choice__main__wrapper {
+  .choice__wrapper {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
 }
 @media screen and (max-width: 768px) {
-  .choice__main__wrapper {
+  .choice__wrapper {
     display: flex;
     gap: 0;
   }
 }
-.choice__main__wrapper .card {
+.choice__wrapper .card {
   padding: 30px 55px 49px;
   border-radius: 6px;
   background: #fff;
   color: #272727;
 }
 @media screen and (max-width: 1440px) {
-  .choice__main__wrapper .card {
+  .choice__wrapper .card {
     padding: 30px 22px;
   }
 }
 @media screen and (max-width: 768px) {
-  .choice__main__wrapper .card {
+  .choice__wrapper .card {
     text-align: left;
     max-width: 302px;
     padding: 20px 16px 30px;
   }
 }
-.choice__main__wrapper .card__title {
+.choice__wrapper .card__title {
   margin-bottom: 16px;
   font-family: "Unbounded";
   font-size: 24px;
   font-weight: 600;
   line-height: 140%;
 }
-.choice__main__wrapper .card__text {
+.choice__wrapper .card__text {
   font-family: "Montserrat";
   font-size: 16px;
   font-weight: 500;
   line-height: 140%;
 }
-.choice__main__wrapper .card__image {
+.choice__wrapper .card__image {
   min-width: 130px;
   max-width: 178px;
   margin: 0 auto 38px;
 }
 @media screen and (max-width: 1440px) {
-  .choice__main__wrapper .card__image {
+  .choice__wrapper .card__image {
     margin-bottom: 30px;
   }
 }
 @media screen and (max-width: 768px) {
-  .choice__main__wrapper .card__image {
+  .choice__wrapper .card__image {
     max-width: 130px;
     margin: 0;
     padding: 0;
@@ -184,40 +159,20 @@
 }
 .questions {
   padding: 50px 90px;
-  margin: 0 20px;
   background: #d6dcea;
 }
 @media screen and (max-width: 1440px) {
   .questions {
     padding: 40px 30px;
-    margin: 0;
   }
 }
 @media screen and (max-width: 768px) {
   .questions {
+    margin: 0 -16px;
     padding: 30px 16px 40px;
   }
 }
-.questions__h2 {
-  margin-bottom: 35px;
-  color: #272727;
-  font-family: "Unbounded";
-  font-size: 30px;
-  font-weight: 600;
-  line-height: 130%;
-}
-@media screen and (max-width: 1440px) {
-  .questions__h2 {
-    font-size: 24px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .questions__h2 {
-    font-size: 22px;
-  }
-}
-.questions__card {
-  margin: 0 auto;
+.questions__content {
   padding: 20px 90px 40px;
   border-radius: 6px;
   background: #fff;
@@ -225,24 +180,24 @@
   box-shadow: 0px 20px 24px 0px rgba(0, 0, 0, 0.12);
 }
 @media screen and (max-width: 1440px) {
-  .questions__card {
+  .questions__content {
     padding: 10px 20px 30px;
   }
 }
 @media screen and (max-width: 768px) {
-  .questions__card {
+  .questions__content {
     padding: 4px 16px 24px;
   }
 }
-.questions__card .item {
+.questions__content .item {
   border-bottom: 1px solid #e2e1ec;
 }
-.questions__card .item__header {
+.questions__content .item__header {
   padding: 20px 0;
   position: relative;
   cursor: pointer;
 }
-.questions__card .item__header__expand {
+.questions__content .item__header__expand {
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -251,7 +206,7 @@
   height: 24px;
   cursor: pointer;
 }
-.questions__card .item__header-h3 {
+.questions__content .item__header-h3 {
   margin-right: 44px;
   color: #272727;
   font-family: "Unbounded";
@@ -260,16 +215,16 @@
   line-height: 140%;
 }
 @media screen and (max-width: 768px) {
-  .questions__card .item__header-h3 {
+  .questions__content .item__header-h3 {
     font-size: 16px;
   }
 }
-.questions__card .item .is-visible {
+.questions__content .item .is-visible {
   display: block;
   opacity: 1;
   animation: animDisp 0.3s ease-in-out;
 }
-.questions__card .item__text {
+.questions__content .item__text {
   display: none;
   margin-top: 10px;
   margin-bottom: 20px;
@@ -279,19 +234,90 @@
   font-weight: 400;
   line-height: 24px;
 }
-.questions__card .item__text ul {
+.questions__content .item__text ul {
   padding-left: 20px;
   margin-bottom: 1.2rem;
 }
-.questions__card .item__text ul li {
+.questions__content .item__text ul li {
   color: #0054e6;
   margin-bottom: 1.2rem;
 }
-.questions__card .item__text ul li:last-child {
+.questions__content .item__text ul li:last-child {
   margin-bottom: 0;
 }
-.questions__card .item__text ul li span {
+.questions__content .item__text ul li span {
   color: #272727;
+}
+.advantages__content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+.advantages__content .card {
+  background: #fff;
+  padding: 30px 20px 55px;
+  border-radius: 6px;
+}
+.advantages__content .card__header {
+  margin-bottom: 54px;
+}
+.advantages__content .card__header-text {
+  position: relative;
+  font-family: "Unbounded";
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 120%;
+  background: linear-gradient(91deg, #5A6BFF 0.89%, #0054E6 99.35%), linear-gradient(91deg, #5A6BFF 0.89%, #0054E6 99.35%);
+  background-clip: text;
+  -webkit-mask-image: url(../../assets/advantagesComponent/circle.png);
+  mask-image: url(../../assets/advantagesComponent/circle.png);
+  -webkit-mask-repeat: no-repeat;
+  mask-size: 24px 24px;
+  mask-position: 0 100%, 25% 25%, 50% 50%, 75% 0, 100% 50%;
+  box-shadow: 0.2px 0.1px 1px 0px #FFF inset;
+  backdrop-filter: blur(2px);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.advantages__content .card__header-text .image {
+  display: inline-block;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+}
+.advantages__content .card__header-text #circle {
+  margin-top: -9px;
+  margin-left: -14px;
+}
+.advantages__content .card__header-text #mark {
+  margin-top: -7px;
+  margin-left: 82px;
+}
+.advantages__content .card__header-text #airplane {
+  margin-left: -13px;
+}
+.advantages__content .card__header-text #clock {
+  margin-left: 94px;
+}
+.advantages__content .card__header-text span {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 140%;
+}
+.advantages__content .card__main-text {
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 140%;
+  position: relative;
+}
+.advantages__content .card__main .external-link {
+  position: absolute;
+  bottom: 0;
+  margin-left: 5px;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
 }
 @font-face {
   font-family: "Unbounded";
@@ -327,20 +353,48 @@ button {
   background: none;
 }
 .wrapper {
-  display: flex;
-  flex-direction: column;
   margin: 0 auto;
-  min-width: 360px;
+}
+.wrapper .inner {
   max-width: 1440px;
-  gap: 90px;
+  min-width: 320px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .wrapper .inner {
+    padding: 0 16px;
+  }
+}
+.section:not(:first-child) {
+  margin-top: 90px;
 }
 @media screen and (max-width: 1440px) {
-  .wrapper {
-    gap: 50px;
+  .section:not(:first-child) {
+    margin-top: 50px;
   }
 }
 @media screen and (max-width: 768px) {
-  .wrapper {
-    gap: 40px;
+  .section:not(:first-child) {
+    margin-top: 40px;
+  }
+}
+.section__header {
+  margin-bottom: 35px;
+  color: #272727;
+  font-family: "Unbounded";
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 130%;
+}
+@media screen and (max-width: 1440px) {
+  .section__header {
+    margin-bottom: 24px;
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .section__header {
+    font-size: 20px;
   }
 }

@@ -1,41 +1,26 @@
 @import "../variables.less";
-.choice {
-  margin: 0 20px;
-  @media @mobile {
-    margin: 0 16px;
-  }
-  &__header {
+.section{
+  &__header{
     width: 66%;
-    margin-bottom: 35px;
-    color: @base-black;
     @media @tablet {
       width: 100%;
     }
-    @media @mobile {
-      margin-bottom: 24px;
-    }
-    &-title {
-      margin-bottom: 18px;
-      font-family: "Unbounded";
-      font-size: 30px;
-      font-weight: 600;
-      line-height: 130%;
-      @media @tablet {
-        font-size: 24px;
-        margin-bottom: 12px;
+    .title{
+        margin-bottom: 18px;
+        @media @tablet {
+          margin-bottom: 12px;
+        }
       }
-      @media @mobile {
-        font-size: 20px;
+    .text{
+        font-family: "Montserrat";
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 140%;
       }
     }
-    &-text {
-      font-family: "Montserrat";
-      font-size: 16px;
-      font-weight: 500;
-      line-height: 140%;
-    }
-  }
-  &__main {
+}
+.choice {
+  &__content {
     padding-bottom: 40px;
     @media @tablet {
       padding-bottom: 30px;
@@ -43,56 +28,56 @@
     @media @mobile {
       padding-bottom: 43px;
     }
-    &__wrapper {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px 30px;
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 30px;
+    @media @tablet {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    @media @mobile {
+      display: flex;
+      gap: 0;
+    }
+    .card {
+      padding: 30px 55px 49px;
+      border-radius: 6px;
+      background: @base-white;
+      color: @base-black;
       @media @tablet {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+        padding: 30px 22px;
       }
       @media @mobile {
-        display: flex;
-        gap: 0;
+        text-align: left;
+        max-width: 302px;
+        padding: 20px 16px 30px;
       }
-      .card {
-        padding: 30px 55px 49px;
-        border-radius: 6px;
-        background: @base-white;
-        color: @base-black;
+      &__title {
+        margin-bottom: 16px;
+        font-family: "Unbounded";
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 140%;
+      }
+      &__text {
+        font-family: "Montserrat";
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 140%;
+      }
+      &__image {
+        min-width: 130px;
+        max-width: 178px;
+        margin: 0 auto 38px;
         @media @tablet {
-          padding: 30px 22px;
+          margin-bottom: 30px;
         }
         @media @mobile {
-          text-align: left;
-          max-width: 302px;
-          padding: 20px 16px 30px;
-        }
-        &__title {
-          margin-bottom: 16px;
-          font-family: "Unbounded";
-          font-size: 24px;
-          font-weight: 600;
-          line-height: 140%;
-        }
-        &__text {
-          font-family: "Montserrat";
-          font-size: 16px;
-          font-weight: 500;
-          line-height: 140%;
-        }
-        &__image {
-          min-width: 130px;
-          max-width: 178px;
-          margin: 0 auto 38px;
-          @media @tablet {
-            margin-bottom: 30px;
-          }
-          @media @mobile {
-            max-width: 130px;
-            margin: 0;
-            padding: 0;
-          }
+          max-width: 130px;
+          margin: 0;
+          padding: 0;
         }
       }
     }

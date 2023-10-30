@@ -12,126 +12,101 @@
   font-style: normal;
   font-display: swap;
 }
-.choice {
-  margin: 0 20px;
-}
-@media screen and (max-width: 768px) {
-  .choice {
-    margin: 0 16px;
-  }
-}
-.choice__header {
+.section__header {
   width: 66%;
-  margin-bottom: 35px;
-  color: #272727;
 }
 @media screen and (max-width: 1440px) {
-  .choice__header {
+  .section__header {
     width: 100%;
   }
 }
-@media screen and (max-width: 768px) {
-  .choice__header {
-    margin-bottom: 24px;
-  }
-}
-.choice__header-title {
+.section__header .title {
   margin-bottom: 18px;
-  font-family: "Unbounded";
-  font-size: 30px;
-  font-weight: 600;
-  line-height: 130%;
 }
 @media screen and (max-width: 1440px) {
-  .choice__header-title {
-    font-size: 24px;
+  .section__header .title {
     margin-bottom: 12px;
   }
 }
-@media screen and (max-width: 768px) {
-  .choice__header-title {
-    font-size: 20px;
-  }
-}
-.choice__header-text {
+.section__header .text {
   font-family: "Montserrat";
   font-size: 16px;
   font-weight: 500;
   line-height: 140%;
 }
-.choice__main {
+.choice__content {
   padding-bottom: 40px;
 }
 @media screen and (max-width: 1440px) {
-  .choice__main {
+  .choice__content {
     padding-bottom: 30px;
   }
 }
 @media screen and (max-width: 768px) {
-  .choice__main {
+  .choice__content {
     padding-bottom: 43px;
   }
 }
-.choice__main__wrapper {
+.choice__wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px 30px;
 }
 @media screen and (max-width: 1440px) {
-  .choice__main__wrapper {
+  .choice__wrapper {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
 }
 @media screen and (max-width: 768px) {
-  .choice__main__wrapper {
+  .choice__wrapper {
     display: flex;
     gap: 0;
   }
 }
-.choice__main__wrapper .card {
+.choice__wrapper .card {
   padding: 30px 55px 49px;
   border-radius: 6px;
   background: #fff;
   color: #272727;
 }
 @media screen and (max-width: 1440px) {
-  .choice__main__wrapper .card {
+  .choice__wrapper .card {
     padding: 30px 22px;
   }
 }
 @media screen and (max-width: 768px) {
-  .choice__main__wrapper .card {
+  .choice__wrapper .card {
     text-align: left;
     max-width: 302px;
     padding: 20px 16px 30px;
   }
 }
-.choice__main__wrapper .card__title {
+.choice__wrapper .card__title {
   margin-bottom: 16px;
   font-family: "Unbounded";
   font-size: 24px;
   font-weight: 600;
   line-height: 140%;
 }
-.choice__main__wrapper .card__text {
+.choice__wrapper .card__text {
   font-family: "Montserrat";
   font-size: 16px;
   font-weight: 500;
   line-height: 140%;
 }
-.choice__main__wrapper .card__image {
+.choice__wrapper .card__image {
   min-width: 130px;
   max-width: 178px;
   margin: 0 auto 38px;
 }
 @media screen and (max-width: 1440px) {
-  .choice__main__wrapper .card__image {
+  .choice__wrapper .card__image {
     margin-bottom: 30px;
   }
 }
 @media screen and (max-width: 768px) {
-  .choice__main__wrapper .card__image {
+  .choice__wrapper .card__image {
     max-width: 130px;
     margin: 0;
     padding: 0;

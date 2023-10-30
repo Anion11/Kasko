@@ -28,40 +28,20 @@
 }
 .questions {
   padding: 50px 90px;
-  margin: 0 20px;
   background: #d6dcea;
 }
 @media screen and (max-width: 1440px) {
   .questions {
     padding: 40px 30px;
-    margin: 0;
   }
 }
 @media screen and (max-width: 768px) {
   .questions {
+    margin: 0 -16px;
     padding: 30px 16px 40px;
   }
 }
-.questions__h2 {
-  margin-bottom: 35px;
-  color: #272727;
-  font-family: "Unbounded";
-  font-size: 30px;
-  font-weight: 600;
-  line-height: 130%;
-}
-@media screen and (max-width: 1440px) {
-  .questions__h2 {
-    font-size: 24px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .questions__h2 {
-    font-size: 22px;
-  }
-}
-.questions__card {
-  margin: 0 auto;
+.questions__content {
   padding: 20px 90px 40px;
   border-radius: 6px;
   background: #fff;
@@ -69,24 +49,24 @@
   box-shadow: 0px 20px 24px 0px rgba(0, 0, 0, 0.12);
 }
 @media screen and (max-width: 1440px) {
-  .questions__card {
+  .questions__content {
     padding: 10px 20px 30px;
   }
 }
 @media screen and (max-width: 768px) {
-  .questions__card {
+  .questions__content {
     padding: 4px 16px 24px;
   }
 }
-.questions__card .item {
+.questions__content .item {
   border-bottom: 1px solid #e2e1ec;
 }
-.questions__card .item__header {
+.questions__content .item__header {
   padding: 20px 0;
   position: relative;
   cursor: pointer;
 }
-.questions__card .item__header__expand {
+.questions__content .item__header__expand {
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -95,7 +75,7 @@
   height: 24px;
   cursor: pointer;
 }
-.questions__card .item__header-h3 {
+.questions__content .item__header-h3 {
   margin-right: 44px;
   color: #272727;
   font-family: "Unbounded";
@@ -104,16 +84,16 @@
   line-height: 140%;
 }
 @media screen and (max-width: 768px) {
-  .questions__card .item__header-h3 {
+  .questions__content .item__header-h3 {
     font-size: 16px;
   }
 }
-.questions__card .item .is-visible {
+.questions__content .item .is-visible {
   display: block;
   opacity: 1;
   animation: animDisp 0.3s ease-in-out;
 }
-.questions__card .item__text {
+.questions__content .item__text {
   display: none;
   margin-top: 10px;
   margin-bottom: 20px;
@@ -123,17 +103,17 @@
   font-weight: 400;
   line-height: 24px;
 }
-.questions__card .item__text ul {
+.questions__content .item__text ul {
   padding-left: 20px;
   margin-bottom: 1.2rem;
 }
-.questions__card .item__text ul li {
+.questions__content .item__text ul li {
   color: #0054e6;
   margin-bottom: 1.2rem;
 }
-.questions__card .item__text ul li:last-child {
+.questions__content .item__text ul li:last-child {
   margin-bottom: 0;
 }
-.questions__card .item__text ul li span {
+.questions__content .item__text ul li span {
   color: #272727;
 }

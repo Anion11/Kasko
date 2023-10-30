@@ -15,276 +15,338 @@
     <title>KASKO</title>
   </head>
   <body>
-    <header></header>
-    <main>
-      <div class="wrapper">
-        <section class="choice">
-          <div class="choice__header">
-            <h2 class="choice__header-title">Выберите программу КАСКО</h2>
-            <span class="choice__header-text">
-              Вы можете получить индивидуальное предложение либо выбрать одну из
-              наших программ — в зависимости от стажа, стиля вождения и
-              состояния автомобиля
-            </span>
-          </div>
-          <div class="choice__main swiper">
-            <div class="choice__main__wrapper swiper-wrapper">
-              <div class="card swiper-slide">
-                <div class="card__image">
-                  <img src="assets/choiceComponent/classic.png" alt="classic" />
+    <div class="wrapper">
+      <header>
+      </header>
+      <main>
+        <div class="inner">
+          <!--Блок с выбором Программы КАСКО-->
+          <section class="section choice">
+            <div class="section__header">
+              <h2 class="title">Выберите программу КАСКО</h2>
+              <span class="text">
+                Вы можете получить индивидуальное предложение либо выбрать одну из
+                наших программ — в зависимости от стажа, стиля вождения и
+                состояния автомобиля
+              </span>
+            </div>
+            <div class="choice__content swiper"> <!--Посмотреть на названия-->
+              <div class="choice__wrapper swiper-wrapper">
+                <div class="card swiper-slide">
+                  <div class="card__image"> <!--Поменять название класса НЕ КАРД а итем-->
+                    <img src="assets/choiceComponent/classic.png" alt="classic" />
+                  </div>
+                  <h2 class="card__title">Классик</h2>
+                  <span class="card__text">
+                    Полная защита авто без ограничений по возрасту и стажу
+                    вождения
+                  </span>
                 </div>
-                <h2 class="card__title">Классик</h2>
-                <span class="card__text">
-                  Полная защита авто без ограничений по возрасту и стажу
-                  вождения
-                </span>
-              </div>
-              <div class="card swiper-slide">
-                <div class="card__image">
-                  <img src="assets/choiceComponent/optima.png" alt="optima" />
+                <div class="card swiper-slide">
+                  <div class="card__image">
+                    <img src="assets/choiceComponent/optima.png" alt="optima" />
+                  </div>
+                  <h2 class="card__title">Оптима</h2>
+                  <span class="card__text">
+                    Полная защита автомобиля с экономией до 30% для уверенных
+                    водителей
+                  </span>
                 </div>
-                <h2 class="card__title">Оптима</h2>
-                <span class="card__text">
-                  Полная защита автомобиля с экономией до 30% для уверенных
-                  водителей
-                </span>
-              </div>
-              <div class="card swiper-slide">
-                <div class="card__image">
-                  <img src="assets/choiceComponent/formula.png" alt="formula" />
+                <div class="card swiper-slide">
+                  <div class="card__image">
+                    <img src="assets/choiceComponent/formula.png" alt="formula" />
+                  </div>
+                  <h2 class="card__title">Формула 50+</h2>
+                  <span class="card__text">
+                    КАСКО с двумя платежами: вторую часть вносите при наступлении
+                    страхового случая
+                  </span>
                 </div>
-                <h2 class="card__title">Формула 50+</h2>
-                <span class="card__text">
-                  КАСКО с двумя платежами: вторую часть вносите при наступлении
-                  страхового случая
-                </span>
-              </div>
-              <div class="card swiper-slide">
-                <div class="card__image">
-                  <img src="assets/choiceComponent/profi.png" alt="profi" />
+                <div class="card swiper-slide">
+                  <div class="card__image">
+                    <img src="assets/choiceComponent/profi.png" alt="profi" />
+                  </div>
+                  <h2 class="card__title">Профи</h2>
+                  <span class="card__text">
+                    Выгода до 70% для водителей со стажем
+                  </span>
                 </div>
-                <h2 class="card__title">Профи</h2>
-                <span class="card__text">
-                  Выгода до 70% для водителей со стажем
-                </span>
-              </div>
-              <div class="card swiper-slide">
-                <div class="card__image">
-                  <img
-                    src="assets/choiceComponent/lightKASKO.png"
-                    alt="lightKASKO"
-                  />
+                <div class="card swiper-slide">
+                  <div class="card__image">
+                    <img
+                      src="assets/choiceComponent/lightKASKO.png"
+                      alt="lightKASKO"
+                    />
+                  </div>
+                  <h2 class="card__title">Легкое КАСКО</h2>
+                  <span class="card__text">Базовые риски всего за 1900 ₽</span>
                 </div>
-                <h2 class="card__title">Легкое КАСКО</h2>
-                <span class="card__text">Базовые риски всего за 1900 ₽</span>
-              </div>
-              <div class="card swiper-slide">
-                <div class="card__image">
-                  <img src="assets/choiceComponent/help.png" alt="help" />
+                <div class="card swiper-slide">
+                  <div class="card__image">
+                    <img src="assets/choiceComponent/help.png" alt="help" />
+                  </div>
+                  <h2 class="card__title">Помощь</h2>
+                  <span cl  ass="card__text">
+                    Защита автомобиля по вине другого участника, даже если у того
+                    нет ОСАГО, всего от 1990 ₽
+                  </span>
                 </div>
-                <h2 class="card__title">Помощь</h2>
-                <span class="card__text">
-                  Защита автомобиля по вине другого участника, даже если у того
-                  нет ОСАГО, всего от 1990 ₽
-                </span>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+            <div class="choice__button">
+              <button>Сравнить программы</button>
+            </div>
+          </section>
+          <!--Блок с преимуществами ЮГОРИИ-->
+          <section class="section advantages">
+            <h2 class="section__header">Преимущества «Югории»</h2>
+            <div class="advantages__content">
+              <div class="card">
+                <div class="card__header">
+                  <span class="card__header-text">
+                       № 1
+                  </span>
+                </div>
+                <div class="card__main">
+                  <span class="card__main-text">
+                    По качеству урегулирования убытков
+                    <a class="external-link" href="/#">
+                      <img src="./assets/advantagesComponent/external-link.png" alt="external-link">
+                    </a>
+                  </span>
+                </div>
+              </div>
+              <div class="card"> <!--НЕ КАРД-->
+                <div class="card__header">
+                  <span class="card__header-text">
+                    ТОП 3
+                  </span>
+                </div>
+                <div class="card__main">
+                  <span class="card__main-text">По качеству сервиса
+                    <a class="external-link" href="/#">
+                      <img src="./assets/advantagesComponent/external-link.png" alt="external-link">
+                    </a>
+                  </span>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__header">
+                  <span class="card__header-text">
+                    21
+                    <span>год +</span>
+                  </span>
+                </div>
+                <div class="card__main">
+                  <span class="card__main-text">Работаем для вас</span>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__header">
+                  <span class="card__header-text">
+                    24/7
+                  </span>
+                </div>
+                <div class="card__main">
+                  <span class="card__main-text">Круглосуточная поддержка</span>
+                </div>
               </div>
             </div>
-            <div class="swiper-pagination"></div>
-          </div>
-          <div class="choice__button">
-            <button>Сравнить программы</button>
-          </div>
-        </section>
-        <section class="questions">
-          <h2 class="questions__h2">Частые вопросы по КАСКО</h2>
-          <div class="questions__card">
-            <div class="item">
-              <div class="item__header">
-                <h3 class="item__header-h3">Что нужно для оформления?</h3>
-                <button class="item__header__expand">
-                  <img src="assets/questionsComponent/plus.png" alt="expand" />
-                </button>
+            <div class="advantages__main"></div>
+          </section>
+          <!--Блок с частыми вопросами по КАСКО-->
+          <section class="section questions">
+            <h2 class="section__header">Частые вопросы по КАСКО</h2>
+            <div class="questions__content">
+              <div class="item">
+                <div class="item__header">
+                  <h3 class="item__header-h3">Что нужно для оформления?</h3>
+                  <button class="item__header__expand">
+                    <img src="assets/questionsComponent/plus.png" alt="expand" />
+                  </button>
+                </div>
+                <div class="item__text">
+                  <ul>
+                    <li>
+                      <span>
+                        Если вред автомобилю был нанесен преднамеренно
+                      </span>
+                    </li>
+                    <li>
+                      <span>
+                        Если машина использовалась в целях, не предусмотренных
+                        договором (например, в соревнованиях, в прокате, для
+                        обучения вождению или для совершения преступления)
+                      </span>
+                    </li>
+                    <li>
+                      <span>
+                        Если авто управлялось лицом, которое не имело на это прав
+                      </span>
+                    </li>
+                  </ul>
+                  <p>
+                    Более подробный перечень ограничений смотрите в Правилах
+                    страхования, а также в вашем договоре.
+                  </p>
+                </div>
               </div>
-              <div class="item__text">
-                <ul>
-                  <li>
-                    <span>
-                      Если вред автомобилю был нанесен преднамеренно
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      Если машина использовалась в целях, не предусмотренных
-                      договором (например, в соревнованиях, в прокате, для
-                      обучения вождению или для совершения преступления)
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      Если авто управлялось лицом, которое не имело на это прав
-                    </span>
-                  </li>
-                </ul>
-                <p>
-                  Более подробный перечень ограничений смотрите в Правилах
-                  страхования, а также в вашем договоре.
-                </p>
+              <div class="item">
+                <div class="item__header">
+                  <h3 class="item__header-h3">Как продлить?</h3>
+                  <button class="item__header__expand">
+                    <img src="assets/questionsComponent/plus.png" alt="expand" />
+                  </button>
+                </div>
+                <div class="item__text">
+                  <span>
+                    Очень много текстаОчень много текстаОчень много текстаОчень
+                    много текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текстаОчень много текстаОчень много
+                    текстаОчень много текста
+                  </span>
+                </div>
               </div>
-            </div>
-            <div class="item">
-              <div class="item__header">
-                <h3 class="item__header-h3">Как продлить?</h3>
-                <button class="item__header__expand">
-                  <img src="assets/questionsComponent/plus.png" alt="expand" />
-                </button>
+              <div class="item">
+                <div class="item__header">
+                  <h3 class="item__header-h3">
+                    Вернут ли оставшуюся премию при продаже авто?
+                  </h3>
+                  <button class="item__header__expand">
+                    <img src="assets/questionsComponent/plus.png" alt="expand" />
+                  </button>
+                </div>
+                <div class="item__text">
+                  <span>Какой-то текст</span>
+                </div>
               </div>
-              <div class="item__text">
-                <span>
-                  Очень много текстаОчень много текстаОчень много текстаОчень
-                  много текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текстаОчень много текстаОчень много
-                  текстаОчень много текста
-                </span>
+              <div class="item">
+                <div class="item__header">
+                  <h3 class="item__header-h3">Когда не выплатят по Каско?</h3>
+                  <button class="item__header__expand">
+                    <img src="assets/questionsComponent/plus.png" alt="expand" />
+                  </button>
+                </div>
+                <div class="item__text">
+                  <span>Какой-то текст</span>
+                </div>
               </div>
-            </div>
-            <div class="item">
-              <div class="item__header">
-                <h3 class="item__header-h3">
-                  Вернут ли оставшуюся премию при продаже авто?
-                </h3>
-                <button class="item__header__expand">
-                  <img src="assets/questionsComponent/plus.png" alt="expand" />
-                </button>
+              <div class="item">
+                <div class="item__header">
+                  <h3 class="item__header-h3">
+                    Как производится ремонт по Каско?
+                  </h3>
+                  <button class="item__header__expand">
+                    <img src="assets/questionsComponent/plus.png" alt="expand" />
+                  </button>
+                </div>
+                <div class="item__text">
+                  <span>Какой-то текст</span>
+                </div>
               </div>
-              <div class="item__text">
-                <span>Какой-то текст</span>
+              <div class="item">
+                <div class="item__header">
+                  <h3 class="item__header-h3">
+                    Сколько водителей можно вписать в полис Каско?
+                  </h3>
+                  <button class="item__header__expand">
+                    <img src="assets/questionsComponent/plus.png" alt="expand" />
+                  </button>
+                </div>
+                <div class="item__text">
+                  <span>Какой-то текст</span>
+                </div>
               </div>
-            </div>
-            <div class="item">
-              <div class="item__header">
-                <h3 class="item__header-h3">Когда не выплатят по Каско?</h3>
-                <button class="item__header__expand">
-                  <img src="assets/questionsComponent/plus.png" alt="expand" />
-                </button>
+              <div class="item">
+                <div class="item__header">
+                  <h3 class="item__header-h3">
+                    Как получить компенсацию по Каско?
+                  </h3>
+                  <button class="item__header__expand">
+                    <img src="assets/questionsComponent/plus.png" alt="expand" />
+                  </button>
+                </div>
+                <div class="item__text">
+                  <span>Какой-то текст</span>
+                </div>
               </div>
-              <div class="item__text">
-                <span>Какой-то текст</span>
+              <div class="item">
+                <div class="item__header">
+                  <h3 class="item__header-h3">
+                    Максимальная сумма выплаты по Каско
+                  </h3>
+                  <button class="item__header__expand">
+                    <img src="assets/questionsComponent/plus.png" alt="expand" />
+                  </button>
+                </div>
+                <div class="item__text">
+                  <span>Какой-то текст</span>
+                </div>
               </div>
-            </div>
-            <div class="item">
-              <div class="item__header">
-                <h3 class="item__header-h3">
-                  Как производится ремонт по Каско?
-                </h3>
-                <button class="item__header__expand">
-                  <img src="assets/questionsComponent/plus.png" alt="expand" />
-                </button>
-              </div>
-              <div class="item__text">
-                <span>Какой-то текст</span>
-              </div>
-            </div>
-            <div class="item">
-              <div class="item__header">
-                <h3 class="item__header-h3">
-                  Сколько водителей можно вписать в полис Каско?
-                </h3>
-                <button class="item__header__expand">
-                  <img src="assets/questionsComponent/plus.png" alt="expand" />
-                </button>
-              </div>
-              <div class="item__text">
-                <span>Какой-то текст</span>
-              </div>
-            </div>
-            <div class="item">
-              <div class="item__header">
-                <h3 class="item__header-h3">
-                  Как получить компенсацию по Каско?
-                </h3>
-                <button class="item__header__expand">
-                  <img src="assets/questionsComponent/plus.png" alt="expand" />
-                </button>
-              </div>
-              <div class="item__text">
-                <span>Какой-то текст</span>
-              </div>
-            </div>
-            <div class="item">
-              <div class="item__header">
-                <h3 class="item__header-h3">
-                  Максимальная сумма выплаты по Каско
-                </h3>
-                <button class="item__header__expand">
-                  <img src="assets/questionsComponent/plus.png" alt="expand" />
-                </button>
-              </div>
-              <div class="item__text">
-                <span>Какой-то текст</span>
-              </div>
-            </div>
-            <div class="item">
-              <div class="item__header">
-                <h3 class="item__header-h3">
-                  Выплата по Каско если сам виноват
-                </h3>
-                <button class="item__header__expand">
-                  <img src="assets/questionsComponent/plus.png" alt="expand" />
-                </button>
-              </div>
-              <div class="item__text">
-                <span>Какой-то текст</span>
+              <div class="item">
+                <div class="item__header">
+                  <h3 class="item__header-h3">
+                    Выплата по Каско если сам виноват
+                  </h3>
+                  <button class="item__header__expand">
+                    <img src="assets/questionsComponent/plus.png" alt="expand" />
+                  </button>
+                </div>
+                <div class="item__text">
+                  <span>Какой-то текст</span>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
-      </div>
-    </main>
-    <footer></footer>
+          </section>
+        </div>
+      </main>
+      <footer></footer>
+    </div>
   </body>
 </html>

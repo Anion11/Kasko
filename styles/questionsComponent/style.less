@@ -17,31 +17,15 @@
 }
 .questions {
   padding: 50px 90px;
-  margin: 0 20px;
   background: @new-ghost-2;
   @media @tablet {
     padding: 40px 30px;
-    margin: 0;
   }
   @media @mobile {
+    margin: 0 -16px; // Отрицательные марджины в переменную
     padding: 30px 16px 40px;
   }
-  &__h2 {
-    margin-bottom: 35px;
-    color: @base-black;
-    font-family: "Unbounded";
-    font-size: 30px;
-    font-weight: 600;
-    line-height: 130%;
-    @media @tablet {
-      font-size: 24px;
-    }
-    @media @mobile {
-      font-size: 22px;
-    }
-  }
-  &__card {
-    margin: 0 auto;
+  &__content {
     padding: 20px 90px 40px;
     border-radius: 6px;
     background: @base-white;
