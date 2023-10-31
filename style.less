@@ -1,7 +1,9 @@
 @import "./styles/variables.less";
-@import "./styles/choice/style.less";
-@import "./styles/questions/style.less";
-@import "./styles/advantages/style.less";
+@import "./styles/choice/choice.less";
+@import "./styles/questions/questions.less";
+@import "./styles/ugoria-advantages/ugoria-advantages.less";
+@import "./styles/useful/useful.less";
+// Подключить bold-
 * {
   margin: 0;
   padding: 0;
@@ -32,13 +34,13 @@ button {
       padding-bottom: 40px;
     }
     .inner {
+      max-width: 1440px;
+      min-width: 320px;
+      margin: 0 auto;
       padding: 0 20px; // variable
       @media @mobile {
         padding: 0 16px;
       }
-      max-width: 1440px;
-      min-width: 320px;
-      margin: 0 auto;
     }
   }
 }
@@ -53,12 +55,15 @@ button {
     }
   }
   &__header {
+    h2{
+      color: @base-black;
+      font-family: "Unbounded","Arial", sans-serif;
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 130%;
+    }
     margin-bottom: 35px;
-    color: @base-black;
-    font-family: "Unbounded";
-    font-size: 30px;
-    font-weight: 600;
-    line-height: 130%;
+    
     @media @tablet {
       margin-bottom: 24px;
       font-size: 24px;

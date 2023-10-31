@@ -30,15 +30,13 @@
   }
 }
 .advantages-item {
-  position: relative;
-  background: #fff;
   padding: 30px 20px 55px;
   border-radius: 6px;
+  background: #fff;
 }
 .advantages-item__header {
   margin-bottom: 54px;
-  position: relative;
-  font-family: "Unbounded";
+  font-family: "Unbounded", "Arial", sans-serif;
   font-size: 40px;
   font-weight: 500;
   line-height: 120%;
@@ -54,8 +52,7 @@
 }
 .advantages-text {
   position: relative;
-  display: inline-block;
-  font-family: "Montserrat";
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 500;
   line-height: 140%;
@@ -63,11 +60,6 @@
 @media screen and (max-width: 1440px) {
   .advantages-text {
     padding-right: 27px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .advantages-text {
-    padding-right: 0;
   }
 }
 .advantages-text .external-link {

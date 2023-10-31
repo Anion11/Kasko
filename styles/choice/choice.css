@@ -1,13 +1,41 @@
 @font-face {
-  font-family: "Unbounded";
-  src: url("fonts/Unbounded-Regular.woff2") format("woff2"), url("fonts/Unbounded-Regular.woff") format("woff");
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat-Regular.woff2") format('woff2'), url('../fonts/Montserrat-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Montserrat";
-  src: url("fonts/Montserrat-Regular.woff2") format("woff2"), url("fonts/Montserrat-Regular.woff") format("woff");
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Medium.woff2') format('woff2'), url('../fonts/Montserrat-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Unbounded';
+  src: url('../fonts/Unbounded-Medium.woff2') format('woff2'), url('../fonts/Unbounded-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-SemiBold.woff2') format('woff2'), url('../fonts/Montserrat-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Unbounded';
+  src: url('../fonts/Unbounded-SemiBold.woff2') format('woff2'), url('../fonts/Unbounded-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Unbounded';
+  src: url('../fonts/Unbounded-Regular.woff2') format('woff2'), url('../fonts/Unbounded-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -29,7 +57,7 @@
   }
 }
 .section__header .text {
-  font-family: "Montserrat";
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 140%;
@@ -85,13 +113,13 @@
 }
 .choice-item__title {
   margin-bottom: 16px;
-  font-family: "Unbounded";
+  font-family: "Unbounded", "Arial", sans-serif;
   font-size: 24px;
   font-weight: 600;
   line-height: 140%;
 }
 .choice-item__text {
-  font-family: "Montserrat";
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 140%;
@@ -120,7 +148,7 @@
   padding: 14px 70px;
   border: 1px solid #638aff;
   border-radius: 4px;
-  font-family: "Montserrat";
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 600;
   line-height: 140%;
