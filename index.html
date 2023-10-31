@@ -16,14 +16,16 @@
   </head>
   <body>
     <div class="wrapper">
-      <header></header>
+      <header class="header"></header>
       <main class="main">
         <div class="inner">
           <!--Блок с выбором Программы КАСКО-->
           <section class="section choice">
             <div class="section__header">
-              <h2 class="title">Выберите программу КАСКО</h2>
-              <div class="text">
+              <div class="choice__title">
+                <h2>Выберите программу КАСКО</h2>
+              </div>
+              <div class="choice__text">
                 Вы можете получить индивидуальное предложение либо выбрать одну
                 из наших программ — в зависимости от стажа, стиля вождения и
                 состояния автомобиля
@@ -93,7 +95,7 @@
               <div class="swiper-pagination"></div>
             </div>
             <div class="choice__button">
-              <button class="butoon">Сравнить программы</button>
+              <button class="button">Сравнить программы</button>
             </div>
           </section>
           <!--Блок В каких случаях пригодится КАСКО-->
@@ -105,57 +107,63 @@
               <div class="useful-item">
                 <div class="useful-item__header">
                   <div class="useful-item_accident">
-                    <img src="assets/useful/accident.png" alt="accident">
+                    <img src="assets/useful/accident.png" alt="accident" />
                   </div>
                 </div>
                 <div class="useful-item__main">
                   <div class="useful-item__title">ДТП</div>
-                  <div class="useful-item__text">даже если виновник вторая сторона и у него нет ОСАГО</div>
+                  <div class="useful-item__text">
+                    даже если виновник вторая сторона и у него нет ОСАГО
+                  </div>
                 </div>
               </div>
               <div class="useful-item">
                 <div class="useful-item__header">
                   <div class="useful-item_transp">
-                    <img src="assets/useful/Transportation.png" alt="Transportation">
+                    <img
+                      src="assets/useful/Transportation.png"
+                      alt="Transportation"
+                    />
                   </div>
                 </div>
                 <div class="useful-item__main">
                   <div class="useful-item__title">Угон</div>
-                  <div class="useful-item__text">и противоправные действия третьих лиц</div>
+                  <div class="useful-item__text">
+                    и противоправные действия третьих лиц
+                  </div>
                 </div>
               </div>
               <div class="useful-item">
                 <div class="useful-item__header">
                   <div class="useful-item_parking">
-                    <img src="assets/useful/parking.png" alt="parking">
+                    <img src="assets/useful/parking.png" alt="parking" />
                   </div>
                 </div>
                 <div class="useful-item__main">
                   <div class="useful-item__title">Повреждения на парковке</div>
-                  <div class="useful-item__text">в том числе падение предметов</div>
+                  <div class="useful-item__text">
+                    в том числе падение предметов
+                  </div>
                 </div>
               </div>
               <div class="useful-item">
                 <div class="useful-item__header">
                   <div class="useful-item_mask">
-                    <img src="assets/useful/Mask.png" alt="mask">
+                    <img src="assets/useful/Mask.png" alt="mask" />
                   </div>
                 </div>
                 <div class="useful-item__main">
                   <div class="useful-item__title">Пожар, взрыв</div>
-                  <div class="useful-item__text">особенно, если авто сгорел полностью</div>
+                  <div class="useful-item__text">
+                    особенно, если авто сгорел полностью
+                  </div>
                 </div>
               </div>
             </div>
           </section>
           <!--Баннер с преимуществами КАСКО в ЮГОРИИ-->
           <section class="section small-banner">
-            <div class="section__header">
-              <h2>Преимущества КАСКО в «Югории»</h2>
-            </div>
-            <div class="small-banner__content">
-
-            </div>
+            <div class="small-banner__content"></div>
           </section>
           <!--Блок с преимуществами ЮГОРИИ-->
           <section class="section advantages">
@@ -220,11 +228,16 @@
             <div class="questions__content">
               <div class="questions__item">
                 <div class="questions__header">
-                  <div class="questions-title">
+                  <div class="questions__title">
                     <h5>Что нужно для оформления?</h5>
                   </div>
-                  <button class="questions-expand">
-                    <img src="assets/questions/plus.png" alt="expand" />
+                  <button class="questions__expand">
+                    <div class="expand plus">
+                      <img src="assets/questions/plus.png" alt="expand" />
+                    </div>
+                    <div class="expand minus">
+                      <img src="assets/questions/minus.png" alt="expand" />
+                    </div>
                   </button>
                 </div>
                 <div class="questions__text">
@@ -256,9 +269,14 @@
               </div>
               <div class="questions__item">
                 <div class="questions__header">
-                  <div class="questions-title"><h5>Как продлить?</h5></div>
-                  <button class="questions-expand">
-                    <img src="assets/questions/plus.png" alt="expand" />
+                  <div class="questions__title"><h5>Как продлить?</h5></div>
+                  <button class="questions__expand">
+                    <div class="expand plus">
+                      <img src="assets/questions/plus.png" alt="expand" />
+                    </div>
+                    <div class="expand minus">
+                      <img src="assets/questions/minus.png" alt="expand" />
+                    </div>
                   </button>
                 </div>
                 <div class="questions__text">
@@ -317,11 +335,16 @@
               </div>
               <div class="questions__item">
                 <div class="questions__header">
-                  <div class="questions-title">
+                  <div class="questions__title">
                     <h5>Вернут ли оставшуюся премию при продаже авто?</h5>
                   </div>
-                  <button class="questions-expand">
-                    <img src="assets/questions/plus.png" alt="expand" />
+                  <button class="questions__expand">
+                    <div class="expand plus">
+                      <img src="assets/questions/plus.png" alt="expand" />
+                    </div>
+                    <div class="expand minus">
+                      <img src="assets/questions/minus.png" alt="expand" />
+                    </div>
                   </button>
                 </div>
                 <div class="questions__text">
@@ -330,11 +353,16 @@
               </div>
               <div class="questions__item">
                 <div class="questions__header">
-                  <div class="questions-title">
+                  <div class="questions__title">
                     <h5>Когда не выплатят по Каско?</h5>
                   </div>
-                  <button class="questions-expand">
-                    <img src="assets/questions/plus.png" alt="expand" />
+                  <button class="questions__expand">
+                    <div class="expand plus">
+                      <img src="assets/questions/plus.png" alt="expand" />
+                    </div>
+                    <div class="expand minus">
+                      <img src="assets/questions/minus.png" alt="expand" />
+                    </div>
                   </button>
                 </div>
                 <div class="questions__text">
@@ -343,11 +371,16 @@
               </div>
               <div class="questions__item">
                 <div class="questions__header">
-                  <div class="questions-title">
+                  <div class="questions__title">
                     <h5>Как производится ремонт по Каско?</h5>
                   </div>
-                  <button class="questions-expand">
-                    <img src="assets/questions/plus.png" alt="expand" />
+                  <button class="questions__expand">
+                    <div class="expand plus">
+                      <img src="assets/questions/plus.png" alt="expand" />
+                    </div>
+                    <div class="expand minus">
+                      <img src="assets/questions/minus.png" alt="expand" />
+                    </div>
                   </button>
                 </div>
                 <div class="questions__text">
@@ -356,11 +389,16 @@
               </div>
               <div class="questions__item">
                 <div class="questions__header">
-                  <div class="questions-title">
+                  <div class="questions__title">
                     <h5>Сколько водителей можно вписать в полис Каско?</h5>
                   </div>
-                  <button class="questions-expand">
-                    <img src="assets/questions/plus.png" alt="expand" />
+                  <button class="questions__expand">
+                    <div class="expand plus">
+                      <img src="assets/questions/plus.png" alt="expand" />
+                    </div>
+                    <div class="expand minus">
+                      <img src="assets/questions/minus.png" alt="expand" />
+                    </div>
                   </button>
                 </div>
                 <div class="questions__text">
@@ -369,11 +407,16 @@
               </div>
               <div class="questions__item">
                 <div class="questions__header">
-                  <div class="questions-title">
+                  <div class="questions__title">
                     <h5>Как получить компенсацию по Каско?</h5>
                   </div>
-                  <button class="questions-expand">
-                    <img src="assets/questions/plus.png" alt="expand" />
+                  <button class="questions__expand">
+                    <div class="expand plus">
+                      <img src="assets/questions/plus.png" alt="expand" />
+                    </div>
+                    <div class="expand minus">
+                      <img src="assets/questions/minus.png" alt="expand" />
+                    </div>
                   </button>
                 </div>
                 <div class="questions__text">
@@ -382,11 +425,16 @@
               </div>
               <div class="questions__item">
                 <div class="questions__header">
-                  <div class="questions-title">
+                  <div class="questions__title">
                     <h5>Максимальная сумма выплаты по Каско</h5>
                   </div>
-                  <button class="questions-expand">
-                    <img src="assets/questions/plus.png" alt="expand" />
+                  <button class="questions__expand">
+                    <div class="expand plus">
+                      <img src="assets/questions/plus.png" alt="expand" />
+                    </div>
+                    <div class="expand minus">
+                      <img src="assets/questions/minus.png" alt="expand" />
+                    </div>
                   </button>
                 </div>
                 <div class="questions__text">
@@ -395,11 +443,16 @@
               </div>
               <div class="questions__item">
                 <div class="questions__header">
-                  <div class="questions-title">
+                  <div class="questions__title">
                     <h5>Выплата по Каско если сам виноват</h5>
                   </div>
-                  <button class="questions-expand">
-                    <img src="assets/questions/plus.png" alt="expand" />
+                  <button class="questions__expand">
+                    <div class="expand plus">
+                      <img src="assets/questions/plus.png" alt="expand" />
+                    </div>
+                    <div class="expand minus">
+                      <img src="assets/questions/minus.png" alt="expand" />
+                    </div>
                   </button>
                 </div>
                 <div class="questions__text">
@@ -410,7 +463,7 @@
           </section>
         </div>
       </main>
-      <footer></footer>
+      <footer class="footer"></footer>
     </div>
   </body>
 </html>

@@ -51,7 +51,7 @@
     margin-top: 10px;
     margin-bottom: 20px;
     color: @base-black;
-    font-family: "Montserrat","Arial", sans-serif;
+    font-family: @font-Montserrat;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -75,7 +75,7 @@
     position: relative;
     cursor: pointer;
   }
-  &-expand {
+  &__expand {
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -83,11 +83,21 @@
     width: 24px;
     height: 24px;
     cursor: pointer;
+    .minus {
+      padding: 11px 5px;
+    }
   }
-  &-title {
+  .expand {
+    display: none;
+  }
+  .expand-active {
+    display: flex;
+    align-items: center;
+  }
+  &__title {
     margin-right: 44px;
     color: @base-black;
-    font-family: "Unbounded","Arial", sans-serif;
+    font-family: @font-Unbounded;
     font-size: 18px;
     font-weight: 600;
     line-height: 140%;
