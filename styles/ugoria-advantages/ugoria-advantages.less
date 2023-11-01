@@ -1,4 +1,4 @@
-@import "../variables.less";
+// main: ../../style.less
 .advantages {
   &__content {
     display: grid;
@@ -34,29 +34,24 @@
       //-webkit-mask-repeat: no-repeat;
       //box-shadow: 0.2px 0.1px 1px 0px #fff inset;
       //backdrop-filter: blur(2px);
-      span {
-        font-size: 24px;
-        font-weight: 600;
-        line-height: 140%;
+    }
+    &__text {
+      position: relative;
+      font-family: @font-Montserrat;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 140%;
+      @media @tablet {
+        padding-right: 27px;
       }
-    }
-  }
-  &-text {
-    position: relative;
-    font-family: @font-Montserrat;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 140%;
-    @media @tablet {
-      padding-right: 27px;
-    }
-    .external-link {
-      display: inline-block;
-      position: absolute;
-      bottom: 0;
-      margin-left: 3px;
-      width: 24px;
-      height: 24px;
+      .external-link {
+        display: inline-block;
+        position: absolute;
+        bottom: 0;
+        margin-left: 3px;
+        width: 24px;
+        height: 24px;
+      }
     }
   }
 }

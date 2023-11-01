@@ -10,8 +10,8 @@
     />
     <link rel="stylesheet" type="text/css" href="./style.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./scripts/swiper.js"></script>
-    <script src="./scripts/questions/script.js"></script>
+    <script src="./scripts/swiper-init.js"></script>
+    <script src="./scripts/questions/questions.js"></script>
     <title>KASKO</title>
   </head>
   <body>
@@ -110,9 +110,9 @@
                     <img src="assets/useful/accident.png" alt="accident" />
                   </div>
                 </div>
-                <div class="useful-item__main">
+                <div class="useful-item__text">
                   <div class="useful-item__title">ДТП</div>
-                  <div class="useful-item__text">
+                  <div class="useful-item__desc">
                     даже если виновник вторая сторона и у него нет ОСАГО
                   </div>
                 </div>
@@ -126,9 +126,9 @@
                     />
                   </div>
                 </div>
-                <div class="useful-item__main">
+                <div class="useful-item__text">
                   <div class="useful-item__title">Угон</div>
-                  <div class="useful-item__text">
+                  <div class="useful-item__desc">
                     и противоправные действия третьих лиц
                   </div>
                 </div>
@@ -139,9 +139,9 @@
                     <img src="assets/useful/parking.png" alt="parking" />
                   </div>
                 </div>
-                <div class="useful-item__main">
+                <div class="useful-item__text">
                   <div class="useful-item__title">Повреждения на парковке</div>
-                  <div class="useful-item__text">
+                  <div class="useful-item__desc">
                     в том числе падение предметов
                   </div>
                 </div>
@@ -152,9 +152,9 @@
                     <img src="assets/useful/Mask.png" alt="mask" />
                   </div>
                 </div>
-                <div class="useful-item__main">
+                <div class="useful-item__text">
                   <div class="useful-item__title">Пожар, взрыв</div>
-                  <div class="useful-item__text">
+                  <div class="useful-item__desc">
                     особенно, если авто сгорел полностью
                   </div>
                 </div>
@@ -173,51 +173,45 @@
                 <div class="advantages-item__header">
                   <h4>№ 1</h4>
                 </div>
-                <div class="advantages-item__main">
-                  <div class="advantages-text">
-                    По качеству урегулирования убытков
-                    <a class="external-link" href="/#">
-                      <img
-                        src="./assets/advantages/external-link.png"
-                        alt="external-link"
-                      />
-                    </a>
-                  </div>
+                <div class="advantages-item__text">
+                  По качеству урегулирования убытков
+                  <a class="external-link" href="/#">
+                    <img
+                      src="./assets/advantages/external-link.png"
+                      alt="external-link"
+                    />
+                  </a>
                 </div>
               </div>
               <div class="advantages-item">
                 <div class="advantages-item__header">
                   <h4>ТОП 3</h4>
                 </div>
-                <div class="advantages-item__main">
-                  <div class="advantages-text">
-                    По качеству сервиса
-                    <a class="external-link" href="/#">
-                      <img
-                        src="./assets/advantages/external-link.png"
-                        alt="external-link"
-                      />
-                    </a>
-                  </div>
+                <div class="advantages-item__text">
+                  По качеству сервиса
+                  <a class="external-link" href="/#">
+                    <img
+                      src="./assets/advantages/external-link.png"
+                      alt="external-link"
+                    />
+                  </a>
                 </div>
               </div>
               <div class="advantages-item">
                 <div class="advantages-item__header">
                   <h4>
                     21
-                    <span>год +</span>
+                    <span class="H-4_semibold_24">год +</span>
                   </h4>
                 </div>
-                <div class="advantages-item__main">
-                  <div class="advantages-text">Работаем для вас</div>
-                </div>
+                <div class="advantages-item__text">Работаем для вас</div>
               </div>
               <div class="advantages-item">
                 <div class="advantages-item__header">
                   <h4>24/7</h4>
                 </div>
-                <div class="advantages-item__main">
-                  <div class="advantages-text">Круглосуточная поддержка</div>
+                <div class="advantages-item__text">
+                  Круглосуточная поддержка
                 </div>
               </div>
             </div>
