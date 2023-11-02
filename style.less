@@ -4,6 +4,7 @@
 @import "./styles/questions/questions.less";
 @import "./styles/ugoria-advantages/ugoria-advantages.less";
 @import "./styles/useful/useful.less";
+@import "./styles/small-banner/small-banner.less";
 
 * {
   margin: 0;
@@ -41,24 +42,15 @@ button {
     }
   }
 }
-.section {
-  &:not(:first-child) {
-    margin-top: 90px;
+.section { 
+    margin-bottom: 90px;
     @media @tablet {
-      margin-top: 50px;
+      margin-bottom: 50px;
     }
     @media @mobile {
-      margin-top: 40px;
+      margin-bottom: 40px;
     }
-  }
   &__header {
-    h2 {
-      color: @base-black;
-      font-family: @font-Unbounded;
-      font-size: 30px;
-      font-weight: 600;
-      line-height: 130%;
-    }
     margin-bottom: 35px;
     @media @tablet {
       margin-bottom: 24px;
@@ -66,6 +58,13 @@ button {
     }
     @media @mobile {
       font-size: 20px;
+    }
+    h2 {
+      color: @base-black;
+      font-family: @font-Unbounded;
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 130%;
     }
   }
 }

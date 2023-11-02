@@ -151,7 +151,6 @@
   font-weight: 600;
   line-height: 140%;
   color: #638aff;
-  text-align: center;
   cursor: pointer;
 }
 .choice__button .button:hover {
@@ -164,9 +163,9 @@
   height: auto;
 }
 .swiper-pagination {
+  display: none;
   bottom: 0 !important;
   margin-bottom: 19px;
-  display: none;
 }
 @media screen and (max-width: 768px) {
   .swiper-pagination {
@@ -254,13 +253,12 @@
 }
 .questions__text ul li {
   margin-bottom: 1.2rem;
-  color: #0054e6;
 }
 .questions__text ul li:last-child {
   margin-bottom: 0;
 }
-.questions__text ul li span {
-  color: #272727;
+.questions__text ul li::marker {
+  color: #0054e6;
 }
 .questions__header {
   display: flex;
@@ -358,9 +356,9 @@
   display: inline-block;
   position: absolute;
   bottom: 0;
-  margin-left: 3px;
   width: 24px;
   height: 24px;
+  margin-left: 3px;
 }
 .useful__content {
   display: grid;
@@ -453,6 +451,124 @@
   font-weight: 500;
   line-height: 140%;
 }
+.small-banner {
+  padding: 35px 90px;
+  border-radius: 6px;
+  background: #638aff;
+  color: #fff;
+}
+@media screen and (max-width: 1440px) {
+  .small-banner {
+    padding: 40px 30px 17px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .small-banner {
+    padding: 24px 16px 14px;
+  }
+}
+.small-banner__photo {
+  margin: 0 auto;
+  max-width: 410px;
+  max-height: 320px;
+}
+@media screen and (max-width: 1440px) {
+  .small-banner__photo {
+    max-width: 329px;
+    max-height: 257px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .small-banner__photo {
+    max-width: 271px;
+    max-height: 210px;
+  }
+}
+.small-banner__header {
+  margin-bottom: 18px;
+}
+@media screen and (max-width: 1440px) {
+  .small-banner__header {
+    margin-bottom: 12px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .small-banner__header {
+    margin-bottom: 10px;
+  }
+}
+.small-banner__header h2 {
+  font-family: "Unbounded";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+}
+@media screen and (max-width: 1440px) {
+  .small-banner__header h2 {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .small-banner__header h2 {
+    font-size: 20px;
+  }
+}
+.small-banner__content {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+@media screen and (max-width: 1440px) {
+  .small-banner__content {
+    display: block;
+  }
+}
+.small-banner__text {
+  font-family: "Montserrat";
+}
+@media screen and (max-width: 1440px) {
+  .small-banner__text {
+    margin-bottom: 35px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .small-banner__text {
+    margin-bottom: 18px;
+  }
+}
+.small-banner__text ul {
+  padding-right: 35px;
+  padding-left: 20px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+.small-banner__text ul li:not(:last-child) {
+  margin-bottom: 12px;
+}
+@media screen and (max-width: 1440px) {
+  .small-banner__text ul li:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+.small-banner__title {
+  margin-bottom: 28px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+}
+@media screen and (max-width: 1440px) {
+  .small-banner__title {
+    margin-bottom: 24px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .small-banner__title {
+    margin-bottom: 20px;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -493,28 +609,21 @@ button {
   min-width: 320px;
   margin: 0 auto;
 }
-.section:not(:first-child) {
-  margin-top: 90px;
+.section {
+  margin-bottom: 90px;
 }
 @media screen and (max-width: 1440px) {
-  .section:not(:first-child) {
-    margin-top: 50px;
+  .section {
+    margin-bottom: 50px;
   }
 }
 @media screen and (max-width: 768px) {
-  .section:not(:first-child) {
-    margin-top: 40px;
+  .section {
+    margin-bottom: 40px;
   }
 }
 .section__header {
   margin-bottom: 35px;
-}
-.section__header h2 {
-  color: #272727;
-  font-family: "Unbounded", "Arial", sans-serif;
-  font-size: 30px;
-  font-weight: 600;
-  line-height: 130%;
 }
 @media screen and (max-width: 1440px) {
   .section__header {
@@ -526,6 +635,13 @@ button {
   .section__header {
     font-size: 20px;
   }
+}
+.section__header h2 {
+  color: #272727;
+  font-family: "Unbounded", "Arial", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 130%;
 }
 .H-4_semibold_24 {
   font-family: "Unbounded", "Arial", sans-serif;

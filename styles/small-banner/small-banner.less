@@ -1,0 +1,93 @@
+// main: ../../style.less
+.small-banner{
+    padding: 35px 90px;
+    border-radius: 6px;
+    background: @main-primary-primary-60;
+    color:@base-white;
+    @media @tablet {
+        padding: 40px 30px 17px;
+    }
+    @media @mobile {
+        padding: 24px 16px 14px;
+    }
+    &__photo{
+        margin: 0 auto;
+        max-width: 410px;
+        max-height: 320px;
+        @media @tablet {
+            max-width: 329px;
+            max-height: 257px;
+        }
+        @media @mobile {
+            max-width: 271px;
+            max-height: 210px;
+        }
+    }
+    &__header{
+        margin-bottom: 18px;
+        @media @tablet {
+            margin-bottom: 12px;
+        }
+        @media @mobile {
+            margin-bottom: 10px;
+        }
+        h2{
+            font-family: "Unbounded";
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 130%;
+            @media @tablet {
+                font-size: 24px;
+            }
+            @media @mobile {
+                font-size: 20px;
+            }
+        }
+    }
+    &__content{
+        display: grid;
+        grid-template-columns: 1fr auto;
+        @media @tablet {
+            display: block;
+        }
+    }
+    &__text{
+        font-family: "Montserrat";
+        @media @tablet {
+            margin-bottom: 35px;
+        }
+        @media @mobile {
+            margin-bottom: 18px;
+        }
+        ul{
+            padding-right: 35px;
+            padding-left: 20px;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%; 
+            li{
+                &:not(:last-child){
+                    margin-bottom: 12px;
+                    @media @tablet {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+    &__title{
+        margin-bottom: 28px;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%;
+        @media @tablet {
+            margin-bottom: 24px;
+        }
+        @media @mobile {
+            margin-bottom: 20px;
+        }
+    }
+}
