@@ -1,0 +1,61 @@
+// main: ../../style.less
+
+.sale{
+    &__content{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 50px 130px;
+        border-radius: 6px;
+        background: @base-white;
+        @media @tablet {
+            grid-template-columns: 1fr;
+            gap: 32px;
+            padding: 40px 30px;
+        }
+        @media @mobile {
+            gap: 24px;
+            padding: 35px 24px;
+        }
+    }
+    &__item{
+        text-align: center;
+        @media @tablet {
+            text-align: left;
+        }
+    }
+    &__title{
+        margin-bottom: 16px;
+        font-family: @font-Unbounded;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%;
+        background: @new-gradient-1;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        @media @tablet {
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
+        @media @mobile {
+            margin-bottom: 5px;
+        }
+        &-number{
+            font-size: 40px;
+            font-weight: 500;
+            line-height: 120%;
+            @media @tablet {      
+                font-size: 30px;
+            }
+        }
+    }
+    &__text{
+        color: @base-black;
+        font-family: @font-Montserrat;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%;
+    }
+}
