@@ -23,7 +23,7 @@
   }
   @media @mobile {
     margin: 0 -16px; // Отрицательные марджины в переменную
-    padding: 30px 16px 40px; 
+    padding: 30px 16px 40px;
   }
   &__content {
     padding: 20px 90px 40px;
@@ -63,7 +63,7 @@
         &:last-child {
           margin-bottom: 0;
         }
-        &::marker{
+        &::marker {
           color: @base-primary;
         }
       }
@@ -83,21 +83,24 @@
     height: 24px;
     cursor: pointer;
   }
-  .expand__plus{
+  .expand__plus {
     display: none;
     position: absolute;
-    top: 0; left: 0; bottom: 0; right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     margin: auto;
     width: 16px;
     height: 2px;
     background: @base-black;
-    &:first-child{
+    &:first-child {
       display: inline-block;
     }
-    &:last-child{
-      transform: rotate(90deg); 
+    &:last-child {
+      transform: rotate(90deg);
     }
-    &-active{
+    &-active {
       display: inline-block;
     }
   }

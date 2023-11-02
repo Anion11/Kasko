@@ -17,46 +17,60 @@
   <body>
     <div class="wrapper">
       <header class="header">
-        <div class="inner">
-          <div class="header__top mob-hidden">
-            <div class="header__logo"><img src="./assets/logo.png" alt="logo"></div>
-            <nav class="nav">
-              <div class="nav__main">
-                <a class="nav__link" href="/#">Частным лицам</a>
-                <a class="nav__link" href="/#">Корпоративным клиентам</a>
-                <a class="nav__link" href="/#">Партнерам</a>
-                <a class="nav__link" href="/#">О компании</a>
-                <a class="nav__link" href="/#">Блог</a>
+        <div class="header__top">
+          <div class="inner">
+            <div class="header__content tablet-hidden">
+              <div class="header__logo">
+                <img src="./assets/logo.png" alt="logo" />
               </div>
-              <div class="nav__search">
-                <a class="nav__link" href="/#">
-                  <div class="nav__icon"><img src="./assets/header/geo.png" alt="geolocation"></div>
-                  Москва
-                </a>
-                <a class="nav__link" href="/#">Офисы</a>
-                <a class="nav__link" href="/#">
-                  <div class="nav__icon "><img src="./assets/header/search.png" alt="search"></div>
-                  Поиск
-                </a>
-              </div>
-            </nav>
-          </div>
-          <div class="header__bottom">
-            <nav class="nav__menu mob-hidden">
-              <a class="nav__link" href="/#">Автомобили</a>
-              <a class="nav__link" href="/#">Имущество</a>
-              <a class="nav__link" href="/#">Здоровье</a>
-              <a class="nav__link" href="/#">Путешествия</a>
-            </nav>
-            <div class="header__logo mob-disp"><img src="./assets/logo.png" alt="logo"></div>
-            <div class="login">
-              <div class="insurance">
-                <div class="insurance-img">
-                  <img src="./assets/header/insurance.png" alt="insurance">
+              <nav class="nav">
+                <div class="nav__main">
+                  <a class="nav__link" href="/#">Частным лицам</a>
+                  <a class="nav__link" href="/#">Корпоративным клиентам</a>
+                  <a class="nav__link" href="/#">Партнерам</a>
+                  <a class="nav__link" href="/#">О компании</a>
+                  <a class="nav__link" href="/#">Блог</a>
                 </div>
-                Страховой случай
+                <div class="nav__search">
+                  <a class="nav__link" href="/#">
+                    <div class="nav__icon">
+                      <img src="./assets/header/geo.png" alt="geolocation" />
+                    </div>
+                    Москва
+                  </a>
+                  <a class="nav__link" href="/#">Офисы</a>
+                  <a class="nav__link" href="/#">
+                    <div class="nav__icon">
+                      <img src="./assets/header/search.png" alt="search" />
+                    </div>
+                    Поиск
+                  </a>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="header__bottom">
+          <div class="inner">
+            <div class="header__content">
+              <nav class="nav__menu tablet-hidden">
+                <a class="nav__link" href="/#">Автомобили</a>
+                <a class="nav__link" href="/#">Имущество</a>
+                <a class="nav__link" href="/#">Здоровье</a>
+                <a class="nav__link" href="/#">Путешествия</a>
+              </nav>
+              <div class="header__logo tablet-disp">
+                <img src="./assets/logo.png" alt="logo" />
               </div>
-              <button class="button">Войти</button>
+              <div class="header__login">
+                <div class="insurance">
+                  <div class="insurance__wrapper">
+                    <img src="./assets/header/insurance.png" alt="insurance" />
+                  </div>
+                  Страховой случай
+                </div>
+                <button class="button header__button mob-hidden">Войти</button>
+              </div>
             </div>
           </div>
         </div>
@@ -74,13 +88,15 @@
               </div>
               <div class="sale__item">
                 <div class="sale__title">
-                 <p>скидки до <span class="sale__title-number">70</span> %</p>
+                  <p>скидки до <span class="sale__title-number">70</span> %</p>
                 </div>
                 <div class="sale__text">для водителей со стажем</div>
               </div>
               <div class="sale__item">
                 <div class="sale__title">
-                  <p>Экономия времени <span class="sale__title-number"></span></p>
+                  <p>
+                    Экономия времени <span class="sale__title-number"></span>
+                  </p>
                 </div>
                 <div class="sale__text">подберем выгодный полис</div>
               </div>
@@ -235,17 +251,30 @@
                 <div class="small-banner__header">
                   <h2>Преимущества КАСКО в «Югории»</h2>
                 </div>
-                <p class="small-banner__title">Наши программы предлагают разные возможности</p>
+                <p class="small-banner__title">
+                  Наши программы предлагают разные возможности
+                </p>
                 <ul>
                   <li>Эвакуация с места ДТП и ремонт деталей без износа</li>
-                  <li>Ремонт фары, зеркала или стекла без справок (до 1 раз в год)</li>
-                  <li>Можно получить полную стоимость автомобиля без учета износа при угоне или тотальном повреждении</li>
+                  <li>
+                    Ремонт фары, зеркала или стекла без справок (до 1 раз в год)
+                  </li>
+                  <li>
+                    Можно получить полную стоимость автомобиля без учета износа
+                    при угоне или тотальном повреждении
+                  </li>
                   <li>Подходят для кредитных авто, как новых, так и б/у</li>
-                  <li>Можно выбрать программу с базовым набором рисков с выгодой до 70%</li>
+                  <li>
+                    Можно выбрать программу с базовым набором рисков с выгодой
+                    до 70%
+                  </li>
                 </ul>
               </div>
               <div class="small-banner__photo">
-                <img src="./assets/small-banner/small-banner-photo.png" alt="small-banner-photo">
+                <img
+                  src="./assets/small-banner/small-banner-photo.png"
+                  alt="small-banner-photo"
+                />
               </div>
             </div>
           </section>
@@ -319,8 +348,7 @@
                     <div class="expand minus">
                       <img src="assets/questions/minus.png" alt="expand" />
                     </div>
-                  -->  
-                  </button>
+                  --></button>
                 </div>
                 <div class="questions__text">
                   <ul>

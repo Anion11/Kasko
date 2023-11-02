@@ -41,31 +41,56 @@
   font-display: swap;
 }
 .header__top {
-  display: flex;
-  padding: 16px 20px;
   border-bottom: 1px solid #e2e1ec;
 }
-.header__bottom {
+.header__content {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding: 14px 20px;
+  padding: 16px 20px;
+}
+.header__login {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.header__login .insurance {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  color: #e3255e;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+}
+.header__button {
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: 2px solid #0054e6;
+  color: #0054e6;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  cursor: pointer;
+}
+.header__button:hover {
+  background: rgba(99, 138, 255, 0.1);
+}
+@media screen and (max-width: 768px) {
+  .header__logo {
+    height: 24px;
+  }
 }
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-}
-.nav__link {
-  color: #767680;
-  font-family: "Montserrat", "Arial", sans-serif;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 140%;
-}
-.nav__link:hover {
-  color: #0054e6;
 }
 .nav__main {
   display: flex;
@@ -76,14 +101,14 @@
   position: relative;
 }
 .nav__main .nav__link:after {
-  margin-top: 19px;
   display: block;
   position: absolute;
-  opacity: 0;
   width: 100%;
   height: 3px;
-  background-color: #0054e6;
+  margin-top: 19px;
   content: "";
+  opacity: 0;
+  background-color: #0054e6;
   transition: opacity 0.3s;
 }
 .nav__main .nav__link:hover:after,
@@ -98,49 +123,24 @@
 .nav__search .nav__link {
   display: flex;
   align-items: center;
-  gap: 6px;
   height: 24px;
+  gap: 6px;
 }
 .nav__menu {
   display: flex;
   align-items: center;
   gap: 20px;
 }
-.login {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
-.login .insurance {
-  display: flex;
-  align-items: center;
-  gap: 3px;
-  color: #E3255E;
+.nav__link {
+  color: #767680;
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 14px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 140%;
 }
-.login .insurance-img {
-  height: 18px;
-  width: 18px;
-}
-.login .button {
-  border-radius: 4px;
-  border: 2px solid #0054e6;
-  padding: 10px 20px;
+.nav__link:hover {
   color: #0054e6;
-  text-align: center;
-  font-family: "Montserrat", "Arial", sans-serif;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 140%;
-  cursor: pointer;
-}
-.login .button:hover {
-  background: rgba(99, 138, 255, 0.1);
 }
 .choice__title {
   margin-bottom: 18px;
@@ -825,7 +825,7 @@ a {
   line-height: 140%;
   /* 33.6px */
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 768px) {
   .mob-hidden {
     display: none;
   }
@@ -833,8 +833,21 @@ a {
 .mob-disp {
   display: none;
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 768px) {
   .mob-disp {
+    display: block;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .tablet-hidden {
+    display: none;
+  }
+}
+.tablet-disp {
+  display: none;
+}
+@media screen and (max-width: 1440px) {
+  .tablet-disp {
     display: block;
   }
 }

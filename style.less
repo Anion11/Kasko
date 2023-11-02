@@ -27,7 +27,7 @@ button {
   border: none;
   background: none;
 }
-a{
+a {
   text-decoration: none;
 }
 .wrapper {
@@ -47,8 +47,8 @@ a{
   min-width: 320px;
   margin: 0 auto;
 }
-.section { 
-  &:not(:last-child){
+.section {
+  &:not(:last-child) {
     margin-bottom: 90px;
     @media @tablet {
       margin-bottom: 50px;
@@ -82,12 +82,23 @@ a{
   font-weight: 600;
   line-height: 140%; /* 33.6px */
 }
-.mob-hidden{
+.mob-hidden {
+  @media @mobile {
+    display: none;
+  }
+}
+.mob-disp {
+  display: none;
+  @media @mobile {
+    display: block;
+  }
+}
+.tablet-hidden {
   @media @tablet {
     display: none;
   }
 }
-.mob-disp{
+.tablet-disp {
   display: none;
   @media @tablet {
     display: block;
