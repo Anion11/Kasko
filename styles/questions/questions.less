@@ -23,14 +23,14 @@
   }
   @media @mobile {
     margin: 0 -16px; // Отрицательные марджины в переменную
-    padding: 30px 16px 40px;
+    padding: 30px 16px 40px; 
   }
   &__content {
     padding: 20px 90px 40px;
     border-radius: 6px;
-    background: @base-white;
     -webkit-box-shadow: 0px 20px 24px 0px rgba(0, 0, 0, 0.12);
     box-shadow: 0px 20px 24px 0px rgba(0, 0, 0, 0.12);
+    background: @base-white;
     @media @tablet {
       padding: 10px 20px 30px;
     }
@@ -56,11 +56,11 @@
     font-weight: 400;
     line-height: 24px;
     ul {
-      padding-left: 20px;
       margin-bottom: 1.2rem;
+      padding-left: 20px;
       li {
-        color: @main-primary;
         margin-bottom: 1.2rem;
+        color: @main-primary;
         &:last-child {
           margin-bottom: 0;
         }
@@ -71,31 +71,38 @@
     }
   }
   &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
     padding: 20px 0;
-    position: relative;
     cursor: pointer;
   }
   &__expand {
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    right: 0;
+    position: relative;
     width: 24px;
     height: 24px;
     cursor: pointer;
-    .minus {
-      padding: 11px 5px;
+  }
+  .expand__plus{
+    display: none;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    margin: auto;
+    width: 16px;
+    height: 2px;
+    background: @base-black;
+    &:first-child{
+      display: inline-block;
+    }
+    &:last-child{
+      transform: rotate(90deg); 
+    }
+    &-active{
+      display: inline-block;
     }
   }
-  .expand {
-    display: none;
-  }
-  .expand-active {
-    display: flex;
-    align-items: center;
-  }
   &__title {
-    margin-right: 44px;
     color: @base-black;
     font-family: @font-Unbounded;
     font-size: 18px;
