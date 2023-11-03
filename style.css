@@ -65,6 +65,9 @@
   font-weight: 600;
   line-height: 140%;
 }
+.header__login .insurance__wrapper {
+  height: 18px;
+}
 .header__button {
   text-align: center;
   padding: 10px 20px;
@@ -81,8 +84,12 @@
 .header__button:hover {
   background: rgba(99, 138, 255, 0.1);
 }
+.header__logo {
+  margin-right: 40px;
+}
 @media screen and (max-width: 768px) {
   .header__logo {
+    margin-right: 20px;
     height: 24px;
   }
 }
@@ -95,7 +102,6 @@
 .nav__main {
   display: flex;
   gap: 20px;
-  padding-left: 40px;
 }
 .nav__main .nav__link {
   position: relative;
