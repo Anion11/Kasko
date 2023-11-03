@@ -1,41 +1,41 @@
 @font-face {
   font-family: "Montserrat";
-  src: url("/fonts/Montserrat/Montserrat-Regular.woff2") format("woff2"), url("/fonts/Montserrat/Montserrat-Regular.woff") format("woff");
+  src: url("../fonts/Montserrat/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat/Montserrat-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Montserrat";
-  src: url("/fonts/Montserrat/Montserrat-Medium.woff2") format("woff2"), url("/fonts/Montserrat/Montserrat-Medium.woff") format("woff");
+  src: url("../fonts/Montserrat/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat/Montserrat-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Unbounded";
-  src: url("/fonts/Unbounded/Unbounded-Medium.woff2") format("woff2"), url("/fonts/Unbounded/Unbounded-Medium.woff") format("woff");
+  src: url("../fonts/Unbounded/Unbounded-Medium.woff2") format("woff2"), url("../fonts/Unbounded/Unbounded-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Montserrat";
-  src: url("/fonts/Montserrat/Montserrat-SemiBold.woff2") format("woff2"), url("/fonts/Montserrat/Montserrat-SemiBold.woff") format("woff");
+  src: url("../fonts/Montserrat/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat/Montserrat-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Unbounded";
-  src: url("/fonts/Unbounded/Unbounded-SemiBold.woff2") format("woff2"), url("/fonts/Unbounded/Unbounded-SemiBold.woff") format("woff");
+  src: url("../fonts/Unbounded/Unbounded-SemiBold.woff2") format("woff2"), url("../fonts/Unbounded/Unbounded-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Unbounded";
-  src: url("/fonts/Unbounded/Unbounded-Regular.woff2") format("woff2"), url("/fonts/Unbounded/Unbounded-Regular.woff") format("woff");
+  src: url("../fonts/Unbounded/Unbounded-Regular.woff2") format("woff2"), url("../fonts/Unbounded/Unbounded-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -142,6 +142,9 @@
 .nav__link:hover {
   color: #0054e6;
 }
+.choice-swiper {
+  position: relative;
+}
 .choice__title {
   margin-bottom: 18px;
 }
@@ -194,6 +197,7 @@
 }
 .choice-item {
   text-align: center;
+  height: auto;
   padding: 30px 55px 49px;
   border-radius: 6px;
   background: #fff;
@@ -242,9 +246,8 @@
   }
 }
 .choice__button {
-  text-align: center;
-}
-.choice__button .button {
+  display: block;
+  margin: 0 auto;
   padding: 14px 70px;
   border: 1px solid #638aff;
   border-radius: 4px;
@@ -255,35 +258,11 @@
   color: #638aff;
   cursor: pointer;
 }
-.choice__button .button:hover {
+.choice__button:hover {
   background-color: rgba(99, 138, 255, 0.1);
 }
-.choice__button .button:active {
+.choice__button:active {
   background-color: rgba(99, 138, 255, 0.2);
-}
-.swiper-slide {
-  height: auto;
-}
-.swiper-pagination {
-  display: none;
-  bottom: 0 !important;
-  margin-bottom: 19px;
-}
-@media screen and (max-width: 768px) {
-  .swiper-pagination {
-    display: block;
-  }
-}
-.swiper-pagination-bullet {
-  height: 5px;
-  width: 5px;
-  background: #8da8ff;
-  opacity: 0.7;
-}
-.swiper-pagination-bullet-active {
-  width: 20px;
-  border-radius: 10px;
-  background: #326cfd;
 }
 @keyframes animDisp {
   0% {
@@ -387,11 +366,13 @@
   width: 16px;
   height: 2px;
   background: #272727;
+  transition: all 1s;
 }
 .questions .expand__plus:first-child {
   display: inline-block;
 }
 .questions .expand__plus:last-child {
+  transition: all 1s;
   transform: rotate(90deg);
 }
 .questions .expand__plus-active {
@@ -619,6 +600,7 @@
 .small-banner__content {
   display: grid;
   grid-template-columns: 1fr auto;
+  gap: 175px;
 }
 @media screen and (max-width: 1440px) {
   .small-banner__content {
@@ -674,6 +656,7 @@
 .sale__content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 100px;
   padding: 50px 130px;
   border-radius: 6px;
   background: #fff;
@@ -739,6 +722,28 @@
   font-style: normal;
   font-weight: 500;
   line-height: 140%;
+}
+.choice-swiper-pagination {
+  width: 60px !important;
+  display: none;
+  bottom: 0 !important;
+  margin-bottom: 19px;
+}
+@media screen and (max-width: 768px) {
+  .choice-swiper-pagination {
+    display: block;
+  }
+}
+.choice-swiper .swiper-pagination--bullet {
+  height: 5px;
+  width: 5px;
+  background: #8da8ff;
+  opacity: 0.7;
+}
+.choice-swiper .swiper-pagination--bullet-active {
+  width: 20px;
+  border-radius: 10px;
+  background: #326cfd;
 }
 * {
   margin: 0;

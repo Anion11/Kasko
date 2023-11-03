@@ -1,9 +1,9 @@
 const mediaQuery = window.matchMedia("(max-width: 768px)");
 window.addEventListener("DOMContentLoaded", () => {
-  let swiper;
+  let choice__swiper;
   function createSwiper() {
-    if (swiper !== undefined) swiper.destroy(true, true);
-    swiper = new Swiper(".swiper", {
+    if (choice__swiper !== undefined) choice__swiper.destroy(true, true);
+    choice__swiper = new Swiper(".choice__content", {
       direction: "horizontal",
       loop: false,
       spaceBetween: 20,
@@ -22,7 +22,7 @@ window.addEventListener("DOMContentLoaded", () => {
   }
   function breakPointCheck() {
     if (mediaQuery.matches) createSwiper();
-    else if (swiper !== undefined) swiper.destroy(true, true);
+    else if (choice__swiper !== undefined) choice__swiper.destroy(true, true);
   }
   mediaQuery.addEventListener("change", breakPointCheck);
   breakPointCheck();
