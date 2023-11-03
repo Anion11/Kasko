@@ -550,19 +550,19 @@
     padding: 24px 16px 14px;
   }
 }
-.small-banner__photo {
+.small-banner__image {
   margin: 0 auto;
   max-width: 410px;
   max-height: 320px;
 }
 @media screen and (max-width: 1440px) {
-  .small-banner__photo {
+  .small-banner__image {
     max-width: 329px;
     max-height: 257px;
   }
 }
 @media screen and (max-width: 768px) {
-  .small-banner__photo {
+  .small-banner__image {
     max-width: 271px;
     max-height: 210px;
   }
@@ -724,7 +724,6 @@
   line-height: 140%;
 }
 .choice-swiper-pagination {
-  width: 60px !important;
   display: none;
   bottom: 0 !important;
   margin-bottom: 19px;
@@ -734,16 +733,92 @@
     display: block;
   }
 }
-.choice-swiper .swiper-pagination--bullet {
+.choice .swiper-pagination-bullet {
   height: 5px;
   width: 5px;
   background: #8da8ff;
   opacity: 0.7;
 }
-.choice-swiper .swiper-pagination--bullet-active {
+.choice .swiper-pagination-bullet-active {
   width: 20px;
   border-radius: 10px;
   background: #326cfd;
+}
+.pros__content {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 95px;
+}
+@media screen and (max-width: 1440px) {
+  .pros__content {
+    display: block;
+  }
+}
+.pros__image {
+  margin: 0 auto;
+  max-width: 640px;
+  max-height: 480px;
+  border-radius: 6px;
+}
+@media screen and (max-width: 1440px) {
+  .pros__image {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .pros__image {
+    max-width: 328px;
+    max-height: 246px;
+    margin-top: 24px;
+  }
+}
+.pros-item {
+  padding: 24px 0;
+  border-bottom: 1px solid #e2e1ec;
+}
+@media screen and (max-width: 1440px) {
+  .pros-item {
+    padding: 20px 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .pros-item {
+    margin-top: 16px;
+  }
+}
+.pros-item:first-child {
+  padding-top: 0;
+}
+.pros-item:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.pros-item__title {
+  margin-bottom: 12px;
+  font-family: "Unbounded", "Arial", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  background: linear-gradient(91deg, #5a6bff 0.89%, #0054e6 99.35%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media screen and (max-width: 1440px) {
+  .pros-item__title {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+}
+.pros-item__text {
+  color: #272727;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
 }
 * {
   margin: 0;
