@@ -9,6 +9,8 @@
 @import "./styles/sale/sale.less";
 @import "./styles/swiper/swiper.less";
 @import "./styles/pros/pros.less";
+@import "./styles/banner/banner.less";
+@import "./styles/request/request.less";
 
 * {
   margin: 0;
@@ -32,6 +34,7 @@ button {
 a {
   text-decoration: none;
 }
+
 .wrapper {
   margin: 0 auto;
   .main {
@@ -43,6 +46,12 @@ a {
       padding: 0 16px 40px 16px;
     }
   }
+  .banner {
+    padding: 0 20px; // variable
+    @media @mobile {
+      padding: 0 16px;
+    }
+  }
 }
 .inner {
   max-width: 1440px;
@@ -50,13 +59,13 @@ a {
   margin: 0 auto;
 }
 .section {
-  &:not(:last-child) {
-    margin-bottom: 90px;
+  &:not(:first-child) {
+    margin-top: 90px;
     @media @tablet {
-      margin-bottom: 50px;
+      margin-top: 50px;
     }
     @media @mobile {
-      margin-bottom: 40px;
+      margin-top: 40px;
     }
   }
   &__header {
@@ -82,7 +91,7 @@ a {
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
-  line-height: 140%; /* 33.6px */
+  line-height: 140%;
 }
 .mob-hidden {
   @media @mobile {

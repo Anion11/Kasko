@@ -1,0 +1,53 @@
+// main: ../../style.less
+.banner {
+  position: relative;
+  background: @base-primary;
+  &__wrapper {
+    padding-top: 90px;
+  }
+  &__content {
+    display: flex;
+    gap: 90px;
+    padding-bottom: 60px;
+  }
+  &__info {
+    max-width: 620px;
+  }
+  &__title h2 {
+    margin-bottom: 28px;
+    color: @base-white;
+    font-family: @font-Unbounded;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+  }
+  &__text {
+    padding-right: 5px;
+    color: @base-white;
+    font-family: @font-Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    margin-bottom: 50px;
+  }
+  &__button {
+    cursor: pointer;
+    border-radius: 4px;
+    background: @base-white;
+    text-align: center;
+    padding: 14px 48px;
+    color: @main-primary-primary-60;
+    text-align: center;
+    font-family: @font-Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 22.4px */
+  }
+  &__image {
+    min-width: 732px;
+    min-height: 440px;
+  }
+}
