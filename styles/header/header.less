@@ -2,12 +2,19 @@
 .header {
   &__top {
     border-bottom: 1px solid @main-neutral-neutral-variant-90;
+    padding: 0 20px;
+  }
+  &__bottom {
+    padding: 0 20px;
+    @media @mobile {
+      padding: 0 16px;
+    }
   }
   &__content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 16px 20px;
+    padding: 16px 0;
   }
   &__login {
     display: flex;
@@ -23,26 +30,26 @@
       font-style: normal;
       font-weight: 600;
       line-height: 140%;
-      &__wrapper{
+      &__wrapper {
         height: 18px;
       }
     }
   }
-  &__button{
-      text-align: center;
-      padding: 10px 20px;
-      border-radius: 4px;
-      border: 2px solid @base-primary;
-      color: @base-primary;
-      font-family: @font-Montserrat;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 140%;
-      cursor: pointer;
-      &:hover {
-        background: @main-primary-primary-60-hover;
-      }
+  &__button {
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: 2px solid @base-primary;
+    color: @base-primary;
+    font-family: @font-Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    cursor: pointer;
+    &:hover {
+      background: @main-primary-primary-60-hover;
+    }
   }
   &__logo {
     margin-right: 40px;
