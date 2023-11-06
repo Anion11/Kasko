@@ -1,17 +1,23 @@
 // main: ../../style.less
 .banner {
   position: relative;
+  margin: 0 -20px;
+  padding: 0 20px 60px;
   background: @base-primary;
-  &__wrapper {
+  @media @mobile {
+    padding: 0 16px 13px;
+    margin: 0 -16px;
+  }
+  &__info {
     padding-top: 90px;
   }
   &__content {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto;
     gap: 90px;
-    padding-bottom: 60px;
-  }
-  &__info {
-    max-width: 620px;
+    @media @mobile {
+      display: block;
+    }
   }
   &__title h2 {
     margin-bottom: 28px;
@@ -21,9 +27,16 @@
     font-style: normal;
     font-weight: 600;
     line-height: 120%;
+    @media @tablet {
+      font-size: 28px;
+      margin-bottom: 22px;
+    }
+    @media @mobile {
+      margin-bottom: 16px;
+      font-size: 22px;
+    }
   }
   &__text {
-    padding-right: 5px;
     color: @base-white;
     font-family: @font-Montserrat;
     font-size: 16px;
@@ -31,6 +44,12 @@
     font-weight: 500;
     line-height: 140%;
     margin-bottom: 50px;
+    @media @tablet {
+      margin-bottom: 62px;
+    }
+    @media @mobile {
+      margin-bottom: 20px;
+    }
   }
   &__button {
     cursor: pointer;
@@ -44,10 +63,27 @@
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    line-height: 140%; /* 22.4px */
+    line-height: 140%;
+    @media @mobile {
+      margin: 0 auto;
+      max-width: 328px;
+      width: 100%;
+    }
+    &:hover {
+      color: @main-primary-primary-40;
+    }
   }
   &__image {
-    min-width: 732px;
-    min-height: 440px;
+    margin: 0 auto;
+    width: 730px;
+    height: 440px;
+    @media @tablet {
+      width: 490px;
+      height: 282px;
+    }
+    @media @mobile {
+      width: 360px;
+      height: 216px;
+    }
   }
 }

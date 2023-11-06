@@ -264,7 +264,6 @@
   }
 }
 .choice__button {
-  display: block;
   margin: 0 auto;
   padding: 14px 70px;
   border: 1px solid #638aff;
@@ -845,18 +844,28 @@
 }
 .banner {
   position: relative;
+  margin: 0 -20px;
+  padding: 0 20px 60px;
   background: #0054e6;
 }
-.banner__wrapper {
+@media screen and (max-width: 768px) {
+  .banner {
+    padding: 0 16px 13px;
+    margin: 0 -16px;
+  }
+}
+.banner__info {
   padding-top: 90px;
 }
 .banner__content {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto;
   gap: 90px;
-  padding-bottom: 60px;
 }
-.banner__info {
-  max-width: 620px;
+@media screen and (max-width: 768px) {
+  .banner__content {
+    display: block;
+  }
 }
 .banner__title h2 {
   margin-bottom: 28px;
@@ -867,8 +876,19 @@
   font-weight: 600;
   line-height: 120%;
 }
+@media screen and (max-width: 1440px) {
+  .banner__title h2 {
+    font-size: 28px;
+    margin-bottom: 22px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .banner__title h2 {
+    margin-bottom: 16px;
+    font-size: 22px;
+  }
+}
 .banner__text {
-  padding-right: 5px;
   color: #fff;
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 16px;
@@ -876,6 +896,16 @@
   font-weight: 500;
   line-height: 140%;
   margin-bottom: 50px;
+}
+@media screen and (max-width: 1440px) {
+  .banner__text {
+    margin-bottom: 62px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .banner__text {
+    margin-bottom: 20px;
+  }
 }
 .banner__button {
   cursor: pointer;
@@ -889,11 +919,33 @@
   font-style: normal;
   font-weight: 500;
   line-height: 140%;
-  /* 22.4px */
+}
+@media screen and (max-width: 768px) {
+  .banner__button {
+    margin: 0 auto;
+    max-width: 328px;
+    width: 100%;
+  }
+}
+.banner__button:hover {
+  color: #0051df;
 }
 .banner__image {
-  min-width: 732px;
-  min-height: 440px;
+  margin: 0 auto;
+  width: 730px;
+  height: 440px;
+}
+@media screen and (max-width: 1440px) {
+  .banner__image {
+    width: 490px;
+    height: 282px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .banner__image {
+    width: 360px;
+    height: 216px;
+  }
 }
 .request {
   padding: 50px 90px;
@@ -1014,6 +1066,7 @@ body {
 button {
   border: none;
   background: none;
+  display: block;
 }
 a {
   text-decoration: none;
@@ -1032,14 +1085,6 @@ a {
 @media screen and (max-width: 768px) {
   .wrapper .main {
     padding: 0 16px 40px 16px;
-  }
-}
-.wrapper .banner {
-  padding: 0 20px;
-}
-@media screen and (max-width: 768px) {
-  .wrapper .banner {
-    padding: 0 16px;
   }
 }
 .inner {
