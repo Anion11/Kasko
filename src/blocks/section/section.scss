@@ -1,7 +1,15 @@
 .section {
-  padding: 25px;
-  border: 2px dashed #ccc;
+  padding: 0 20px;
+  @include media-tablet {
+    padding: 0 16px;
+  }
   &:not(:first-child) {
-    margin-top: 50px;
+    margin-top: 90px;
+    @include media-laptop {
+      margin-top: 50px;
+    }
+    @include media-tablet {
+      margin-top: 40px;
+    }
   }
 }

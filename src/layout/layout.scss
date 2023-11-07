@@ -28,12 +28,11 @@ img {
   max-width: 100%;
 }
 a {
-  display: inline-block;
   text-decoration: none;
-  color: $black;
+  color: $base-black;
   transition: 0.3s;
   &:hover {
-    color: teal;
+    color: $base-primary;
   }
 }
 ul {
@@ -62,28 +61,22 @@ blockquote {
   padding: 0;
 }
 
-// defaults
 .wrapper {
   position: relative;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   margin: 0 auto;
-  font-family: $font;
-  color: $black;
+  color: $base-black;
   .inner {
     max-width: 1340px;
     margin: 0 auto;
-    padding: 0 25px;
     @include media-laptop {
       max-width: 100%;
     }
-    @include media-tablet {
-      padding: 0 10px;
-    }
   }
-  main {
+  .main {
     flex: 1 0;
-    padding: 50px 0 70px;
+    padding-bottom: 90px;
   }
 }

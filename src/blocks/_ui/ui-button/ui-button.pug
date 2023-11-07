@@ -13,11 +13,11 @@ mixin ui-button(text, mods)
   if (attributes.href)
     a.ui-button(class=allMods)&attributes(attributes)
       if text.p3
-        +ui-p3(text.p3, text.mods)
-      block
+        =text.p3
+        block
 
   else
     button.ui-button(class=allMods)&attributes(attributes)
       if text.p3
-        +ui-p3(text.p3, text.mods)
-      block
+        =text.p3
+        block

@@ -2,24 +2,23 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 15px 50px;
   text-align: center;
-  text-transform: uppercase;
-  color: $black;
-  background: #fff;
-  border: 1px solid teal;
-  border-radius: 6px;
+  padding: 14px 70px;
+  color: $base-white;
+  background: $main-primary-primary-50;
+  border-radius: 4px;
   transition: 0.3s;
   cursor: pointer;
-  &:hover {
-    color: teal;
+  &--xs {
+    padding: 14px 48px;
   }
-  &--filled {
-    color: #fff;
-    background: teal;
-    &:hover {
-      color: teal;
-      background: #fff;
-    }
+  &--xxs {
+    padding: 10px 20px;
+  }
+  &:hover {
+    background: $main-primary-primary-40;
+  }
+  &:active {
+    background: $main-primary-primary-40;
   }
 }

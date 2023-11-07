@@ -1,54 +1,55 @@
+// main: ../style.less
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'Montserrat';
+  src: url('../../public/fonts/Montserrat/Montserrat-Regular.woff2')
+      format('woff2'),
+    url('../../public/fonts/Montserrat/Montserrat-Regular.woff') format('woff');
+  font-weight: normal;
   font-style: normal;
-  font-weight: 100;
   font-display: swap;
-  src:
-    url('/fonts/Roboto-Thin.woff2') format('woff2'),
-    url('/fonts/Roboto-Thin.woff') format('woff');
 }
 @font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src:
-    url('/fonts/Roboto-Light.woff2') format('woff2'),
-    url('/fonts/Roboto-Light.woff') format('woff');
-}
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src:
-    url('/fonts/Roboto-Regular.woff2') format('woff2'),
-    url('/fonts/Roboto-Regular.woff') format('woff');
-}
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
+  font-family: 'Montserrat';
+  src: url('../../public/fonts/Montserrat/Montserrat-Medium.woff2')
+      format('woff2'),
+    url('../../public/fonts/Montserrat/Montserrat-Medium.woff') format('woff');
   font-weight: 500;
+  font-style: normal;
   font-display: swap;
-  src:
-    url('/fonts/Roboto-Medium.woff2') format('woff2'),
-    url('/fonts/Roboto-Medium.woff') format('woff');
 }
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'Unbounded';
+  src: url('../../public/fonts/Unbounded/Unbounded-Medium.woff2')
+      format('woff2'),
+    url('../../public/fonts/Unbounded/Unbounded-Medium.woff') format('woff');
+  font-weight: 500;
   font-style: normal;
-  font-weight: 700;
   font-display: swap;
-  src:
-    url('/fonts/Roboto-Bold.woff2') format('woff2'),
-    url('/fonts/Roboto-Bold.woff') format('woff');
 }
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'Montserrat';
+  src: url('../../public/fonts/Montserrat/Montserrat-SemiBold.woff2')
+      format('woff2'),
+    url('../../public/fonts/Montserrat/Montserrat-SemiBold.woff') format('woff');
+  font-weight: 600;
   font-style: normal;
-  font-weight: 900;
   font-display: swap;
-  src:
-    url('/fonts/Roboto-Black.woff2') format('woff2'),
-    url('/fonts/Roboto-Black.woff') format('woff');
+}
+@font-face {
+  font-family: 'Unbounded';
+  src: url('../../public/fonts/Unbounded/Unbounded-SemiBold.woff2')
+      format('woff2'),
+    url('../../public/fonts/Unbounded/Unbounded-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Unbounded';
+  src: url('../../public/fonts/Unbounded/Unbounded-Regular.woff2')
+      format('woff2'),
+    url('../../public/fonts/Unbounded/Unbounded-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
