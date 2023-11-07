@@ -2,20 +2,31 @@
 .banner {
   position: relative;
   margin: 0 -20px;
-  padding: 0 20px 60px;
+  padding: 0 20px;
   background: @base-primary;
   @media @mobile {
     padding: 0 16px 13px;
     margin: 0 -16px;
   }
-  &__info {
+  &__info { 
     padding-top: 90px;
+    @media @tablet {
+      padding-top: 50px;
+    }
+    @media @mobile {
+      padding-top: 30px;
+    }
   }
   &__content {
+    padding-bottom:90px;
     display: grid;
     grid-template-columns: 1fr auto;
-    gap: 90px;
+    gap: 93px;
+    @media @tablet {
+      padding-bottom:115px;
+    }
     @media @mobile {
+      padding: 0;
       display: block;
     }
   }
@@ -46,8 +57,10 @@
     margin-bottom: 50px;
     @media @tablet {
       margin-bottom: 62px;
+      max-width: 320px;
     }
     @media @mobile {
+      max-width: none;
       margin-bottom: 20px;
     }
   }
@@ -66,24 +79,30 @@
     line-height: 140%;
     @media @mobile {
       margin: 0 auto;
-      max-width: 328px;
-      width: 100%;
+      width: 328px;
     }
     &:hover {
       color: @main-primary-primary-40;
     }
   }
   &__image {
+    position: relative;
     margin: 0 auto;
     width: 730px;
     height: 440px;
     @media @tablet {
+      position: absolute;
+      right: 0;
+      margin-top: 150px;
       width: 490px;
       height: 282px;
     }
     @media @mobile {
-      width: 360px;
-      height: 216px;
+      width: 100%;
+      position: static;
+      margin: 0 auto;
+      max-width: 360px;
+      max-height: 216px;
     }
   }
 }
