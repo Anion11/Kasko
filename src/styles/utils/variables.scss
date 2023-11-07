@@ -1,0 +1,18 @@
+:root {
+  // fonts
+  --font: 'Roboto', 'Arial', sans-serif;
+
+  // colors
+  --black: #0c0c0c;
+}
+
+// fonts
+$font: var(--font);
+
+// colors
+$black: var(--black);
+
+// media
+$mediaWidthLaptop: 1340px;
+$mediaWidthTablet: 767px;
+$mediaWidthMobile: 320px;
