@@ -31,9 +31,6 @@ a {
   text-decoration: none;
   color: $base-black;
   transition: 0.3s;
-  &:hover {
-    color: $base-primary;
-  }
 }
 ul {
   margin: 0;
@@ -61,6 +58,10 @@ blockquote {
   padding: 0;
 }
 
+button{
+  background: none;
+  border: none;
+}
 .wrapper {
   position: relative;
   display: flex;
@@ -68,6 +69,7 @@ blockquote {
   min-height: 100vh;
   margin: 0 auto;
   color: $base-black;
+  background: $base-bg;
   .inner {
     max-width: 1340px;
     margin: 0 auto;

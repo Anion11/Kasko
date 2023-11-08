@@ -1,59 +1,45 @@
 .ui-p1 {
-  font: 22px/1.5 $font;
-  @include media-tablet {
-    font-size: 18px;
-  }
+  font: 18px $font-Montserrat;
+  font-weight: 500;
+  line-height: 140%;
 }
 .ui-p2 {
-  font: 20px/1.5 $font;
-  @include media-tablet {
-    font-size: 18px;
-  }
+  font: 16px $font-Montserrat;
+  font-weight: 500;
+  line-height: 140%;
 }
 .ui-p3 {
-  font: 18px/1.5 $font;
-  @include media-tablet {
-    font-size: 16px;
-  }
-}
-.ui-p4 {
-  font: 16px/1.5 $font;
-  @include media-tablet {
-    font-size: 15px;
-  }
-}
-.ui-p5 {
-  font: 15px/1.3 $font;
-  @include media-tablet {
-    font-size: 14px;
-  }
-}
-.ui-p6 {
-  font: 14px/1.3 $font;
-  @include media-tablet {
+  font: 14px $font-Montserrat;
+  font-weight: 500;
+  line-height: 140%;
+  @include media-laptop{
     font-size: 13px;
   }
 }
-.ui-p7 {
-  font: 13px/1.4 $font;
+.ui-p4 {
+  font: 13px$font-Montserrat;
+  font-weight: 500;
+  line-height: 140%;
   @include media-tablet {
-    font-size: 12px;
+    font-size: 11px;
   }
 }
-.ui-p8 {
-  font: 12px/1.4 $font;
+.ui-p5 {
+  font: 12px $font-Montserrat;
+  font-weight: 500;
+  line-height: 120%;
   @include media-tablet {
     font-size: 11px;
   }
 }
 [class*='ui-p'] {
-  &[class*='--light'] {
-    font-weight: 300;
+  &[class*='--regular'] {
+    font-weight: 400;
   }
-  &[class*='--bold'] {
-    font-weight: 700;
+  &[class*='--semibold'] {
+    font-weight: 600;
   }
   &[class*='--white'] {
-    color: #fff;
+    color: $base-white;
   }
 }

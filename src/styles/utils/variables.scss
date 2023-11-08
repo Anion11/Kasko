@@ -3,6 +3,7 @@
   --font-Montserrat: 'Montserrat', 'Arial', sans-serif;
   --font-Unbounded: 'Unbounded', 'Arial', sans-serif;
   // colors
+  --base-bg: #F6F7F8;
   --base-black: #272727;
   --base-white: #fff;
   --base-primary: #0054e6;
@@ -24,6 +25,7 @@ $font-Unbounded: var(--font-Unbounded);
 $font: var(--font-Montserrat);
 
 // colors
+$base-bg: var(--base-bg);
 $base-black: var(--base-black);
 $base-white: var(--base-white);
 $base-primary: var(--base-primary);

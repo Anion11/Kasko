@@ -1,0 +1,23 @@
+.choice {
+  position: relative;
+  &__content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+  &-item{
+    text-align: center;
+    padding: 30px 55px 50px;
+    border-radius: 6px;
+    background: $base-white;
+    &__image{
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+    &__title{
+      margin-bottom: 16px;
+    }
+  }
+}

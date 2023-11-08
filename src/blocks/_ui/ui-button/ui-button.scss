@@ -1,24 +1,41 @@
 .ui-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
+  margin: 0 auto;
   text-align: center;
   padding: 14px 70px;
-  color: $base-white;
-  background: $main-primary-primary-50;
   border-radius: 4px;
   transition: 0.3s;
+  color: $main-primary-primary-60;
   cursor: pointer;
-  &--xs {
-    padding: 14px 48px;
+  @include media-tablet{
+    padding: 10px 48px;
+    min-width: 296px
   }
-  &--xxs {
-    padding: 10px 20px;
+  &:disabled{
+    background: $main-neutral-neutral-variant-90;
   }
   &:hover {
+    color: $base-white;
     background: $main-primary-primary-40;
   }
   &:active {
+    color: $base-white;
     background: $main-primary-primary-40;
+  }
+  &--xs {
+    padding: inherit 48px;
+  }
+  &--xxs {
+    padding: inherit 20px;
+  }
+  &--border{
+    border: 1px solid $main-primary-primary-60;
+  }
+  &--filled{
+    color: $base-white;
+    background: $main-primary-primary-50;
+  }
+  &--white{
+    background: $base-white;
   }
 }

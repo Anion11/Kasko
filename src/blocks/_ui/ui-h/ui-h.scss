@@ -1,60 +1,60 @@
 .ui-h1 {
-  font: 54px/1.3 $font;
+  font: 36px $font-Unbounded;
+  font-weight: 400;
+  line-height: 120%;
   @include media-laptop {
-    font-size: 36px;
-  }
-  @include media-tablet {
-    font-size: 32px;
-  }
-}
-.ui-h2 {
-  font: 40px/1.3 $font;
-  @include media-laptop {
-    font-size: 30px;
+    font-size: 28px;
   }
   @include media-tablet {
     font-size: 22px;
   }
 }
-.ui-h3 {
-  font: 32px/1.3 $font;
+.ui-h2 {
+  font: 30px $font-Unbounded;
+  font-weight: 400;
+  line-height: 130%;
   @include media-laptop {
     font-size: 24px;
-    line-height: 1.4;
+  }
+  @include media-tablet {
+    font-size: 20px;
+  }
+}
+.ui-h3 {
+  font: 28px $font-Unbounded;
+  font-weight: 400;
+  line-height: 120%;
+  @include media-laptop {
+    font-size: 22px;
   }
   @include media-tablet {
     font-size: 18px;
   }
 }
 .ui-h4 {
-  font: 24px/1.3 $font;
+  font: 24px $font-Unbounded;
+  font-weight: 400;
+  line-height: 140%;
   @include media-laptop {
-    font-size: 22px;
-  }
-  @include media-tablet {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 .ui-h5 {
-  font: 20px/1.3 $font;
+  font: 18px $font-Unbounded;
+  font-weight: 400;
+  line-height: 140%;
   @include media-laptop {
     font-size: 16px;
   }
-}
-.ui-h6 {
-  font: 16px/1.3 $font;
-  @include media-laptop {
-    font-size: 14px;
+  @include media-tablet {
+    font-size: 18px;
   }
 }
 [class*='ui-h'] {
-  &[class*='--light'] {
-    font-weight: 300;
-  }
-  &[class*='--bold'] {
-    font-weight: 700;
+  &[class*='--semibold'] {
+    font-weight: 600;
   }
   &[class*='--white'] {
-    color: #fff;
+    color: $base-white;
   }
 }
