@@ -18,27 +18,27 @@ mixin choice(mods)
       {
         title:'Оптима',
         text:'Полная защита автомобиля с экономией до 30% для уверенных водителей',
-        src:'../../images/choice/classic.png'
+        src:'../../images/choice/optima.png'
       },
       {
         title:'Формула 50+',
         text:'КАСКО с двумя платежами: вторую часть вносите при наступлении страхового случая',
-        src:'../../images/choice/classic.png'
+        src:'../../images/choice/formula.png'
       },
       {
         title:'Профи',
         text:'Выгода до 70% для водителей со стажем',
-        src:'../../images/choice/classic.png'
+        src:'../../images/choice/profi.png'
       },
       {
         title:'Легкое КАСКО',
         text:'Базовые риски всего за 1900 ₽',
-        src:'../../images/choice/classic.png'
+        src:'../../images/choice/lightKASKO.png'
       },
       {
         title:'Помощь',
         text:'Защита автомобиля по вине другого участника, даже если у того нет ОСАГО, всего от 1990 ₽',
-        src:'../../images/choice/classic.png'
+        src:'../../images/choice/help.png'
       }
     ]
   .choice(class=allMods)&attributes(attributes)
@@ -49,12 +49,12 @@ mixin choice(mods)
         +ui-p2("Вы можете получить индивидуальное предложение либо выбрать одну из наших программ — в зависимости от стажа, стиля вождения и состояния автомобиля")
     .choice__content
       each item in cardItems
-        .choice-item
+        .choice-item 
           .choice-item__image 
             img(src=item.src, alt="card-image")
           .choice-item__title
-            +ui-h4(item.title)
+            +ui-h4(item.title, "--semibold")
           .choice-item__text
             +ui-p2(item.text)
-    +ui-button({p3: "Сравнить программы"}, "--border")
+    +ui-button({p2: "Сравнить программы"}, "--border")
     block
