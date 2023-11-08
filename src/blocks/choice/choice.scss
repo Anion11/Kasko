@@ -1,34 +1,38 @@
 .choice {
   position: relative;
-  &__content{
+  &__content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     margin-bottom: 40px;
-    @include media-laptop{
+    @include media-laptop {
       grid-template-columns: repeat(2, 1fr);
       gap: 20px;
       margin-bottom: 30px;
     }
   }
-  &-item{
+  &-item {
     text-align: center;
     padding: 30px 55px 50px;
     border-radius: 6px;
     background: $base-white;
-    @include media-laptop{
+    @include media-laptop {
       padding: 30px 22px;
     }
-    &__image{
+    &__image {
       display: flex;
       justify-content: center;
       margin-bottom: 30px;
     }
-    &__title{
+    &__title {
       margin-bottom: 16px;
-      @include media-laptop{
+      @include media-laptop {
         margin-bottom: 10px;
       }
     }
+  }
+  &__ui-button {
+    display: block;
+    margin: 0 auto;
   }
 }

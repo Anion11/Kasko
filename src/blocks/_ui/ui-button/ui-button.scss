@@ -1,6 +1,6 @@
 .ui-button {
-  display: block;
-  margin: 0 auto;
+  display: inline-flex;
+  justify-content: center;
   text-align: center;
   padding: 14px 70px;
   border-radius: 4px;
@@ -8,11 +8,11 @@
   color: $main-primary-primary-60;
   font-family: $font-Montserrat;
   cursor: pointer;
-  @include media-tablet{
+  @include media-tablet {
     padding: 10px 48px;
-    min-width: 296px
+    min-width: 296px;
   }
-  &:disabled{
+  &:disabled {
     background: $main-neutral-neutral-variant-90;
   }
   &:hover {
@@ -29,14 +29,14 @@
   &--xxs {
     padding: inherit 20px;
   }
-  &--border{
+  &--border {
     border: 1px solid $main-primary-primary-60;
   }
-  &--filled{
+  &--filled {
     color: $base-white;
     background: $main-primary-primary-50;
   }
-  &--white{
+  &--white {
     background: $base-white;
   }
 }

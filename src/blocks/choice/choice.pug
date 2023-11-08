@@ -49,12 +49,12 @@ mixin choice(mods)
         +ui-p2("Вы можете получить индивидуальное предложение либо выбрать одну из наших программ — в зависимости от стажа, стиля вождения и состояния автомобиля")
     .choice__content
       each item in cardItems
-        .choice-item 
-          .choice-item__image 
+        .choice-item
+          .choice-item__image
             img(src=item.src, alt="card-image")
           .choice-item__title
             +ui-h4(item.title, "--semibold")
           .choice-item__text
             +ui-p2(item.text)
-    +ui-button({p2: "Сравнить программы"}, "--border")
+    +ui-button({p3: "Сравнить программы"}, "--border,choice")
     block
