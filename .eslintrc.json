@@ -7,11 +7,7 @@
     "sourceType": "module"
   },
   "plugins": ["sonarjs", "unicorn"],
-  "extends": [
-    "standard",
-    "plugin:sonarjs/recommended",
-    "plugin:unicorn/recommended"
-  ],
+  "extends": ["standard", "plugin:sonarjs/recommended", "plugin:unicorn/recommended"],
   "rules": {
     "comma-dangle": ["error", "never"],
     "id-length": ["error", { "exceptions": ["$"] }],
@@ -20,7 +16,7 @@
     "no-console": "error",
     "no-unused-vars": "off",
     "prefer-arrow-callback": "off",
-    "semi": ["error", "never"],
+    "semi": ["error", "always"],
     "space-before-function-paren": [
       "error",
       {
