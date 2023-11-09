@@ -31,6 +31,9 @@ a {
   text-decoration: none;
   color: $base-black;
   transition: 0.3s;
+  &:hover{
+    color: $base-primary;
+  }
 }
 ul {
   margin: 0;
@@ -71,7 +74,7 @@ button{
   color: $base-black;
   background: $base-bg;
   .inner {
-    max-width: 1460px;
+    max-width: 1440px;
     margin: 0 auto;
     @include media-laptop {
       max-width: 100%;
@@ -79,6 +82,28 @@ button{
   }
   .main {
     flex: 1 0;
-    padding-bottom: 90px;
+    padding: 0 20px 90px;
+  }
+}
+.mob-hidden {
+  @include media-tablet{
+    display: none;
+  }
+}
+.mob-disp {
+  display: none;
+  @include media-tablet {
+    display: block;
+  }
+}
+.tablet-hidden {
+  @include media-laptop {
+    display: none;
+  }
+}
+.tablet-disp {
+  display: none;
+  @include media-laptop {
+    display: block;
   }
 }

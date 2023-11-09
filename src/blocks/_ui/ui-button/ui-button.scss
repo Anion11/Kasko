@@ -9,8 +9,9 @@
   font-family: $font-Montserrat;
   cursor: pointer;
   @include media-tablet {
-    padding: 10px 48px;
     min-width: 296px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
   &:disabled {
     background: $main-neutral-neutral-variant-90;
@@ -24,10 +25,13 @@
     background: $main-primary-primary-40;
   }
   &--xs {
-    padding: inherit 48px;
+    padding: 14px 48px;
   }
   &--xxs {
-    padding: inherit 20px;
+    padding: 10px 20px;
+    @include media-tablet {
+      min-width: auto;
+    }
   }
   &--border {
     border: 1px solid $main-primary-primary-60;

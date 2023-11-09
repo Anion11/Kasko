@@ -42,9 +42,8 @@ mixin choice(mods)
       }
     ]
   .choice(class=allMods)&attributes(attributes)
-    .section__head
-      .section__title
-        +ui-h2("Выберите программу КАСКО", "--semibold")
+    .section-head
+      +ui-h2("Выберите программу КАСКО", "section-head, --semibold")
       .section__text.choice__text
         +ui-p2("Вы можете получить индивидуальное предложение либо выбрать одну из наших программ — в зависимости от стажа, стиля вождения и состояния автомобиля")
     .choice__content.swiper

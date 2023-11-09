@@ -1,37 +1,54 @@
 -
-  const headerMenu = [
-    { title: 'Title_1',
-      list: [
-        { name: 'Link_1', link: '#' },
-        { name: 'Link_2', link: '#' },
-        { name: 'Link_3', link: '#' }
-      ]
-    },
-    { title: 'Title_2', link: '#' },
-    { title: 'Title_3',
-      list: [
-        { name: 'Link_1', link: '#' },
-        { name: 'Link_2', link: '#' },
-        { name: 'Link_3', link: '#' }
-      ]
-    },
-    { title: 'Title_4', link: '#' }
+  const headerNavMain = [
+      { text: 'Частным лицам', link: '#' },
+      { text: 'Корпоративным клиентам', link: '#' },
+      { text: 'Партнерам', link: '#' },
+      { text: 'О компании', link: '#' },
+      { text: 'Блог', link: '#' }
+  ]
+  const headerNavSearch = [
+      { text: 'Москва', link: '#', src: '../../images/header/geo.png'},
+      { text: 'Офисы', link: '#'},
+      { text: 'Поиск', link: '#', src: '../../images/header/search.png'}
+  ]
+  const headerNavMenu = [
+      { text: 'Автомобили', link: '#'},
+      { text: 'Имущество', link: '#'},
+      { text: 'Здоровье', link: '#'},
+      { text: 'Путешествия', link: '#'}
   ]
 
 header.header
-  .inner
-    a.header__logo(href='/')
-      +ui-svg('icon_logo')
-    ul.header__menu
-      each headerMenuItem in headerMenu
-        li.header__item
-          if headerMenuItem.list
-            .header__link.header__link--arrow
-              +ui-p3(headerMenuItem.title)
-            ul.header__list
-              each headerMenuItemLink in headerMenuItem.list
-                li.header__item
-                  a.header__link(href=headerMenuItemLink.link)=headerMenuItemLink.name
-          else
-            a.header__link(href=headerMenuItem.link)
-              +ui-p3(headerMenuItem.title)
+  .header__top.tablet-hidden
+    .inner
+      .header__content.tablet-hidden
+        a(href="").header__logo
+          img(src="../../images/logo.png", alt="logo")
+        nav.nav
+          .nav__main
+            each navItem in headerNavMain
+              a(href=navItem.link).nav__link.ui-p3=navItem.text
+          .nav__search
+            each navItem in headerNavSearch
+              a(href=navItem.link).ui-p2.nav__link
+                if navItem.src
+                  .nav__icon 
+                    img(src=navItem.src, alt="nav-image")
+                =navItem.text
+  .header__bot 
+    .inner
+      a(href="").header__logo.tablet-disp
+        img(src="../../images/logo.png", alt="logo")
+      .header__content
+        nav.nav__menu.tablet-hidden
+          each navItem in headerNavMenu
+            a(href=navItem.link).ui-p3=navItem.text
+        .header__login 
+          .insurance 
+            .insurance__wrapper 
+              img(src="../../images/header/insurance.png", alt="insurance")
+            +ui-p3("Страховой случай")
+          +ui-button({p3: "Войти"}, "--white, --xxs, header")(href='')
+
+    
+    
