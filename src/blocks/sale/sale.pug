@@ -1,0 +1,25 @@
+mixin sale(mods)
+  -
+    const baseName = 'sale'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+    const saleContent = [
+      {title:"от <span class='ui-label'>1990</span> ₽", text:"большой выбор программ"},
+      {title:"скидки до <span class='ui-label'>70</span> %", text:"для водителей со стажем"},
+      {title:"Экономия времени <span class='ui-label'></span>", text:"подберем выгодный полис"}
+    ]
+  .sale(class=allMods)&attributes(attributes)
+    .sale__content
+      each saleItem in saleContent
+        .sale__item
+          .sale__title
+            +ui-h4(saleItem.title, "sale, --semibold")
+          .sale__text
+            +ui-p1(saleItem.text)
+    block

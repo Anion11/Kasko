@@ -1,0 +1,39 @@
+.sale {
+  position: relative;
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+    padding: 50px 130px;
+    border-radius: 6px;
+    background: $base-white;
+    @include media-laptop {
+      grid-template-columns: 1fr;
+      gap: 32px;
+      padding: 40px 30px;
+    }
+    @include media-tablet {
+      gap: 24px;
+      padding: 35px 24px;
+    }
+  }
+  &__item {
+    text-align: center;
+    @include media-laptop {
+      text-align: left;
+    }
+  }
+  &__title {
+    margin-bottom: 16px;
+    background: $new-gradient-1;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @include media-laptop {
+      margin-bottom: 8px;
+    }
+    @include media-tablet {
+      margin-bottom: 5px;
+    }
+  }
+}
