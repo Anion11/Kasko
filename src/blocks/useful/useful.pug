@@ -1,0 +1,52 @@
+mixin useful(mods)
+  -
+    const baseName = 'useful'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+    const usefulContent =[
+      {
+        className:"accident",
+        src:"../../images/useful/accident.png",
+        title:"ДТП",
+        desc:"даже если виновник вторая сторона и у него нет ОСАГО"
+      },
+      {
+        className:"transp",
+        src:"../../images/useful/transportation.png",
+        title:"Угон",
+        desc:"и противоправные действия третьих лиц"
+      },
+      {
+        className:"parking",
+        src:"../../images/useful/parking.png",
+        title:"Повреждения на парковке",
+        desc:"в том числе падение предметов"
+      },
+      {
+        className:"mask",
+        src:"../../images/useful/mask.png",
+        title:"Пожар, взрыв",
+        desc:"особенно, если авто сгорел полностью"
+      }
+    ]
+  .useful(class=allMods)&attributes(attributes)
+    .section-head
+      +ui-h2("В каких случаях пригодится КАСКО")
+    .useful__content
+      each usefulItem in usefulContent
+        .useful-item
+          .useful-item__header
+            div(class="useful-item__" + usefulItem.className)
+              img(src=usefulItem.src, alt=usefulItem.className)
+          .useful-item__text
+            .useful-item__title
+              +ui-p1(usefulItem.title, "--semibold")
+            .useful-item__desc
+              +ui-p2(usefulItem.desc)
+    block

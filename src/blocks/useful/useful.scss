@@ -1,0 +1,66 @@
+.useful {
+  position: relative;
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    @include media-laptop {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    @include media-tablet {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+  }
+  &-item {
+    padding: 20px 16px;
+    border-radius: 6px;
+    background: $base-white;
+    @include media-laptop {
+      padding: 20px 16px;
+    }
+    @include media-tablet {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 20px;
+    }
+    &__header {
+      width: 36px;
+      height: 36px;
+      min-width: 36px;
+      margin-bottom: 53px;
+      @include media-laptop {
+        margin-bottom: 60px;
+      }
+      @include media-tablet {
+        margin: 0;
+      }
+    }
+    &__accident {
+      height: 100%;
+      padding: 4px 0;
+    }
+    &__transp {
+      height: 100%;
+      padding: 5px 3.43px;
+    }
+    &__parking {
+      height: 100%;
+    }
+    &__mask {
+      height: 100%;
+      padding: 4.5px 7px;
+    }
+    &__title {
+      margin-bottom: 12px;
+      @include media-laptop {
+        margin-bottom: 10px;
+      }
+      @include media-tablet {
+        margin-bottom: 8px;
+      }
+    }
+  }
+}
