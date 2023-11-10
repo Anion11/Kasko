@@ -1,0 +1,63 @@
+.small-banner {
+  position: relative;
+  padding: 35px 90px;
+  border-radius: 6px;
+  background: $main-primary-primary-60;
+  color: $base-white;
+  @include media-laptop {
+    padding: 40px 30px 17px;
+  }
+  @include media-tablet {
+    padding: 24px 16px 14px;
+  }
+  &__ui-h2 {
+    margin-bottom: 18px;
+    @include media-laptop {
+      margin-bottom: 12px;
+    }
+    @include media-tablet {
+      margin-bottom: 10px;
+    }
+  }
+  &__ui-p1 {
+    margin-bottom: 28px;
+    @include media-laptop {
+      margin-bottom: 24px;
+    }
+    @include media-tablet {
+      margin-bottom: 20px;
+    }
+  }
+  &__info {
+    @include media-laptop {
+      margin-bottom: 35px;
+    }
+    @include media-tablet {
+      margin-bottom: 18px;
+    }
+  }
+  &__ui-ul {
+    padding-right: 30px;
+  }
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 179px;
+    @include media-laptop {
+      display: block;
+    }
+  }
+  &__image {
+    margin: auto;
+    max-width: 410px;
+    max-height: 320px;
+    @include media-laptop {
+      max-width: 329px;
+      max-height: 257px;
+    }
+    @include media-tablet {
+      max-width: 271px;
+      max-height: 210px;
+    }
+  }
+}
