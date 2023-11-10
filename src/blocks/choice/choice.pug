@@ -44,8 +44,7 @@ mixin choice(mods)
   .choice(class=allMods)&attributes(attributes)
     .section-head
       +ui-h2("Выберите программу КАСКО", "section-head, --semibold")
-      .section__text.choice__text
-        +ui-p2("Вы можете получить индивидуальное предложение либо выбрать одну из наших программ — в зависимости от стажа, стиля вождения и состояния автомобиля")
+      +ui-p2("Вы можете получить индивидуальное предложение либо выбрать одну из наших программ — в зависимости от стажа, стиля вождения и состояния автомобиля", "section-head")
     .choice__content.swiper
       .choice__wrapper.swiper-wrapper
         each item in cardItems
