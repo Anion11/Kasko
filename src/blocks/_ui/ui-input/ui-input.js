@@ -22,13 +22,9 @@ function checkInputFill() {
   if (uiInputs) {
     for (const element of uiInputs) {
       const input = element.querySelector('input');
-      input.value === ''
-        ? input.classList.remove('filled')
-        : input.classList.add('filled');
+      input.value === '' ? input.classList.remove('filled') : input.classList.add('filled');
       input.addEventListener('input', function () {
-        input.value === ''
-          ? input.classList.remove('filled')
-          : input.classList.add('filled');
+        input.value === '' ? input.classList.remove('filled') : input.classList.add('filled');
       });
     }
   }
@@ -38,12 +34,11 @@ function validation() {
   const formBlocks = document.querySelectorAll('form');
   if (formBlocks) {
     for (const formBlock of formBlocks) {
-      const inputs = formBlock.querySelectorAll(
-        'input[required], select[required], .ui-checkbox[required] input'
-      );
+      const inputs = formBlock.querySelectorAll('input[required], select[required], .ui-checkbox[required] input');
       const mailInputs = formBlock.querySelectorAll('input[type="email"]');
       const phoneInputs = formBlock.querySelectorAll('input[type="phone"]');
       const validate = new JustValidate(formBlock, {
+        errorFieldCssClass: 'just-validate-error-input',
         validateBeforeSubmitting: true
       });
       if (inputs) {

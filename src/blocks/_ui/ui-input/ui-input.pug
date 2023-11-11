@@ -10,9 +10,9 @@ mixin ui-input(id, label, mods, type)
       allMods = allMods.trim()
     }
 
-  .ui-input(class=allMods class=(label ? '' : 'ui-input--no-label'))
+  .ui-input(class=allMods class=(label ? '' : 'ui-input--no-label')).ui-p2
     input(id=id type=(typeof(type) !== 'undefined' && type ? type : 'text'))&attributes(attributes)
     if label
       label(for=id)
-        +ui-p6(label)
+        +ui-p2(label)
     block

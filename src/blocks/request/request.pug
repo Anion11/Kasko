@@ -1,0 +1,25 @@
+mixin request(mods)
+  -
+    const baseName = 'request'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .request(class=allMods)&attributes(attributes)
+    .request__content
+      +ui-h2("Оставьте заявку на полис КАСКО", "request, --semibold")
+      +ui-p2("Оставьте свои данные - мы поможем подобрать для вас программу на самых выгодных условиях.", "request")
+      form(action="").request__form
+        .request__input-wrapper
+          +ui-input('Surname', 'Фамилия')(required)
+          +ui-input('Name', 'Имя')(required)
+          +ui-input('Phone', 'Номер телефона')(required)
+        .request__assent
+          +ui-checkbox('agreement', '<span class="ui-p3">Даю согласие на <a class="request__assent-link" href="/#">обработку персональных данных </a>.</span>')(required)
+        +ui-button({p2: "Оставить заявку"}, "--xs, --filled")
+    block

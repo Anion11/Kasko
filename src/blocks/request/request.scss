@@ -1,0 +1,48 @@
+.request {
+  position: relative;
+  padding: 50px 90px;
+  border-radius: 6px;
+  background-color: $new-ghost-2;
+  background-image: url('../../images/request/request-bg-laptop.png');
+  background-position: 100% 100%;
+  background-size: 42% 79%;
+  background-repeat: no-repeat;
+  @include media-laptop {
+    background-image: url('../../images/request/request-bg-tablet.png');
+    background-size: 380px 250px;
+    padding: 40px 30px;
+  }
+  @include media-tablet {
+    padding: 30px 16px;
+    background-image: none;
+  }
+  &__ui-h2 {
+    margin-bottom: 18px;
+    @include media-laptop {
+      margin-bottom: 12px;
+    }
+  }
+  &__ui-p2 {
+    margin-bottom: 28px;
+    @include media-laptop {
+      margin-bottom: 24px;
+    }
+  }
+  &__input-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+    @include media-laptop {
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+  }
+  &__assent {
+    margin-bottom: 30px;
+    @include media-laptop {
+      margin-bottom: 24px;
+    }
+  }
+}

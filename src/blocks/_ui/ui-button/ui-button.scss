@@ -6,10 +6,11 @@
   border-radius: 4px;
   transition: 0.3s;
   color: $main-primary-primary-60;
-  font-family: $font-Montserrat;
   cursor: pointer;
   @include media-tablet {
-    min-width: 329px;
+    display: block;
+    margin: 0 auto;
+    width: 328px;
     padding-top: 10px;
     padding-bottom: 10px;
   }
@@ -26,6 +27,12 @@
   }
   &--xs {
     padding: 14px 48px;
+    @include media-tablet {
+      display: block;
+      width: 100%;
+      max-width: 296px;
+      margin: 0 auto;
+    }
   }
   &--xxs {
     padding: 10px 20px;

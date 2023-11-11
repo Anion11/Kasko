@@ -4,8 +4,7 @@
     display: none;
     &:checked + label {
       &::before {
-        background: teal;
-        border-color: teal;
+        opacity: 0;
       }
       &::after {
         opacity: 1;
@@ -13,31 +12,32 @@
     }
   }
   label {
+    display: inline-block;
     position: relative;
-    padding-left: 30px;
+    padding-left: 26px;
     cursor: pointer;
     user-select: none;
     &::before {
       content: '';
       position: absolute;
-      top: 50%;
+      top: -2px;
       left: 0;
-      transform: translateY(-50%);
       width: 20px;
       height: 20px;
-      border: 1px solid #ccc;
-      border-radius: 3px;
+      background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M13.3333%208.88889H6.66667C6.05556%208.88889%205.55556%209.38889%205.55556%2010C5.55556%2010.6111%206.05556%2011.1111%206.66667%2011.1111H13.3333C13.9444%2011.1111%2014.4444%2010.6111%2014.4444%2010C14.4444%209.38889%2013.9444%208.88889%2013.3333%208.88889ZM17.7778%2016.6667C17.7778%2017.2789%2017.28%2017.7778%2016.6667%2017.7778H3.33333C2.72%2017.7778%202.22222%2017.2789%202.22222%2016.6667V3.33333C2.22222%202.72111%202.72%202.22222%203.33333%202.22222H16.6667C17.28%202.22222%2017.7778%202.72111%2017.7778%203.33333V16.6667ZM16.6667%200H3.33333C1.49556%200%200%201.49556%200%203.33333V16.6667C0%2018.5044%201.49556%2020%203.33333%2020H16.6667C18.5044%2020%2020%2018.5044%2020%2016.6667V3.33333C20%201.49556%2018.5044%200%2016.6667%200Z%22%20fill%3D%22%238F9BB3%22%2F%3E%0A%3C%2Fsvg%3E');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
       transition: 0.3s;
     }
     &::after {
       content: '';
       position: absolute;
-      top: 50%;
-      left: 5px;
-      transform: translateY(-50%);
-      width: 10px;
-      height: 10px;
-      background-image: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5 3.5L4.5 7L9 1' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+      left: -2px;
+      top: -4px;
+      width: 24px;
+      height: 24px;
+      background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M15.0051%207.99389L10.8007%2013.515L8.98622%2011.1972C8.60733%2010.7128%207.90956%2010.6283%207.42622%2011.0072C6.94289%2011.385%206.85733%2012.0839%207.23622%2012.5661L9.93733%2016.0183C10.1484%2016.2872%2010.4707%2016.4439%2010.8129%2016.4439H10.8207C11.164%2016.4428%2011.4884%2016.2806%2011.6962%2016.0061L16.7729%209.33944C17.1451%208.85056%2017.0507%208.155%2016.5618%207.78278C16.0729%207.41056%2015.3751%207.50611%2015.0051%207.99389ZM19.7778%2018.6667C19.7778%2019.28%2019.2789%2019.7778%2018.6667%2019.7778H5.33333C4.72111%2019.7778%204.22222%2019.28%204.22222%2018.6667V5.33333C4.22222%204.72%204.72111%204.22222%205.33333%204.22222H18.6667C19.2789%204.22222%2019.7778%204.72%2019.7778%205.33333V18.6667ZM18.6667%202H5.33333C3.49556%202%202%203.49556%202%205.33333V18.6667C2%2020.5044%203.49556%2022%205.33333%2022H18.6667C20.5044%2022%2022%2020.5044%2022%2018.6667V5.33333C22%203.49556%2020.5044%202%2018.6667%202Z%22%20fill%3D%22%23326CFD%22%2F%3E%0A%3C%2Fsvg%3E');
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
@@ -47,13 +47,20 @@
     a {
       display: inline;
       text-decoration: underline;
-      color: teal;
+      color: $base-primary;
     }
   }
   .just-validate-error-label {
     position: absolute;
     top: 100%;
     left: 0;
-    font: 12px/1.2 $font;
+    margin-top: 4px;
+    margin-left: 26px;
+    color: $main-error-error-60;
+    font-family: $font-Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
   }
 }

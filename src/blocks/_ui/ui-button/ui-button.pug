@@ -12,12 +12,12 @@ mixin ui-button(text, mods)
 
   if (attributes.href)
     a.ui-button(class=allMods)&attributes(attributes)
-      if text.p3
-        +ui-p2(text.p3, "--semibold")
+      if text.p2
+        +ui-p2(text.p2)
         block
 
   else
     button.ui-button(class=allMods)&attributes(attributes)
-      if text.p3
-        +ui-p2(text.p3, "--semibold")
+      if text.p2
+        +ui-p2(text.p2)
         block
