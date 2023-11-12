@@ -1,0 +1,67 @@
+@keyframes animDisp {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: block;
+    opacity: 0;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+.questions {
+  position: relative;
+  padding: 50px 90px;
+  background: $new-ghost-2;
+  @include media-laptop {
+    padding: 40px 30px;
+  }
+  @include media-tablet {
+    margin: 0 -16px; // Отрицательные марджины в переменную
+    padding: 30px 16px 40px;
+  }
+  &__content {
+    padding: 20px 90px 40px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0px 20px 24px 0px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 20px 24px 0px rgba(0, 0, 0, 0.12);
+    background: $base-white;
+    @include media-laptop {
+      padding: 10px 20px 30px;
+    }
+    @include media-tablet {
+      padding: 4px 16px 24px;
+    }
+  }
+  &__item {
+    border-bottom: 1px solid $main-neutral-neutral-variant-90;
+  }
+  .is-visible {
+    display: block;
+    opacity: 1;
+    animation: animDisp 0.3s ease-in-out;
+  }
+  &__text {
+    display: none;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    cursor: pointer;
+  }
+  .questions__text {
+    &__ui-ul {
+      margin-bottom: 12px;
+    }
+  }
+}

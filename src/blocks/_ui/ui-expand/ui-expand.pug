@@ -1,0 +1,16 @@
+mixin ui-expand(mods)
+  -
+    const baseName = 'ui-expand'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  button.ui-expand(class=allMods)&attributes(attributes)
+    span.expand__plus
+    span.expand__plus.expand__plus-active
+    block
