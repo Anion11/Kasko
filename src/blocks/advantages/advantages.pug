@@ -1,0 +1,30 @@
+mixin advantages(mods)
+  -
+    const baseName = 'advantages'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+    const advantageItems = [
+      {label: "№ 1", text:"По качеству урегулирования убытков", link: "/#"},
+      {label: "ТОП 3", text:"По качеству сервиса", link: "/#"},
+      {label: "21 <span class='ui-h4 ui-h4--semibold'>год +</span>", text:"Работаем для вас"},
+      {label: "24/7", text:"Круглосуточная поддержка"}
+    ]
+
+  .advantages(class=allMods)&attributes(attributes)
+    .section-head
+      +ui-h2("Преимущества «Югории»", "--semibold")
+    .advantages__content
+      each item in advantageItems
+        .advantages-item
+          +ui-label(item.label, "advantages-item")
+          +ui-p1(item.text, "advantages-item")
+            if item.link
+              a(href="/#").external-link
+                img(src="../../images/advantages/external-link.png", alt="external-link")
+    block

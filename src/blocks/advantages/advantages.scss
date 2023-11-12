@@ -1,0 +1,54 @@
+.advantages {
+  position: relative;
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    @include media-laptop {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px 16px;
+    }
+    @include media-tablet {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+  }
+  &-item {
+    padding: 30px 20px 55px;
+    border-radius: 6px;
+    background: $base-white;
+    &__ui-label {
+      margin-bottom: 54px;
+      background: $new-gradient-1, linear-gradient(91deg, #5a6bff 0.89%, #0054e6 99.35%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      /* &::before {
+        content: '';
+        position: absolute;
+        width: 36px;
+        height: 36px;
+        margin-left: -14px;
+        margin-top: -9px;
+        mask-image: url('../../images/advantages/circle.svg');
+        -webkit-mask-image: url('../../images/advantages/circle.svg');
+        background-color: rgba(0, 133, 255, 1);
+        -webkit-filter: blur(5px);
+      }*/
+    }
+    &__ui-p1 {
+      position: relative;
+      @include media-laptop {
+        padding-right: 27px;
+      }
+      .external-link {
+        display: inline-block;
+        position: absolute;
+        bottom: 0;
+        width: 24px;
+        height: 24px;
+        margin-left: 3px;
+      }
+    }
+  }
+}
