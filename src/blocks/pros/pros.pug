@@ -1,0 +1,26 @@
+mixin pros(mods)
+  -
+    const baseName = 'pros'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+    const prosItems = [
+      {title: "Удобно", text:"Вы можете сами рассчитать стоимость полиса на сайте, используя калькулятор, и оформить страховку онлайн. Для этого не нужно ехать в офис: полис придет к вам на e-mail, он действителен так же, как и его бумажный вариант."},
+      {title: "Выгодно", text: "Широкий выбор программ от 1990 руб. за полис, которые максимально отвечают вашим пожеланиям и требованиям и позволяют сэкономить до 70% по сравнению с классическим КАСКО. Есть рассрочка."},
+      {title: "Надежно", text: "У нас есть круглосуточная поддержка по телефону 8 (800) 100-82-00, нам доверилось уже более 2,5 млн клиентов по всей России, за последний год мы выплатили ---- по договорам КАСКО. Наш рейтинг надежности – ruA+"}
+    ]
+  .pros(class=allMods)&attributes(attributes)
+    .pros__content
+      .pros__info
+        each prosItem in prosItems
+          .pros-item
+            +ui-h4(prosItem.title, "pros-item, --semibold")
+            +ui-p2(prosItem.text)
+      .pros__image
+        img(src="../../images/pros/darts.png", alt="darts")
+    block
