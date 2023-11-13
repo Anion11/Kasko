@@ -1,4 +1,4 @@
-mixin request(mods)
+mixin request(id, mods)
   -
     const baseName = 'request'
     let allMods = ''
@@ -20,6 +20,6 @@ mixin request(mods)
           +ui-input('Name', 'Имя')(required)
           +ui-input('Phone', 'Номер телефона')(required)
         .request__assent
-          +ui-checkbox('agreement', '<span class="ui-p3">Даю согласие на <a class="request__assent-link" href="/#">обработку персональных данных </a>.</span>')(required)
+          +ui-checkbox('agreement' + id, '<span class="ui-p3">Даю согласие на <a class="request__assent-link" href="/#">обработку персональных данных </a>.</span>')(required)
         +ui-button({p2: "Оставить заявку"}, "--xs, --filled")
     block

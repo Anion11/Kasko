@@ -38,6 +38,7 @@
       display: flex;
       align-items: center;
       gap: 3px;
+      color: $main-error-error-50;
       &__wrapper {
         min-width: 18px;
         @include media-laptop {

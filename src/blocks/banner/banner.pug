@@ -1,0 +1,25 @@
+mixin banner(mods)
+  -
+    const baseName = 'banner'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+    const bannerInfo ={
+      title: "Оформить полис КАСКО",
+      text: "КАСКО – это ваша финансовая защита при угоне, ДТП или неожиданном повреждении автомобиля. Выберите лучшую программу КАСКО, отвечающую всем вашим требованиям - не выходя из дома.",
+      src: "../../images/banner/banner-image.png"
+    }
+  .banner(class=allMods)&attributes(attributes)
+    .inner
+      .banner__content 
+        .banner__info
+          +ui-h1(bannerInfo.title, "banner, --semibold, --white")
+          +ui-p2(bannerInfo.text, "banner, --white")
+        .banner__image
+          img(src=bannerInfo.src, alt="banner-image")
+    block

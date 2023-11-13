@@ -46,3 +46,8 @@
     }
   }
 }
+[class*='request'] {
+  &[class*='--white'] {
+    background: $base-white;
+  }
+}

@@ -1,5 +1,6 @@
 .ui-checkbox {
   position: relative;
+  z-index: 10;
   input {
     display: none;
     &:checked + label {
@@ -45,7 +46,6 @@
       transition: 0.3s;
     }
     a {
-      display: inline;
       text-decoration: underline;
       color: $base-primary;
     }
