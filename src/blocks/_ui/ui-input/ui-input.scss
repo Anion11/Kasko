@@ -25,6 +25,10 @@
   .just-validate-error-input {
     border: 1px solid $main-error-error-60;
     background: $new-error-10;
+    & ~ label{
+      background: linear-gradient(transparent 50%, $new-error-10 50%) no-repeat !important;
+      color: $main-error-error-60;
+    }
     &:focus {
       border: 2px solid $main-error-error-60;
       caret-color: $main-error-error-60;

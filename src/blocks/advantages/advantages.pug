@@ -10,8 +10,8 @@ mixin advantages(mods)
       allMods = allMods.trim()
     }
     const advantageItems = [
-      {label: "№ 1", text:"По качеству урегулирования убытков", link: "/#"},
-      {label: "ТОП 3", text:"По качеству сервиса", link: "/#"},
+      {label: "№ 1", text:"По качеству урегулирования убытков", link: "#"},
+      {label: "ТОП 3", text:"По качеству сервиса", link: "#"},
       {label: "21 <span class='ui-h4 ui-h4--semibold'>год +</span>", text:"Работаем для вас"},
       {label: "24/7", text:"Круглосуточная поддержка"}
     ]
@@ -25,6 +25,6 @@ mixin advantages(mods)
           +ui-label(item.label, "advantages-item")
           +ui-p1(item.text, "advantages-item")
             if item.link
-              a(href="/#").external-link
+              a(href="#").external-link
                 img(src="../../images/advantages/external-link.png", alt="external-link")
     block

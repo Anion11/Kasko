@@ -60,9 +60,9 @@
       margin-top: 150px; 
     }
     @include media-tablet  {
+      position: static;
       max-width: 360px;
       max-height: 216px;
-      position: static;
       margin: 0 auto;
     }
   }
