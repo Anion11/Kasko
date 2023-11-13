@@ -18,8 +18,6 @@ mixin sale(mods)
     .sale__content
       each saleItem in saleContent
         .sale__item
-          .sale__title
-            +ui-h4(saleItem.title, "sale, --semibold")
-          .sale__text
-            +ui-p1(saleItem.text)
+          +ui-h4(saleItem.title, "sale, --semibold")
+          +ui-p1(saleItem.text)
     block

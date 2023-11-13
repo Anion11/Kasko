@@ -51,10 +51,8 @@ mixin choice(mods)
           .choice-item.swiper-slide
             .choice-item__image
               img(src=item.src, alt="card-image")
-            .choice-item__title
-              +ui-h4(item.title, "--semibold")
-            .choice-item__text
-              +ui-p2(item.text)
+            +ui-h4(item.title, "choice-item, --semibold")
+            +ui-p2(item.text)
       .swiper-pagination
     +ui-button({p2: "Сравнить программы"}, "choice, --border")
     block

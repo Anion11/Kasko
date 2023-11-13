@@ -45,8 +45,6 @@ mixin useful(mods)
             div(class="useful-item__" + usefulItem.className)
               img(src=usefulItem.src, alt=usefulItem.className)
           .useful-item__text
-            .useful-item__title
-              +ui-p1(usefulItem.title, "--semibold")
-            .useful-item__desc
-              +ui-p2(usefulItem.desc)
+            +ui-p1(usefulItem.title, "useful-item, --semibold")
+            +ui-p2(usefulItem.desc)
     block

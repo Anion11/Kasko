@@ -8,6 +8,7 @@
     }
     @include media-tablet {
       padding-bottom: 43px;
+      margin-right: -16px;
     }
   }
   &__wrapper {
@@ -21,6 +22,7 @@
     @include media-tablet {
       display: flex;
       gap: 0;
+      
     }
   }
   &-item {
@@ -51,7 +53,7 @@
         padding: 0;
       }
     }
-    &__title {
+    &__ui-h4 {
       margin-bottom: 16px;
       @include media-laptop {
         margin-bottom: 10px;
