@@ -17,22 +17,4 @@
       margin: -40px -16px 0;
     }
   }
-  &-head {
-    margin-bottom: 35px;
-    @include media-laptop {
-      margin-bottom: 24px;
-    }
-    &__ui-h2 {
-      margin-bottom: 18px;
-      @include media-laptop {
-        margin-bottom: 12px;
-      }
-    }
-    &__ui-p2 {
-      width: 66%;
-      @include media-laptop {
-        width: 100%;
-      }
-    }
-  }
 }

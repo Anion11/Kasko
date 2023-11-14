@@ -17,6 +17,16 @@ function inputMask() {
           lazy: false
         });
       }
+      if (inputMaskItem.dataset.police) {
+        IMask(inputMaskItem, {
+          mask: '??-##-000000',
+          lazy: false,
+          definitions: {
+            '#': /[А-Я]/,
+            '?': /[IVX]/
+          }
+        });
+      }
     }
   }
 }
