@@ -15,11 +15,10 @@ mixin banner(mods)
       src: "../../images/banner/banner-image.png"
     }
   .banner(class=allMods)&attributes(attributes)
-    .inner
-      .banner__content
-        .banner__info
-          +ui-h1(bannerInfo.title, "banner, --semibold, --white")
-          +ui-p2(bannerInfo.text, "banner, --white")
-        .banner__image
-          img(src=bannerInfo.src, alt="banner-image")
+    .banner__content
+      .banner__info
+        +ui-h1(bannerInfo.title, "banner, --semibold, --white")
+        +ui-p2(bannerInfo.text, "banner, --white")
+      .banner__image
+        img(src=bannerInfo.src, alt="banner-image")
     block

@@ -1,19 +1,30 @@
 .banner {
   position: relative;
   height: 500px;
-  margin: 0 -20px;
-  padding: 0 20px;
-  background: $base-primary;
-  @include media-laptop{
+  &::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    transform: translate(-50%);
+    width: calc(100dvw - var(--scrollbar-width));
+    background: $base-primary;
+    @include media-laptop {
+      background: $new-gradient-1;
+    }
+  }
+  @include media-laptop {
     height: 485px;
     background: $new-gradient-1;
   }
-  @include media-tablet{
+  @include media-tablet {
     height: 470px;
-    padding: 0 16px;
-    margin: 0 -16px;
   }
-  &__info { 
+  &__content {
+    position: relative;
+    z-index: 1;
+  }
+  &__info {
     padding-top: 90px;
     @include media-laptop {
       padding-top: 50px;
@@ -22,17 +33,9 @@
       padding-top: 30px;
     }
   }
-  &__content {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 93px;
-    @include media-tablet {
-      display: block;
-    }
-  }
   &__ui-h1 {
     margin-bottom: 28px;
-    @include media-laptop  {
+    @include media-laptop {
       margin-bottom: 22px;
     }
     @include media-tablet {
@@ -40,26 +43,27 @@
     }
   }
   &__ui-p2 {
-    @include media-laptop{
-      padding-right: 360px;
+    margin-right: 800px;
+    @include media-laptop {
+      margin-right: 440px;
     }
     @include media-tablet {
-      padding: 0;
-      margin-bottom: 24px;
+      margin: 0 0 24px;
     }
   }
   &__image {
-    position: relative;
-    margin: 0 auto;
-    @include media-laptop  {
-      position: absolute;
-      right: 0;
-      width: 100%;
-      max-width: 490px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 732px;
+    max-height: 440px;
+    @include media-laptop {
+      max-width: 470px;
       max-height: 282px;
-      margin-top: 150px; 
+      top: 25%;
     }
-    @include media-tablet  {
+    @include media-tablet {
       position: static;
       max-width: 360px;
       max-height: 216px;
