@@ -11,7 +11,7 @@ mixin ui-input(id, label, mods, type)
     }
 
   .ui-input(class=allMods class=(label ? '' : 'ui-input--no-label')).ui-p2
-    input(id=id type=(typeof(type) !== 'undefined' && type ? type : 'text'))&attributes(attributes)
+    input(id=id type=(typeof(type) !== 'undefined' && type ? type : 'text') data-phone=(type === 'phone' && "phone"))&attributes(attributes)
     if label
       label(for=id)
         +ui-p2(label)

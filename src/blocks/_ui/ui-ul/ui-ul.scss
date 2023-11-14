@@ -1,5 +1,6 @@
 .ui-ul {
   $marker-size: 6px;
+  margin-bottom: 12px;
   li {
     position: relative;
     padding-left: calc($marker-size + 9px);

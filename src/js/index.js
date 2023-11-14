@@ -12,7 +12,6 @@ import uiTooltip from '../blocks/_ui/ui-tooltip/ui-tooltip';
 import gallery from '../blocks/gallery/gallery';
 import slider from '../blocks/slider/slider';
 import choiceSwiper from '../blocks/choice/choice-swiper';
-import uiExpand from '../blocks/_ui/ui-expand/ui-expand';
 
 document.addEventListener('DOMContentLoaded', function () {
   uiAccordion();
@@ -23,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function () {
   uiTab();
   uiTextarea();
   uiTooltip();
-  uiExpand();
   gallery();
   slider();
   choiceSwiper();

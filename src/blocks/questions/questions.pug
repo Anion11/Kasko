@@ -32,12 +32,8 @@ mixin questions(mods)
       +ui-h2("Частые вопросы по КАСКО", "--semibold")
     .questions__content
       each questionItem in questionItems
-        .questions__item
-          .questions__header
-            +ui-h5(questionItem.title, "--semibold")
-            +ui-expand()
-          .questions__text
-            if questionItem.ulItems
-              +ui-ul(questionItem.ulItems, "questions__text")
-            +ui-p2(questionItem.text)
+        +ui-accordion({h5: questionItem.title}, "questions-item, --toggle-plus")
+          if questionItem.ulItems
+            +ui-ul(questionItem.ulItems, "questions__text")
+          +ui-p2(questionItem.text)
     block

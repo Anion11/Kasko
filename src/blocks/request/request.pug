@@ -16,10 +16,10 @@ mixin request(id, mods)
       +ui-p2("Оставьте свои данные - мы поможем подобрать для вас программу на самых выгодных условиях.", "request")
       form(action="").request__form
         .request__input-wrapper
-          +ui-input('Surname', 'Фамилия')(required)
-          +ui-input('Name', 'Имя')(required)
-          +ui-input('phone', 'Номер телефона', "", "phone")(required)
+          +ui-input(id + 'Surname', 'Фамилия')(required)
+          +ui-input(id + 'Name', 'Имя')(required)
+          +ui-input(id + 'phone', 'Номер телефона', "", "phone")(required)
         .request__assent
-          +ui-checkbox('agreement' + id, '<span class="ui-p3">Даю согласие на <a class="request__assent-link" href="#">обработку персональных данных </a>.</span>')(required)
+          +ui-checkbox(id + 'agreement', '<span class="ui-p3">Даю согласие на <a class="request__assent-link" href="#">обработку персональных данных </a>.</span>')(required)
         +ui-button({p2: "Оставить заявку"}, "--xs, --filled")
     block

@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
+    transition: .3s;
     &--active {
       .ui-accordion__toggle {
         &::after {
@@ -32,9 +33,51 @@
   }
   &__body {
     display: none;
-    padding-top: 24px;
   }
   &--white {
-    color: #fff;
+    color: $base-white;
+  }
+}
+[class*='ui-accordion'] {
+  &[class*='--toggle-plus'] {
+    .ui-accordion {
+      &__head {
+        &--active {
+          .ui-accordion__toggle {
+            &::before {
+              transform: translateY(-50%) rotate(180deg);
+            }
+          }
+        }
+      }
+      &__toggle {
+        flex-shrink: 0;
+        position: relative;
+        margin-left: 26px;
+        cursor: pointer;
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+          width: 16px;
+          height: 2px;
+          background: $base-black;
+          transition: 0.3s;
+        }
+        &:before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%) rotate(90deg);
+          width: 16px;
+          height: 2px;
+          background: $base-black;
+          transition: 0.3s;
+        }
+      }
+    }
   }
 }
