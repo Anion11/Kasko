@@ -1,5 +1,6 @@
 .ui-label {
-  font: 40px $font-Unbounded;
+  font-size: 40px;
+  font-family: $font-Unbounded;
   font-weight: 500;
   line-height: 120%;
   @include media-laptop {

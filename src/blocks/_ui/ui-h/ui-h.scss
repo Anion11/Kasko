@@ -1,5 +1,6 @@
 .ui-h1 {
-  font: 36px $font-Unbounded;
+  font-size: 36px;
+  font-family: $font-Unbounded;
   font-weight: 400;
   line-height: 120%;
   @include media-laptop {
@@ -10,7 +11,8 @@
   }
 }
 .ui-h2 {
-  font: 30px $font-Unbounded;
+  font-size: 30px;
+  font-family: $font-Unbounded;
   font-weight: 400;
   line-height: 130%;
   @include media-laptop {
@@ -21,7 +23,8 @@
   }
 }
 .ui-h3 {
-  font: 28px $font-Unbounded;
+  font-size: 28px;
+  font-family: $font-Unbounded;
   font-weight: 400;
   line-height: 120%;
   @include media-laptop {
@@ -32,7 +35,8 @@
   }
 }
 .ui-h4 {
-  font: 24px $font-Unbounded;
+  font-size: 24px;
+  font-family: $font-Unbounded;
   font-weight: 400;
   line-height: 140%;
   @include media-laptop {
@@ -40,7 +44,8 @@
   }
 }
 .ui-h5 {
-  font: 18px $font-Unbounded;
+  font-size: 18px;
+  font-family: $font-Unbounded;
   font-weight: 400;
   line-height: 140%;
   @include media-laptop {

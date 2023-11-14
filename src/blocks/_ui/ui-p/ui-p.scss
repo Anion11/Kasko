@@ -1,15 +1,18 @@
 .ui-p1 {
-  font: 18px $font-Montserrat;
+  font-size: 18px;
+  font-family: $font-Montserrat;
   font-weight: 500;
   line-height: 140%;
 }
 .ui-p2 {
-  font: 16px $font-Montserrat;
+  font-size: 16px;
+  font-family: $font-Montserrat;
   font-weight: 500;
   line-height: 140%;
 }
 .ui-p3 {
-  font: 14px $font-Montserrat;
+  font-size: 14px;
+  font-family: $font-Montserrat;
   font-weight: 500;
   line-height: 140%;
   @include media-laptop{
@@ -17,7 +20,8 @@
   }
 }
 .ui-p4 {
-  font: 13px$font-Montserrat;
+  font-size: 13px;
+  font-family: $font-Montserrat;
   font-weight: 500;
   line-height: 140%;
   @include media-tablet {
@@ -25,7 +29,8 @@
   }
 }
 .ui-p5 {
-  font: 12px $font-Montserrat;
+  font-size: 12px;
+  font-family: $font-Montserrat;
   font-weight: 500;
   line-height: 120%;
   @include media-tablet {
