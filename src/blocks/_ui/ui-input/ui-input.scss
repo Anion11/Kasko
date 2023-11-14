@@ -3,14 +3,15 @@
   input {
     width: 100%;
     padding: 13px 16px;
-    border: 1px solid $base-ghost;
-    border-radius: 4px 4px 0px 0px;
+    border: 2px solid transparent;
+    box-shadow: 0 0 0 1px $base-ghost, 0 0 0 1px $base-ghost;
+    border-radius: 4px;
     background: $base-white;
     outline: none;
     &:focus {
       border: 2px solid $main-primary-primary-50;
       background: $base-white;
-      caret-color: $base-primary;
+      caret-color: $base-primary;  
       & ~ label {
         color: $main-primary-primary-60;
       }
