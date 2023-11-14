@@ -22,7 +22,7 @@
   }
   &__content {
     position: relative;
-    z-index: 1;
+    z-index: 0;
   }
   &__info {
     padding-top: 90px;
@@ -43,7 +43,7 @@
     }
   }
   &__ui-p2 {
-    margin-right: 800px;
+    margin-right: 825px;
     @include media-laptop {
       margin-right: 440px;
     }
@@ -61,7 +61,7 @@
     @include media-laptop {
       max-width: 470px;
       max-height: 282px;
-      top: 25%;
+      top: 50%;
     }
     @include media-tablet {
       position: static;
