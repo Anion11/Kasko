@@ -42,6 +42,10 @@ mixin choice(mods)
       }
     ]
   .choice(class=allMods)&attributes(attributes)
+    +section-head({
+        h2: "Выберите программу КАСКО",
+        p2: "Вы можете получить индивидуальное предложение либо выбрать одну из наших программ — в зависимости от стажа, стиля вождения и состояния автомобиля"
+      })
     .choice__content.swiper
       .choice__wrapper.swiper-wrapper
         each item in cardItems

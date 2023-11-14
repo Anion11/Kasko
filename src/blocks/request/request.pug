@@ -12,8 +12,7 @@ mixin request(id, mods)
 
   .request(class=allMods)&attributes(attributes)
     .request__content
-      +ui-h2("Оставьте заявку на полис КАСКО", "request, --semibold")
-      +ui-p2("Оставьте свои данные - мы поможем подобрать для вас программу на самых выгодных условиях.", "request")
+      +section-head({h2: "Оставьте заявку на полис КАСКО", p2:"Оставьте свои данные - мы поможем подобрать для вас программу на самых выгодных условиях."}, "--xs")
       form(action="").request__form
         .request__input-wrapper
           +ui-input(id + 'Surname', 'Фамилия')(required)

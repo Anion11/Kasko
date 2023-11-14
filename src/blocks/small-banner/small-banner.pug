@@ -17,10 +17,9 @@ mixin small-banner(mods)
       { title: 'Можно выбрать программу с базовым набором рисков с выгодой до 70%'}
     ]
   .small-banner(class=allMods)&attributes(attributes)
-    .small-banner__content
+    .small-banner__content 
       .small-banner__info
-        +ui-h2("Преимущества КАСКО в «Югории»", "small-banner, --semibold, --white")
-        +ui-p1("Наши программы предлагают разные возможности", "small-banner, --white")
+        +section-head({h2: "Преимущества КАСКО в «Югории»", p2:"Наши программы предлагают разные возможности"}, "--xs")
         +ui-ul(smallBannerListItems, "small-banner, --white")
       .small-banner__image
         img(src="../../images/small-banner/small-banner-photo.png", alt="small-banner-image")

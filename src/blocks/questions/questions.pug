@@ -28,6 +28,7 @@ mixin questions(mods)
       {}
     ]
   .questions(class=allMods)&attributes(attributes)
+    +section-head({h2: "Частые вопросы по КАСКО"})
     .questions__content
       each questionItem in questionItems
         +ui-accordion({h5: questionItem.title}, "questions-item, --toggle-plus")
