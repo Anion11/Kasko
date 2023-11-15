@@ -102,7 +102,7 @@ function validation() {
             {
               validator: (value, context) => {
                 for (const char of value) {
-                  if (array.has(char)) {
+                  if (array.includes(char)) {
                     console.log(char);
                   }
                 }

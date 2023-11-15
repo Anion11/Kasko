@@ -4,7 +4,6 @@
     width: 100%;
     padding: 13px 16px;
     border: 2px solid transparent;
-    box-shadow: 0 0 0 1px $base-ghost, 0 0 0 1px $base-ghost;
     border-radius: 4px;
     background: $base-white;
     outline: none;
@@ -24,7 +23,6 @@
     }
   }
   .just-validate-error-input {
-    border: 1px solid $main-error-error-60;
     background: $new-error-10;
     & ~ label{
       background: linear-gradient(transparent 50%, $new-error-10 50%) no-repeat !important;
@@ -36,6 +34,7 @@
       background: $base-white;
       & ~ label {
         color: $main-error-error-60;
+        background: linear-gradient(transparent 50%, $base-white 50%) no-repeat !important;
       }
     }
   }

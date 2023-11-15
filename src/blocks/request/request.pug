@@ -15,10 +15,14 @@ mixin request(id, mods)
       +section-head({h2: "Оставьте заявку на полис КАСКО", p2:"Оставьте свои данные - мы поможем подобрать для вас программу на самых выгодных условиях."}, "--xs")
       form(action="").request__form
         .request__input-wrapper
-          +ui-input(id + 'Surname', 'Фамилия', "", "police")(required)
+          +ui-input(id + 'Surname', 'Фамилия')(required)
           +ui-input(id + 'Name', 'Имя')(required)
           +ui-input(id + 'phone', 'Номер телефона', "", "phone")(required)
         .request__assent
           +ui-checkbox(id + 'agreement', '<span class="ui-p3">Даю согласие на <a class="request__assent-link" href="#">обработку персональных данных </a>.</span>')(required)
         +ui-button({p2: "Оставить заявку"}, "--filled")
+        br
+        br
+        br
+        +ui-input(id + 'test', 'test', "", "police")(required)
     block
