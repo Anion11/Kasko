@@ -9,11 +9,12 @@ mixin banner(mods)
       }
       allMods = allMods.trim()
     }
-    const bannerInfo ={
+    const bannerInfo = {
       title: "Оформить полис КАСКО",
       text: "КАСКО – это ваша финансовая защита при угоне, ДТП или неожиданном повреждении автомобиля. Выберите лучшую программу КАСКО, отвечающую всем вашим требованиям - не выходя из дома.",
       src: "../../images/banner/banner-image.png"
     }
+
   .banner(class=allMods)&attributes(attributes)
     .banner__content
       .banner__info

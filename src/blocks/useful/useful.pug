@@ -9,7 +9,7 @@ mixin useful(mods)
       }
       allMods = allMods.trim()
     }
-    const usefulContent =[
+    const usefulContent = [
       {
         className:"accident",
         src:"../../images/useful/accident.png",
@@ -35,6 +35,7 @@ mixin useful(mods)
         desc:"особенно, если авто сгорел полностью"
       }
     ]
+    
   .useful(class=allMods)&attributes(attributes)
     +section-head({h2: "В каких случаях пригодится КАСКО"})
     .useful__content
