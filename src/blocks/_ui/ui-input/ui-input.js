@@ -19,7 +19,7 @@ function inputMask() {
       }
       if (inputMaskItem.attributes[1].value === 'police') {
         IMask(inputMaskItem, {
-          mask: '~[~~~~~]-##-000000',
+          mask: '~[~~~~~~~]-##-000000',
           lazy: false,
           prepareChar: string__ => string__.toUpperCase(),
           definitions: {
@@ -92,7 +92,39 @@ function validation() {
         }
       }
       if (policeInputs) {
-        const array = ['I', 'V', 'X'];
+        const romanArray = 'XVI';
+        const dka = [
+          [-1, 1, 5, 4],
+          [-1, 2, 5, 4],
+          [-1, 3, 5, 4],
+          [-1, null, 5, 4],
+          [-1, 8, 8, 7],
+          [-1, null, null, 6],
+          [-1, null, null, 7],
+          [-1, null, null, 8],
+          [-1, null, null, null],
+          [-1, null, null, 13],
+          [-1, null, null, null],
+          [-1, null, null, null],
+          [-1, null, null, null],
+          [-1, null, null, null]
+        ];
+        const validRoman = (str) => {
+          const lexems = str.split('').map((l) => romanArray.indexOf(l) + 1);
+          let state = 0;
+          let idx = 0;
+          while (true) {
+            const lex = lexems[idx] ?? 0;
+            state = dka[state][lex];
+            if (state === null) {
+              return false;
+            }
+            if (state === -1) {
+              return idx === str.length;
+            }
+            idx += 1;
+          }
+        }
         for (const policeInput of policeInputs) {
           validate.addField(policeInput, [
             {
@@ -100,13 +132,7 @@ function validation() {
               errorMessage: 'Обязательное поле'
             },
             {
-              validator: (value, context) => {
-                for (const char of value) {
-                  if (array.includes(char)) {
-                    console.log(char);
-                  }
-                }
-              },
+              validator: (value, context) => validRoman(value.split('-')[0]),
               errorMessage: 'Римские цифры написаны неправильно!!!'
             }
           ]);
