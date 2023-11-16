@@ -48,7 +48,8 @@
       margin-right: 440px;
     }
     @include media-tablet {
-      margin: 0 0 24px;
+      margin-bottom: 24px;
+      margin-right: 0;
     }
   }
   &__image {

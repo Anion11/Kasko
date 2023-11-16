@@ -61,7 +61,6 @@ blockquote {
   margin: 0;
   padding: 0;
 }
-
 button {
   background: none;
   border: none;
@@ -77,16 +76,14 @@ button {
   .inner {
     max-width: 1440px;
     margin: 0 auto;
+    padding: $inner-pd;
     @include media-laptop {
       max-width: 100%;
     }
   }
   .main {
     flex: 1 0;
-    padding: 0 20px 90px;
-    @include media-tablet {
-      padding: 0 16px 90px;
-    }
+    padding-bottom: $section-mg;
   }
 }
 .mob-hidden {

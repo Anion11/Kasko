@@ -44,6 +44,16 @@ $main-error-error-60: var(--main-error-error-60);
 $new-ghost-2: var(--new-ghost-2);
 $new-gradient-1: var(--new-gradient-1);
 
+// utils
+$inner-pd: 0 20px;
+$section-mg: 90px;
+@media (max-width: 1440px) {
+  $section-mg: 50px;
+}
+@media (max-width: 767px) {
+  $inner-pd: 0 16px;
+  $section-mg: 40px;
+}
 // media
 $mediaWidthLaptop: 1440px;
 $mediaWidthTablet: 767px;
