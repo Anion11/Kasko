@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
-    transition: .3s;
+    transition: 0.3s;
     &--active {
       .ui-accordion__toggle {
         &::after {
