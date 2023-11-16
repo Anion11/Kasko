@@ -21,7 +21,7 @@ function inputMask() {
         IMask(inputMaskItem, {
           mask: '~[~~~~~~~]-##-000000',
           lazy: false,
-          prepareChar: string__ => string__.toUpperCase(),
+          prepareChar: (string__) => string__.toUpperCase(),
           definitions: {
             '#': /[А-Я]/,
             '~': /[IVX]/
@@ -97,29 +97,29 @@ function validation() {
           [-1, 1, 5, 4],
           [-1, 2, 5, 4],
           [-1, 3, 5, 4],
-          [-1, null, 5, 4],
+          [-1, undefined, 5, 4],
           [-1, 8, 8, 7],
-          [-1, null, null, 6],
-          [-1, null, null, 7],
-          [-1, null, null, 8],
-          [-1, null, null, null]
+          [-1, undefined, undefined, 6],
+          [-1, undefined, undefined, 7],
+          [-1, undefined, undefined, 8],
+          [-1, undefined, undefined, undefined]
         ];
-        const validRoman = (str) => {
-          const lexems = str.split('').map((l) => romanArray.indexOf(l) + 1);
+        const validRoman = (string__) => {
+          const lexems = [...string__].map((id) => romanArray.indexOf(id) + 1);
           let state = 0;
-          let idx = 0;
+          let index = 0;
           while (true) {
-            const lex = lexems[idx] ?? 0;
+            const lex = lexems[index] ?? 0;
             state = dka[state][lex];
-            if (state === null) {
+            if (state === undefined) {
               return false;
             }
             if (state === -1) {
-              return idx === str.length;
+              return index === string__.length;
             }
-            idx += 1;
+            index += 1;
           }
-        }
+        };
         for (const policeInput of policeInputs) {
           validate.addField(policeInput, [
             {
