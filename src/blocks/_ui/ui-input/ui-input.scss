@@ -5,8 +5,8 @@
     padding: 13px 16px;
     border-radius: 4px;
     background: $base-white;
-    border: 2px solid transparent;
-    outline: 1px solid $base-ghost;
+    border: 1px solid $base-ghost;
+    outline: none;
     &:focus {
       border: 2px solid $main-primary-primary-50;
       background: $base-white;
@@ -23,8 +23,7 @@
     }
   }
   .just-validate-error-input {
-    border: 2px solid transparent;
-    outline: 1px solid $main-error-error-60;
+    border: 1px solid $main-error-error-60;
     background: $new-error-10;
     & ~ label{
       background: linear-gradient(transparent 50%, $new-error-10 50%) no-repeat !important;
