@@ -102,11 +102,6 @@ function validation() {
           [-1, null, null, 6],
           [-1, null, null, 7],
           [-1, null, null, 8],
-          [-1, null, null, null],
-          [-1, null, null, 13],
-          [-1, null, null, null],
-          [-1, null, null, null],
-          [-1, null, null, null],
           [-1, null, null, null]
         ];
         const validRoman = (str) => {
