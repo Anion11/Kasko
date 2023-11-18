@@ -2,16 +2,17 @@
   position: relative;
   input {
     width: 100%;
+    height: 48px;
     padding: 13px 16px;
-    border-radius: 4px;
     background: $base-white;
     border: 1px solid $base-ghost;
+    border-radius: 4px;
     outline: none;
     &:focus {
-      border: 2px solid $main-primary-primary-50;
       background: $base-white;
-      caret-color: $base-primary;  
-      & ~ label {
+      border: 2px solid $main-primary-primary-50;
+      caret-color: $base-primary;
+      ~ label {
         color: $main-primary-primary-60;
       }
     }
@@ -21,19 +22,22 @@
       padding: 0 4px;
       background: linear-gradient(transparent 50%, $base-white 50%) no-repeat;
     }
+    &:-webkit-autofill {
+      box-shadow: 0 0 0 1000px $base-white inset;
+    }
   }
   .just-validate-error-input {
-    border: 1px solid $main-error-error-60;
     background: $new-error-10;
-    & ~ label{
+    border: 1px solid $main-error-error-60;
+    ~ label {
       background: linear-gradient(transparent 50%, $new-error-10 50%) no-repeat !important;
       color: $main-error-error-60;
     }
     &:focus {
+      background: $base-white;
       border: 2px solid $main-error-error-60;
       caret-color: $main-error-error-60;
-      background: $base-white;
-      & ~ label {
+      ~ label {
         color: $main-error-error-60;
         background: linear-gradient(transparent 50%, $base-white 50%) no-repeat !important;
       }
