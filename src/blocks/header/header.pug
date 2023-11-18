@@ -25,10 +25,10 @@ header.header
         a(href="").header__logo
           img(src="../../images/logo.png", alt="logo")
         nav.header__nav
-          .nav__main
+          .header__nav-main
             each navItem in headerNavMain
               a(href=navItem.link).nav__link.ui-p3=navItem.text
-          .nav__search
+          .header__nav-search
             each navItem in headerNavSearch
               a(href=navItem.link).ui-p2.nav__link
                 if navItem.src

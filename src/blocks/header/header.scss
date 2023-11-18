@@ -48,7 +48,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    .nav__main {
+    &-main {
       display: flex;
       gap: 20px;
       .nav__link {
@@ -70,7 +70,7 @@
         }
       }
     }
-    .nav__search {
+    &-search {
       display: flex;
       align-items: center;
       gap: 20px;
@@ -80,10 +80,10 @@
         gap: 6px;
       }
     }
-    .nav__menu {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
+  }
+  .nav__menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
   }
 }
