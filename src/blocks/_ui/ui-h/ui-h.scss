@@ -62,4 +62,7 @@
   &[class*='--white'] {
     color: $base-white;
   }
+  &[class*='--montserrat'] {
+    font-family: $font-Montserrat;
+  }
 }
