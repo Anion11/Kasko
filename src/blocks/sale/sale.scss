@@ -1,12 +1,11 @@
 .sale {
-  position: relative;
   &__content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 100px;
     padding: 50px 130px;
-    border-radius: 6px;
     background: $base-white;
+    border-radius: 6px;
     @include media-laptop {
       grid-template-columns: 1fr;
       gap: 32px;
@@ -27,7 +26,6 @@
     margin-bottom: 16px;
     background: $new-gradient-1;
     background-clip: text;
-    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     @include media-laptop {
       margin-bottom: 8px;

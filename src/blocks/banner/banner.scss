@@ -4,10 +4,10 @@
   &::before {
     content: '';
     position: absolute;
-    height: 100%;
     left: 50%;
+    width: calc(100vw - var(--scrollbar-width));
+    height: 100%;
     transform: translate(-50%);
-    width: calc(100dvw - var(--scrollbar-width));
     background: $base-primary;
     @include media-laptop {
       background: $new-gradient-1;

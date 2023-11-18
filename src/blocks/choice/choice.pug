@@ -41,7 +41,7 @@ mixin choice(mods)
         src:'../../images/choice/help.png'
       }
     ]
-    
+
   .choice(class=allMods)&attributes(attributes)
     +section-head({
         h2: "Выберите программу КАСКО",
@@ -55,6 +55,6 @@ mixin choice(mods)
               img(src=item.src, alt="card-image")
             +ui-h4(item.title, "choice-item, --semibold")
             +ui-p2(item.text)
-      .swiper-pagination
+      +ui-swiper-bullets()
     +ui-button({p2: "Сравнить программы"}, "choice, --border")
     block

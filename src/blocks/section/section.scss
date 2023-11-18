@@ -1,6 +1,7 @@
 .section {
   margin-top: $section-mg;
   &--first {
+    position: relative;
     margin-top: -110px;
     @include media-laptop {
       margin-top: -75px;

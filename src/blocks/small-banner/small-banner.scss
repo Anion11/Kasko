@@ -1,8 +1,7 @@
 .small-banner {
-  position: relative;
   padding: 35px 90px;
-  border-radius: 6px;
   background: $main-primary-primary-60;
+  border-radius: 6px;
   color: $base-white;
   @include media-laptop {
     padding: 40px 30px 17px;

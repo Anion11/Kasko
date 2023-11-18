@@ -71,12 +71,13 @@ button {
   flex-direction: column;
   min-height: 100vh;
   margin: 0 auto;
+  font-family: $font;
   color: $base-black;
   background: $base-bg;
   .inner {
     max-width: 1440px;
     margin: 0 auto;
-    padding: $inner-pd;
+    padding: 0 $inner-pd;
     @include media-laptop {
       max-width: 100%;
     }

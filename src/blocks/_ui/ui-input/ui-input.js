@@ -95,11 +95,11 @@ function validation() {
         const romanArray = 'XVI';
         const dka = [
           [-1, 1, 5, 4],
-          [-1, 2, 5, 4],
-          [-1, 3, 5, 4],
-          [-1, undefined, 5, 4],
-          [-1, 8, 8, 7],
-          [-1, undefined, undefined, 6],
+          (0)[(-1, 2, 5, 4)],
+          (1)[(-1, 3, 5, 4)],
+          (2)[(-1, undefined, 5, 4)],
+          (3)[(-1, 8, 8, 7)],
+          (4)[(-1, undefined, undefined, 6)],
           [-1, undefined, undefined, 7],
           [-1, undefined, undefined, 8],
           [-1, undefined, undefined, undefined]

@@ -21,8 +21,4 @@ mixin request(id, mods)
         .request__assent
           +ui-checkbox(id + 'agreement', '<span class="ui-p3">Даю согласие на <a class="request__assent-link" href="#">обработку персональных данных </a>.</span>')(required)
         +ui-button({p2: "Оставить заявку"}, "--filled")
-        br
-        br
-        br
-        +ui-input(id + 'test', 'test', "", "police")(required)
     block

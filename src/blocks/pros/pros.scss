@@ -1,5 +1,4 @@
 .pros {
-  position: relative;
   &__content {
     display: grid;
     grid-template-columns: 1fr auto;
@@ -42,7 +41,6 @@
       margin-bottom: 12px;
       background: $new-gradient-1;
       background-clip: text;
-      -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       @include media-laptop {
         margin-bottom: 10px;

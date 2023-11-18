@@ -1,5 +1,4 @@
 .advantages {
-  position: relative;
   &__content {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -15,15 +14,11 @@
   }
   &-item {
     padding: 30px 20px 55px;
-    border-radius: 6px;
     background: $base-white;
+    border-radius: 6px;
     &__ui-label {
-      margin-bottom: 54px;
-      background: $new-gradient-1, linear-gradient(91deg, #5a6bff 0.89%, #0054e6 99.35%);
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      /* &::before {
+      /*
+      &::before {
         content: '';
         position: absolute;
         width: 36px;
@@ -34,7 +29,12 @@
         -webkit-mask-image: url('../../images/advantages/circle.svg');
         background-color: rgba(0, 133, 255, 1);
         -webkit-filter: blur(5px);
-      }*/
+      }
+      */
+      margin-bottom: 54px;
+      background: $new-gradient-1, linear-gradient(91deg, #5a6bff 0.89%, #0054e6 99.35%);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
     &__ui-p1 {
       position: relative;

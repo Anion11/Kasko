@@ -1,5 +1,4 @@
 .choice {
-  position: relative;
   &__content {
     position: relative;
     padding-bottom: 40px;
@@ -25,12 +24,12 @@
     }
   }
   &-item {
-    height: auto;
     width: auto;
+    height: auto;
     padding: 30px 55px 50px;
+    background: $base-white;
     border-radius: 6px;
     text-align: center;
-    background: $base-white;
     @include media-laptop {
       padding: 30px 22px;
     }
@@ -72,20 +71,7 @@
       display: none;
       @include media-tablet {
         display: block;
-        bottom: 0;
-        margin-bottom: 24px;
       }
-    }
-  }
-  .swiper-pagination-bullet {
-    height: 5px;
-    width: 5px;
-    background: $main-primary-primary-70;
-    opacity: 0.7;
-    &-active {
-      width: 20px;
-      border-radius: 10px;
-      background: $main-primary-primary-50;
     }
   }
 }

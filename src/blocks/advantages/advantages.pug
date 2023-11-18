@@ -20,10 +20,15 @@ mixin advantages(mods)
     +section-head({h2: "Преимущества «Югории»"})
     .advantages__content
       each item in advantageItems
-        .advantages-item
-          +ui-label(item.label, "advantages-item")
-          +ui-p1(item.text, "advantages-item")
-            if item.link
-              a(href="#").external-link
-                img(src="../../images/advantages/external-link.png", alt="external-link")
+        if item.link
+          .advantages-item
+            +ui-label(item.label, "advantages-item")
+            a(href="#")
+              +ui-p1(item.text, "advantages-item")
+                .external-link
+                  img(src="../../images/advantages/external-link.png", alt="external-link")
+        else
+          .advantages-item
+            +ui-label(item.label, "advantages-item")
+            +ui-p1(item.text, "advantages-item")
     block
