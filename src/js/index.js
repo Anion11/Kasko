@@ -12,6 +12,7 @@ import uiTooltip from '../blocks/_ui/ui-tooltip/ui-tooltip';
 import gallery from '../blocks/gallery/gallery';
 import slider from '../blocks/slider/slider';
 import choiceSwiper from '../blocks/choice/choice-swiper';
+import bannerSwiper from '../blocks/banner/banner-swiper';
 
 document.addEventListener('DOMContentLoaded', function () {
   uiAccordion();
@@ -24,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
   uiTooltip();
   gallery();
   slider();
+  bannerSwiper();
   choiceSwiper();
   window.addEventListener('load', scrollBarWidth, false);
   window.addEventListener('resize', scrollBarWidth, false);

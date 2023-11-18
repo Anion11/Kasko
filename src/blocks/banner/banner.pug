@@ -9,17 +9,23 @@ mixin banner(mods)
       }
       allMods = allMods.trim()
     }
-    const bannerInfo = {
-      title: "Оформить полис КАСКО",
-      text: "КАСКО – это ваша финансовая защита при угоне, ДТП или неожиданном повреждении автомобиля. Выберите лучшую программу КАСКО, отвечающую всем вашим требованиям - не выходя из дома.",
-      src: "../../images/banner/banner-image.png"
-    }
+    const bannerItems = [
+      {
+        title: "Оформить полис КАСКО",
+        text: "КАСКО – это ваша финансовая защита при угоне, ДТП или неожиданном повреждении автомобиля. Выберите лучшую программу КАСКО, отвечающую всем вашим требованиям - не выходя из дома.",
+        src: "../../images/banner/banner-image.png"
+      }
+    ]
 
   .banner(class=allMods)&attributes(attributes)
-    .banner__content
-      .banner__info
-        +ui-h1(bannerInfo.title, "banner, --semibold, --white")
-        +ui-p2(bannerInfo.text, "banner, --white")
-      .banner__image
-        img(src=bannerInfo.src, alt="banner-image")
+    .swiper
+      .swiper-wrapper
+        each bannerItem in bannerItems
+          .swiper-slide.banner__content
+            .banner__info
+              +ui-h1(bannerItem.title, "banner, --semibold, --white")
+              +ui-p2(bannerItem.text, "banner, --white")
+            .banner__image
+              img(src=bannerItem.src, alt="banner-image")
+      +ui-swiper-buttons()
     block
