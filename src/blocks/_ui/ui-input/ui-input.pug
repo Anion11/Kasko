@@ -16,3 +16,25 @@ mixin ui-input(id, label, mods, type)
       label(for=id)
         +ui-p2(label)
     block
+
+mixin ui-input-search(id, label, mods, type)
+  -
+    const baseName = 'ui-input-search'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .ui-input-search(class=allMods class=(label ? '' : 'ui-input-search--no-label')).ui-p2
+    input(id=id type=(typeof(type) !== 'undefined' && type ? type : 'text'))&attributes(attributes)
+    if label
+      label(for=id)
+        .ui-input-search__wrapper
+          img(src="../../images/ui-input/search.png", alt="search")
+          +ui-p2(label)
+        .ui-input-search__close
+    block

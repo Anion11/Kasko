@@ -5,6 +5,7 @@ export default function uiInput() {
   inputMask();
   checkInputFill();
   validation();
+  clearInputValue();
 }
 
 function inputMask() {
@@ -34,12 +35,36 @@ function inputMask() {
 
 function checkInputFill() {
   const uiInputs = document.querySelectorAll('.ui-input');
+  const uiInputSearch = document.querySelectorAll('.ui-input-search');
   if (uiInputs) {
     for (const element of uiInputs) {
       const input = element.querySelector('input');
       input.value === '' ? input.classList.remove('filled') : input.classList.add('filled');
       input.addEventListener('input', function () {
         input.value === '' ? input.classList.remove('filled') : input.classList.add('filled');
+      });
+    }
+  }
+  if (uiInputSearch) {
+    for (const element of uiInputSearch) {
+      const input = element.querySelector('input');
+      input.value === '' ? input.classList.remove('filled') : input.classList.add('filled');
+      input.addEventListener('input', function () {
+        input.value === '' ? input.classList.remove('filled') : input.classList.add('filled');
+      });
+    }
+  }
+}
+
+function clearInputValue() {
+  const uiInputSearch = document.querySelectorAll('.ui-input-search');
+  if (uiInputSearch) {
+    for (const element of uiInputSearch) {
+      const input = element.querySelector('input');
+      const closeElement = element.querySelector('.ui-input-search__close');
+      closeElement.addEventListener('click', () => {
+        input.value = '';
+        input.dispatchEvent(new Event('input'));
       });
     }
   }
