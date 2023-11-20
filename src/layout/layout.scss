@@ -33,7 +33,7 @@ a {
   color: $base-black;
   transition: 0.3s;
   &:hover {
-    color: $base-primary;
+    color: $base-primary !important;
   }
 }
 ul {
@@ -104,9 +104,9 @@ button {
   }
 }
 .tablet-disp {
-  display: none !important;
+  display: none;
   @include media-laptop {
-    display: block !important;
+    display: block;
   }
 }
 .grid {

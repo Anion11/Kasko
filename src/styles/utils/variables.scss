@@ -16,6 +16,7 @@
   --main-neutral-neutral-variant-30: #45464f;
   --main-neutral-neutral-variant-40: #5d5e67;
   --main-neutral-neutral-variant-50: #767680;
+  --main-neutral-neutral-variant-60: #90909A;
   --main-neutral-neutral-variant-90: #e2e1ec;
   --main-error-error-40: #bd0048;
   --main-error-error-50: #e3255e;
@@ -23,6 +24,11 @@
   --new-ghost-2: #d6dcea;
   --new-gradient-1: linear-gradient(91deg, #5a6bff 0.89%, #0054e6 99.35%);
   --new-error-10: #fdeeee;
+  --inner-pd: 20px;
+  --section-mg: 90px;
+  @media (max-width: 767px){
+    --inner-pd: 16px;
+  }
 }
 
 // fonts
@@ -43,6 +49,7 @@ $main-primary-primary-70: var(--main-primary-primary-70);
 $main-neutral-neutral-variant-30: var(--main-neutral-neutral-variant-30);
 $main-neutral-neutral-variant-40: var(--main-neutral-neutral-variant-40);
 $main-neutral-neutral-variant-50: var(--main-neutral-neutral-variant-50);
+$main-neutral-neutral-variant-60: var(--main-neutral-neutral-variant-60);
 $main-neutral-neutral-variant-90: var(--main-neutral-neutral-variant-90);
 $new-error-10: var(--new-error-10);
 $main-error-error-40: var(--main-error-error-40);
@@ -52,8 +59,8 @@ $new-ghost-2: var(--new-ghost-2);
 $new-gradient-1: var(--new-gradient-1);
 
 // utils
-$inner-pd: 20px;
-$section-mg: 90px;
+$inner-pd: var(--inner-pd);
+$section-mg: var(--section-mg);
 
 // media
 $mediaWidthLaptop: 1440px;

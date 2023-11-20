@@ -27,6 +27,97 @@
       }
     }
   }
+  &__menu {
+    position: relative;
+    margin-bottom: 45px;
+    @include media-laptop {
+      margin-bottom: 30px;
+    }
+    &-laptop{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 120px;
+    }
+    .ui-accordion{
+      @include media-laptop {
+        border-bottom: 1px solid $main-neutral-neutral-variant-30;
+        &:first-child{
+          border-top: 1px solid $main-neutral-neutral-variant-30;
+        }
+      }
+      &__head{
+        padding: 16px 0;
+      }
+      &__body{
+        padding-bottom: 22px;
+      }
+    }
+    &-link {
+      display: block;
+      margin-top: 14px;
+      color: $main-neutral-neutral-variant-60;
+      &:first-child {
+        margin: 0;
+      }
+    }
+  }
+  .utils {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 14px;
+    margin-right: 30px;
+    @include media-laptop {
+      position: static;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+    &-item{
+      &__app{
+        @include media-laptop{
+          display: flex;
+          align-items: center;
+          &-image{
+            width: 74px;
+            margin-right: 16px;
+            padding: 21px;
+            border-radius: 12px;
+            border: 2px solid $main-neutral-neutral-variant-40;
+          }
+          &-text{
+            display: grid;
+            gap: 6px;
+            color: $main-neutral-neutral-variant-50;
+          }
+        }
+      }
+      &__version{
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        gap: 6px;
+        &:first-child {
+          margin-bottom: 16px;
+        }
+      }
+      &__social{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        margin-top: 40px;
+        @include media-laptop {
+          margin-top: 24px;
+        }
+        &-image{
+          max-width: 36px;
+          padding: 8px;
+          border-radius: 6px;
+          background-color: $main-neutral-neutral-variant-30;
+        }
+      }
+    }
+  }
   &__copyrights {
     display: grid;
     grid-template-columns: 1fr auto;

@@ -39,6 +39,13 @@
   }
 }
 [class*='ui-accordion'] {
+  &[class*='--white']{
+    .ui-accordion__toggle {
+      &::after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='10' fill='none'%3E%3Cpath stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m15 1.5-7 7-7-7'/%3E%3C/svg%3E");
+      }
+    }
+  }
   &[class*='--toggle-plus'] {
     .ui-accordion {
       &__head {

@@ -2,32 +2,62 @@
   const footerСopyrights = "© 1997 — 2019 АО «ГСК «Югория». Лицензии ЦБ РФ: ОС № 3211-03 от 26.08.2019 г., СИ № 3211 от 26.08.2019 г., СЛ № 3211 " +
              "от 26.08.2019 г., ОС № 3211-04 от 26.08.2019 г., ПС № 3211 от 26.08.2019 г., ОС № 3211-05 от 26.08.2019 г."
   const footerMenu = [
-    { title: 'Title_1',
+    { title: 'Частным клиентам',
       list: [
-      { name: 'Link_1', link: '#' },
-      { name: 'Link_2', link: '#' },
-      { name: 'Link_3', link: '#' }
+      { name: 'Зеленая карта', link: '#' },
+      { name: 'КАСКО', link: '#' },
+      { name: 'ОСАГО', link: '#' },
+      { name: 'РУД', link: '#' },
+      { name: 'Ипотечное страхование', link: '#' },
+      { name: 'Титульное страхование', link: '#' },
+      { name: 'Страхование имущества физических лиц', link: '#' },
+      { name: 'Антиклещ', link: '#' },
+      { name: 'Страхование от несчастных случаев', link: '#' },
+      { name: 'Страхование путешественников', link: '#' },
+      { name: 'Пролонгация полисов', link: '#' },
+      { name: 'Финансовый уполномоченный', link: '#' },
+      { name: 'Для клиентов ПАО «АСКО-СТРАХОВАНИЕ»', link: '#' },
+      { name: 'Расторжение договора страхования', link: '#' }
     ]},
-    { title: 'Title_2',
+    { title: 'Корпоративным клиентам',
       list: [
-      { name: 'Link_1', link: '#' },
-      { name: 'Link_2', link: '#' },
-      { name: 'Link_3', link: '#' }
+      { name: 'Страхование ответственности ОПО', link: '#' },
+      { name: 'Гражданская ответственность перевозчика', link: '#' },
+      { name: 'ОСАГО', link: '#' },
+      { name: 'Страхование транспорта', link: '#' },
+      { name: 'ДМС сотрудников', link: '#' },
+      { name: 'Страхование имущества', link: '#' },
+      { name: 'Страхование ответственности', link: '#' },
+      { name: 'Строительно-монтажные риски', link: '#' }
     ]},
-    { title: 'Title_3',
+    { title: 'Партнерам',
       list: [
-      { name: 'Link_1', link: '#' },
-      { name: 'Link_2', link: '#' },
-      { name: 'Link_3', link: '#' }
+      { name: 'Продукты', link: '#' },
+      { name: 'Вэбмастерам', link: '#' },
+      { name: 'Агентам/брокерам', link: '#' },
+      { name: 'Реестр страховых агентов', link: '#' },
+      { name: 'Лизинговым компаниям', link: '#' },
+      { name: 'Автодилерам', link: '#' },
+      { name: 'СТОА', link: '#' },
+      { name: 'Банкам', link: '#' }
     ]},
-    { title: 'Title_4',
+    { title: 'О компании',
       list: [
-      { name: 'Link_1', link: '#' },
-      { name: 'Link_2', link: '#' },
-      { name: 'Link_3', link: '#' }
+      { name: 'О компании', link: '#' },
+      { name: 'Пресс-центр', link: '#' },
+      { name: 'Лицензии и документы', link: '#' },
+      { name: 'Безопасность персональных данных', link: '#' },
+      { name: 'Карьера в Югории', link: '#' },
+      { name: 'Охрана труда', link: '#' },
+      { name: 'Сообщить о фактах коррупции', link: '#' }
     ]}
   ]
-
+    socialButtons = [
+      {src:"../../images/footer/tg.png", alt:"telegram", link:"#"},
+      {src:"../../images/footer/vk.png", alt:"vk", link:"#"},
+      {src:"../../images/footer/ok.png", alt:"ok", link:"#"},
+      {src:"../../images/footer/Yandex.png", alt:"yandex", link:"#"}
+    ]
 footer.footer
   .inner
     .footer__helper
@@ -35,7 +65,41 @@ footer.footer
       .grid
         +ui-h3("8-800-100-82-00", "--white, --montserrat")
         +ui-p3("Федеральный контактный центр")
-    .footer__nav
+    nav.footer__menu
+      .footer__menu-laptop.tablet-hidden
+        each menu in footerMenu
+          .footer__menu-item
+            +ui-p2(menu.title, "--white")
+            each menuItem in menu.list
+              a(href=menuItem.link).footer__menu-link
+                +ui-p3(menuItem.name)
+      .footer__menu-tablet.tablet-disp
+        each menu in footerMenu
+          +ui-accordion({p2: menu.title}, "--white")
+            each menuItem in menu.list
+              a(href=menuItem.link).footer__menu-link
+                +ui-p3(menuItem.name)
+      .utils
+        .utils-item.tablet-disp
+          a(href="#").utils-item__app
+            .utils-item__app-image
+              img(src="../../images/footer/mob-app.png", alt="mob-app")
+            .utils-item__app-text
+              +ui-p2("Мобильное приложение", "--white")
+              +ui-p3("Загрузите приложение для iOS и Android", "--regular")
+        .utils-item
+          a(href="#").utils-item__version
+            .utils__version-image
+              img(src="../../images/footer/eye.png", alt="eye")
+            +ui-p3("Версия для слабовидящих", "--white")
+          a(href="#").utils-item__version
+            .utils__version-image
+              img(src="../../images/footer/globe.png", alt="globe")
+            +ui-p3("English version", "--white")
+          .utils-item__social
+            each socialItem in socialButtons
+              a(href=socialItem.link).utils-item__social-image
+                img(src=socialItem.src, alt=socialItem.alt)
     .footer__copyrights
       +ui-p3(footerСopyrights)
-      +ui-p3("Сделано в <span class='ui-p3 ui-p3--white'>D’Terra</span>", "--bottom")
+      +ui-p3("Сделано в <a href='#' class='ui-p3 ui-p3--white'>D’Terra</a>", "--bottom")

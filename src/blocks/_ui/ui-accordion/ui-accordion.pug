@@ -12,7 +12,10 @@ mixin ui-accordion(text, mods)
 
   .ui-accordion(class=allMods)&attributes(attributes)
     .ui-accordion__head
-      +ui-h5(text, "--semibold")
+      if text.h5
+        +ui-h5(text.h5, "--semibold")
+      else if text.p2 
+        +ui-p2(text.p2, "--semibold --white")
       .ui-accordion__toggle
     .ui-accordion__body
       block
