@@ -1,7 +1,7 @@
 import Swiper from 'swiper/bundle';
 
 export default function choiceSwiper() {
-  const mediaQuery = window.matchMedia('(max-width: 768px)');
+  const breakPoint = window.matchMedia('(max-width: 768px)');
   let choiceSwiper;
   function createSwiper() {
     if (choiceSwiper !== undefined) choiceSwiper.destroy(true, true);
@@ -23,9 +23,9 @@ export default function choiceSwiper() {
     });
   }
   function breakPointCheck() {
-    if (mediaQuery.matches) createSwiper();
+    if (breakPoint.matches) createSwiper();
     else if (choiceSwiper !== undefined) choiceSwiper.destroy(true, true);
   }
-  mediaQuery.addEventListener('change', breakPointCheck);
+  breakPoint.addEventListener('change', breakPointCheck);
   breakPointCheck();
 }

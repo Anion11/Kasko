@@ -13,6 +13,7 @@ import gallery from '../blocks/gallery/gallery';
 import slider from '../blocks/slider/slider';
 import choiceSwiper from '../blocks/choice/choice-swiper';
 import bannerSwiper from '../blocks/banner/banner-swiper';
+import footerAccordion from '../blocks/footer/footer';
 
 document.addEventListener('DOMContentLoaded', function () {
   uiAccordion();
@@ -21,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
   uiRange();
   uiSelect();
   uiTab();
+  footerAccordion();
   uiTextarea();
   uiTooltip();
   gallery();

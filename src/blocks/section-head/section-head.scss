@@ -7,10 +7,8 @@
     width: 66%;
     padding-top: 18px;
     @include media-laptop {
-      padding-top: 12px;
-    }
-    @include media-laptop {
       width: 100%;
+      padding-top: 12px;
     }
   }
 }

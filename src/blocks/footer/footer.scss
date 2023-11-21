@@ -2,8 +2,16 @@
   flex: 0 1;
   padding: 45px 0 40px;
   background: $base-black;
+  background-image: url("../../images/footer/bg_footer.png");
+  background-repeat: no-repeat;
+  background-position: bottom left;
   @include media-laptop {
     padding: 35px 0 22px;
+    background-size: auto 460px;
+  }
+  @include media-tablet {
+    padding: 35px 0 22px;
+    background-size: auto 404px;
   }
   &__helper {
     display: grid;
@@ -35,31 +43,76 @@
     @include media-laptop {
       margin-bottom: 30px;
     }
-    &-laptop{
+    &-content{
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 120px;
+      gap: 105px;
+      @include media-laptop {
+        display: block;
+      }
     }
-    .ui-accordion{
+    &-item {
       @include media-laptop {
         border-bottom: 1px solid $main-neutral-neutral-variant-30;
         &:first-child{
           border-top: 1px solid $main-neutral-neutral-variant-30;
         }
       }
-      &__head{
-        padding: 16px 0;
+    }
+    &-head {
+      padding: 16px 0;
+      @include media-laptop {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        transition: 0.3s;
+        &--active {
+          .footer__menu-toggle {
+            &::after {
+              transform: translateY(-50%) rotate(180deg);
+            }
+          }
+        }
       }
-      &__body{
-        padding-bottom: 22px;
+    }
+    &-toggle {
+      @include media-laptop {
+        flex-shrink: 0;
+        position: relative;
+        margin-left: 22px;
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+          width: 18px;
+          height: 18px;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='10' fill='none'%3E%3Cpath stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m15 1.5-7 7-7-7'/%3E%3C/svg%3E");
+          background-repeat: no-repeat;
+          background-size: contain;
+          transition: 0.3s;
+        }
+      }
+    }
+    &-body {
+      padding: 14px 0 22px;
+      gap: 14px;
+      @include media-laptop{
+        display: none;
+        grid-template-columns: repeat(auto-fit, minmax(auto, 300px));
+        column-gap: 34px;
+        padding-top: 0;
+      }
+      @include media-tablet{
+        grid-template-columns: 1fr;
       }
     }
     &-link {
-      display: block;
-      margin-top: 14px;
       color: $main-neutral-neutral-variant-60;
-      &:first-child {
-        margin: 0;
+      .ui-p3 {
+        display: inline;
       }
     }
   }
@@ -74,6 +127,7 @@
       display: flex;
       justify-content: space-between;
       margin-top: 30px;
+      margin-right: 0;
     }
     @include media-tablet {
       flex-direction: column;

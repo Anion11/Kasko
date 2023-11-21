@@ -66,19 +66,17 @@ footer.footer
         +ui-h3("8-800-100-82-00", "--white, --montserrat")
         +ui-p3("Федеральный контактный центр")
     nav.footer__menu
-      .footer__menu-laptop.tablet-hidden
+      .footer__menu-content
         each menu in footerMenu
           .footer__menu-item
-            +ui-p2(menu.title, "--white")
-            each menuItem in menu.list
-              a(href=menuItem.link).footer__menu-link
-                +ui-p3(menuItem.name)
-      .footer__menu-tablet.tablet-disp
-        each menu in footerMenu
-          +ui-accordion({p2: menu.title}, "--white")
-            each menuItem in menu.list
-              a(href=menuItem.link).footer__menu-link
-                +ui-p3(menuItem.name)
+            .footer__menu-head
+              +ui-p2(menu.title, "--white")
+              .footer__menu-toggle
+            .footer__menu-body
+              each menuItem in menu.list
+                div
+                  a(href=menuItem.link).footer__menu-link
+                    +ui-p3(menuItem.name)
       .utils
         .utils-item.tablet-disp
           a(href="#").utils-item__app
