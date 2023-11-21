@@ -36,12 +36,12 @@
     }
   }
   &__ui-ul {
-    padding-right: 30px;
+    padding-right: 44px;
   }
   &__content {
     display: grid;
     grid-template-columns: 1fr auto;
-    gap: 179px;
+    gap: 130px;
     @include media-laptop {
       display: block;
     }

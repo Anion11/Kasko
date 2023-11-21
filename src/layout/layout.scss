@@ -75,7 +75,7 @@ button {
   color: $base-black;
   background: $base-bg;
   .inner {
-    max-width: 1440px;
+    max-width: 1480px;
     margin: 0 auto;
     padding: 0 $inner-pd;
     @include media-laptop {
@@ -119,4 +119,5 @@ button {
   width: 24px;
   height: 24px;
   margin-left: 3px;
+  margin-bottom: 3px;
 }

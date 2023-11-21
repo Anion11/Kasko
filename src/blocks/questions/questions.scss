@@ -20,8 +20,15 @@
       padding: 4px 16px 24px;
     }
   }
-  &-item__ui-accordion:not(:last-child) {
-    border-bottom: 1px solid $main-neutral-neutral-variant-90;
+  &-item__ui-accordion {
+    @include media-laptop {
+      &:last-child{
+        border-bottom: 1px solid $main-neutral-neutral-variant-90;
+      }
+    }
+    &:not(:last-child){
+      border-bottom: 1px solid $main-neutral-neutral-variant-90;
+    }
   }
   .ui-accordion__head {
     padding: 20px 0;

@@ -26,8 +26,12 @@
   --new-error-10: #fdeeee;
   --inner-pd: 20px;
   --section-mg: 90px;
+  @media (max-width: 1440px){
+    --section-mg: 50px;
+  }
   @media (max-width: 767px){
     --inner-pd: 16px;
+    --section-mg: 40px;
   }
 }
 
