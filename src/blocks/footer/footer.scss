@@ -2,7 +2,7 @@
   flex: 0 1;
   padding: 45px 0 40px;
   background: $base-black;
-  background-image: url("../../images/footer/bg_footer.png");
+  background-image: url('../../images/footer/bg_footer.png');
   background-repeat: no-repeat;
   background-position: bottom left;
   @include media-laptop {
@@ -43,7 +43,7 @@
     @include media-laptop {
       margin-bottom: 30px;
     }
-    &-content{
+    &-content {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 105px;
@@ -54,7 +54,7 @@
     &-item {
       @include media-laptop {
         border-bottom: 1px solid $main-neutral-neutral-variant-30;
-        &:first-child{
+        &:first-child {
           border-top: 1px solid $main-neutral-neutral-variant-30;
         }
       }
@@ -99,13 +99,13 @@
     &-body {
       padding: 14px 0 22px;
       gap: 14px;
-      @include media-laptop{
+      @include media-laptop {
         display: none;
-        grid-template-columns: repeat(4, minmax(auto, 300px)); //ljltkfnm
+        grid-template-columns: repeat(4, minmax(auto, 300px));
         column-gap: 34px;
         padding-top: 0;
       }
-      @include media-tablet{
+      @include media-tablet {
         grid-template-columns: 1fr;
       }
     }
@@ -132,19 +132,18 @@
     @include media-tablet {
       flex-direction: column;
     }
-    &-item{
-      &__app{
-        @include media-laptop{
+    &-item {
+      &__app {
+        @include media-laptop {
           display: flex;
           align-items: center;
-          &-image{
-            width: 74px;
+          &-image {
             margin-right: 16px;
             padding: 21px;
-            border-radius: 12px;
             border: 2px solid $main-neutral-neutral-variant-40;
+            border-radius: 12px;
           }
-          &-text{
+          &-text {
             display: grid;
             gap: 6px;
             color: $main-neutral-neutral-variant-50;
@@ -155,7 +154,7 @@
           border-bottom: 1px solid $main-neutral-neutral-variant-30;
         }
       }
-      &__version{
+      &__version {
         display: grid;
         grid-template-columns: auto 1fr;
         align-items: center;
@@ -167,7 +166,7 @@
           }
         }
       }
-      &__social{
+      &__social {
         display: grid;
         grid-template-columns: repeat(4, auto);
         justify-content: start;
@@ -179,7 +178,7 @@
         @include media-tablet {
           margin-top: 30px;
         }
-        &-image{
+        &-image {
           max-width: 36px;
           padding: 8px;
           border-radius: 6px;

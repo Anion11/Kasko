@@ -15,5 +15,8 @@
 [class*='section-head'] {
   &[class*='--xs'] {
     margin-bottom: 28px;
+    @include media-laptop {
+      margin-bottom: 24px;
+    }
   }
 }

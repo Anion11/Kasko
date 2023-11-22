@@ -6,9 +6,7 @@ export default function footerAccordion() {
   if (accordionBlocks) {
     function handler() {
       this.classList.toggle('footer__menu-head--active');
-      toggle(this.nextSibling.nextSibling, {
-        display: 'grid'
-      });
+      toggle(this.nextSibling.nextSibling, { display: 'grid' });
     }
     function accordionToggle() {
       for (const accordionItem of accordionBlocks) {
@@ -19,10 +17,9 @@ export default function footerAccordion() {
           up(itemBody);
         } else {
           itemHead.removeEventListener('click', handler);
-          itemHead.classList.contains('footer__menu-head--active') && itemHead.classList.toggle('footer__menu-head--active');
-          down(itemBody, {
-            display: 'grid'
-          });
+          itemHead.classList.contains('footer__menu-head--active') &&
+            itemHead.classList.toggle('footer__menu-head--active');
+          down(itemBody, { display: 'grid' });
         }
       }
     }
