@@ -9,6 +9,7 @@
   --base-white: #fff;
   --base-primary: #0054e6;
   --base-ghost: #8f9bb3;
+  --base-secondary: #c8d3ff;
   --main-primary-primary-50: #326cfd;
   --main-primary-primary-60: rgb(99 138 255);
   --main-primary-primary-40: #0051df;
@@ -16,7 +17,7 @@
   --main-neutral-neutral-variant-30: #45464f;
   --main-neutral-neutral-variant-40: #5d5e67;
   --main-neutral-neutral-variant-50: #767680;
-  --main-neutral-neutral-variant-60: #90909A;
+  --main-neutral-neutral-variant-60: #90909a;
   --main-neutral-neutral-variant-90: #e2e1ec;
   --main-error-error-40: #bd0048;
   --main-error-error-50: #e3255e;
@@ -26,10 +27,10 @@
   --new-error-10: #fdeeee;
   --inner-pd: 20px;
   --section-mg: 90px;
-  @media (max-width: 1440px){
+  @media (width <= 1440px) {
     --section-mg: 50px;
   }
-  @media (max-width: 767px){
+  @media (width <= 767px) {
     --inner-pd: 16px;
     --section-mg: 40px;
   }
@@ -46,6 +47,7 @@ $base-black: var(--base-black);
 $base-white: var(--base-white);
 $base-primary: var(--base-primary);
 $base-ghost: var(--base-ghost);
+$base-secondary: var(--base-secondary);
 $main-primary-primary-40: var(--main-primary-primary-40);
 $main-primary-primary-50: var(--main-primary-primary-50);
 $main-primary-primary-60: var(--main-primary-primary-60);

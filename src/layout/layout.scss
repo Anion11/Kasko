@@ -74,6 +74,12 @@ button {
   font-family: $font;
   color: $base-black;
   background: $base-bg;
+  @include media-laptop {
+    padding-bottom: 81px;
+  }
+  @include media-tablet {
+    padding-bottom: 66px;
+  }
   .inner {
     max-width: 1480px;
     margin: 0 auto;

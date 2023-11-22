@@ -87,3 +87,33 @@
     gap: 20px;
   }
 }
+.tab-bar {
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+  width: 100%;
+  padding: 15px 50px;
+  background: $base-white;
+  border: 1px solid $base-secondary;
+  border-radius: 6px 6px 0 0;
+  @include media-tablet {
+    padding: 10px 17px;
+  }
+  &__content {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 100px;
+    @include media-tablet {
+      gap: 24px;
+    }
+  }
+  &__item {
+    display: grid;
+    gap: 5px;
+    text-align: center;
+  }
+  &__image {
+    margin: 0 auto;
+  }
+}
