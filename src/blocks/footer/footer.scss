@@ -106,7 +106,7 @@
       gap: 14px;
       @include media-laptop {
         display: none;
-        grid-template-columns: repeat(4, minmax(auto, 300px));
+        grid-template-columns: repeat(2, 1fr);
         column-gap: 34px;
         padding-bottom: 22px;
       }
