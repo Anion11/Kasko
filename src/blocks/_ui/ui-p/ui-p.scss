@@ -15,7 +15,7 @@
   font-family: $font-Montserrat;
   font-weight: 500;
   line-height: 140%;
-  @include media-laptop{
+  @include media-laptop {
     font-size: 13px;
   }
 }

@@ -52,12 +52,17 @@
       { name: 'Сообщить о фактах коррупции', link: '#' }
     ]}
   ]
-    socialButtons = [
-      {src:"../../images/footer/tg.png", alt:"telegram", link:"#"},
-      {src:"../../images/footer/vk.png", alt:"vk", link:"#"},
-      {src:"../../images/footer/ok.png", alt:"ok", link:"#"},
-      {src:"../../images/footer/Yandex.png", alt:"yandex", link:"#"}
-    ]
+  const UtilsSocialButtons = [
+    { src:"../../images/footer/tg.png", alt:"telegram", link:"#" },
+    { src:"../../images/footer/vk.png", alt:"vk", link:"#" },
+    { src:"../../images/footer/ok.png", alt:"ok", link:"#" },
+    { src:"../../images/footer/Yandex.png", alt:"yandex", link:"#" }
+  ]
+  const UtilsVersions = [
+    { src:"../../images/footer/eye.png", alt:"eye", link:"#", text: "Версия для слабовидящих" },
+    { src:"../../images/footer/globe.png", alt:"globe", link:"#", text: "English version" }
+  ]
+
 footer.footer
   .inner
     form(action="").footer__helper
@@ -79,25 +84,23 @@ footer.footer
                     +ui-p3(menuItem.name)
       .utils
         .utils-item.tablet-disp
-          a(href="#").utils-item__app
-            .utils-item__app-image
+          .utils-item__app
+            a(href="#").utils-item__app-image
               img(src="../../images/footer/mob-app.png", alt="mob-app")
             .utils-item__app-text
               +ui-p2("Мобильное приложение", "--white")
               +ui-p3("Загрузите приложение для iOS и Android", "--regular")
         .utils-item
-          a(href="#").utils-item__version
-            .utils__version-image
-              img(src="../../images/footer/eye.png", alt="eye")
-            +ui-p3("Версия для слабовидящих", "--white")
-          a(href="#").utils-item__version
-            .utils__version-image
-              img(src="../../images/footer/globe.png", alt="globe")
-            +ui-p3("English version", "--white")
+          each versionItem in UtilsVersions
+            .utils-item__version
+              a(href=versionItem.link).utils__version-image
+                img(src=versionItem.src, alt=versionItem.alt)
+              a(href=versionItem.link)
+                +ui-p3(versionItem.text, "--white")
           .utils-item__social
-            each socialItem in socialButtons
+            each socialItem in UtilsSocialButtons
               a(href=socialItem.link).utils-item__social-image
                 img(src=socialItem.src, alt=socialItem.alt)
     .footer__copyrights
       +ui-p3(footerСopyrights)
-      +ui-p3("Сделано в <a href='#' class='ui-p3 ui-p3--white'>D’Terra</a>", "--bottom")
+      +ui-p3("Сделано в <a href='#' class='ui-p3 ui-p3--white'>D’Terra</a>")
