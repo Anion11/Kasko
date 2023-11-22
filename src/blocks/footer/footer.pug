@@ -100,8 +100,8 @@ footer.footer
                 +ui-p3(versionItem.text, "--white")
           .utils-item__social
             each socialItem in UtilsSocialButtons
-              a(href=socialItem.link).utils-item__social-image
-                img(src=socialItem.src + ".png", alt=socialItem.alt onmouseover=`this.src="${socialItem.src}-hover.png";` onmouseout=`this.src="${socialItem.src}.png";`)
+              a(href=socialItem.link onmouseover=`this.firstChild.src="${socialItem.src}-hover.png";` onmouseout=`this.firstChild.src="${socialItem.src}.png";`).utils-item__social-image
+                img(src=socialItem.src + ".png", alt=socialItem.alt)
     .footer__copyrights
       +ui-p3(footerСopyrights)
       +ui-p3("Сделано в <a href='#' class='ui-p3 ui-p3--white'>D’Terra</a>")
