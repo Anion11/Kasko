@@ -1,6 +1,7 @@
 -
   const footerСopyrights = "© 1997 — 2019 АО «ГСК «Югория». Лицензии ЦБ РФ: ОС № 3211-03 от 26.08.2019 г., СИ № 3211 от 26.08.2019 г., СЛ № 3211 " +
              "от 26.08.2019 г., ОС № 3211-04 от 26.08.2019 г., ПС № 3211 от 26.08.2019 г., ОС № 3211-05 от 26.08.2019 г."
+
   const footerMenu = [
     { title: 'Частным клиентам',
       list: [
@@ -53,10 +54,10 @@
     ]}
   ]
   const UtilsSocialButtons = [
-    { src:"../../images/footer/tg.png", alt:"telegram", link:"#" },
-    { src:"../../images/footer/vk.png", alt:"vk", link:"#" },
-    { src:"../../images/footer/ok.png", alt:"ok", link:"#" },
-    { src:"../../images/footer/Yandex.png", alt:"yandex", link:"#" }
+    { src:"../../images/footer/tg", alt:"telegram", link:"#" },
+    { src:"../../images/footer/vk", alt:"vk", link:"#" },
+    { src:"../../images/footer/ok", alt:"ok", link:"#" },
+    { src:"../../images/footer/Yandex", alt:"yandex", link:"#" }
   ]
   const UtilsVersions = [
     { src:"../../images/footer/eye.png", alt:"eye", link:"#", text: "Версия для слабовидящих" },
@@ -100,7 +101,7 @@ footer.footer
           .utils-item__social
             each socialItem in UtilsSocialButtons
               a(href=socialItem.link).utils-item__social-image
-                img(src=socialItem.src, alt=socialItem.alt)
+                img(src=socialItem.src + ".png", alt=socialItem.alt onmouseover=`this.src="${socialItem.src}-hover.png";` onmouseout=`this.src="${socialItem.src}.png";`)
     .footer__copyrights
       +ui-p3(footerСopyrights)
       +ui-p3("Сделано в <a href='#' class='ui-p3 ui-p3--white'>D’Terra</a>")
