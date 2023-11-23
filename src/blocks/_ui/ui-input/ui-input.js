@@ -6,8 +6,24 @@ export default function uiInput() {
   checkInputFill();
   validation();
   clearInputValue();
+  searchOnFocus();
 }
 
+function searchOnFocus() {
+  const uiInputSearch = document.querySelectorAll('.ui-input-search');
+  if (uiInputSearch) {
+    for (const searchItem of uiInputSearch) {
+      const searchInput = searchItem.querySelector('input');
+      const searchImage = searchItem.querySelector('img');
+      searchInput.addEventListener('focus', () => {
+        searchImage.src = '../../images/ui-input/search-focus.png';
+      });
+      searchInput.addEventListener('blur', () => {
+        if (!searchInput.value) searchImage.src = '../../images/ui-input/search.png';
+      });
+    }
+  }
+}
 function inputMask() {
   const inputMaskItems = document.querySelectorAll('input');
   if (inputMaskItems) {
