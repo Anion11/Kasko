@@ -1,0 +1,28 @@
+mixin menu-popup(mods)
+  -
+    const baseName = 'menu-popup'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .menu-popup(class=allMods)&attributes(attributes)
+    .menu-popup__content
+      .menu-popup__close
+      +ui-input-search("helper", "Чем вам помочь?", "menu-popup, --popup")
+      .menu-popup__more
+        a(href="#").menu-popup__app
+          .menu-popup__app-image
+            img(src="", alt="mobile-app")
+          +ui-p3("Мобильное приложение. Все функции под рукой", "--white")
+        a(href="#").menu-popup__map
+          .menu-popup__map
+            img(src="", alt="map")
+          +ui-p3("Москва")
+      .menu-popup__feedback
+        +ui-h3("8-800-100-82-00", "--montserrat")
+        +ui-p3("Федеральный контактный центр")
