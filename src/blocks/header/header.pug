@@ -56,20 +56,17 @@ header.header
               img(src="../../images/header/insurance.png", alt="insurance")
             +ui-p3("Страховой случай")
           +ui-button({p2: "Войти"}, "--white, --xxs, header")(href='').mob-hidden
-  .tab-bar.tablet-disp
-    .tab-bar__content
-      each tabBarItem in tabBarMenu
-        if tabBarItem.link
-          a(href=tabBarItem.link).tab-bar__item
-            .tab-bar__image
-              img(src=tabBarItem.src, alt=tabBarItem.alt)
-            +ui-p4(tabBarItem.text)
-        else
-          .tab-bar__item.tab-bar__main
-            .tab-bar__image
-              img(src=tabBarItem.src, alt=tabBarItem.alt)
-            +ui-p4(tabBarItem.text)
+  +tab-bar()
   .menu-popup
     .menu-popup__content
-      .close
+      .menu-popup__close
+        .qwe 
+        .qwe1
       +ui-input-search("helper", "Чем вам помочь?", "--popup")
+      .menu-popup__more
+
+      .menu-popup__feedback
+        +ui-h3("8-800-100-82-00", "--montserrat")
+        +ui-p3("Федеральный контактный центр", "")
+
+    

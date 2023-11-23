@@ -14,7 +14,7 @@ import slider from '../blocks/slider/slider';
 import choiceSwiper from '../blocks/choice/choice-swiper';
 import bannerSwiper from '../blocks/banner/banner-swiper';
 import footerAccordion from '../blocks/footer/footer';
-import headerMenu from '../blocks/header/header';
+import tabBarMenu from '../blocks/tab-bar/tab-bar';
 
 document.addEventListener('DOMContentLoaded', function () {
   uiAccordion();
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
   uiInput();
   uiRange();
   uiSelect();
-  headerMenu();
+  tabBarMenu();
   uiTab();
   footerAccordion();
   uiTextarea();

@@ -39,6 +39,9 @@
       }
     }
   }
+  &__feedback{
+    display: grid;
+  }
   &__menu {
     position: relative;
     margin: 40px 0 45px;

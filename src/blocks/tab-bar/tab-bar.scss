@@ -1,0 +1,41 @@
+.tab-bar {
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+  width: 100%;
+  padding: 15px 50px;
+  background: $base-white;
+  border-top: 1px solid $base-secondary;
+  border-right: 1px solid $base-secondary;
+  border-left: 1px solid $base-secondary;
+  border-radius: 6px 6px 0 0;
+  @include media-tablet {
+    padding: 10px 17px;
+  }
+  &__content {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 100px;
+    @include media-tablet {
+      gap: 24px;
+    }
+  }
+  &__item {
+    display: grid;
+    gap: 5px;
+    text-align: center;
+    cursor: pointer;
+  }
+  &__image {
+    margin: 0 auto;
+  }
+  &__main {
+    &--active{
+      color: $base-primary;
+    }
+    &:hover {
+      color: $base-primary;
+    }
+  }
+}

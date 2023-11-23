@@ -1,0 +1,26 @@
+mixin tab-bar(mods)
+  -
+    const baseName = 'tab-bar'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .tab-bar(class=allMods)&attributes(attributes).tablet-disp
+    .tab-bar__content
+      each tabBarItem in tabBarMenu
+        if tabBarItem.link
+          a(href=tabBarItem.link).tab-bar__item
+            .tab-bar__image
+              img(src=tabBarItem.src, alt=tabBarItem.alt)
+            +ui-p4(tabBarItem.text)
+        else
+          .tab-bar__item.tab-bar__main
+            .tab-bar__image
+              img(src=tabBarItem.src, alt=tabBarItem.alt)
+            +ui-p4(tabBarItem.text)
+    

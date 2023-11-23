@@ -1,8 +1,8 @@
 import { toggle, up } from 'slide-element';
 
-export default function headerMenu() {
+export default function tabBarMenu() {
   const breakPoint = window.matchMedia('(max-width: 1440px)');
-  const menu = document.querySelector('.tab-bar__main');
+  const buttonMenu = document.querySelector('.tab-bar__main');
   const popup = document.querySelector('.menu-popup');
   function toggleMenu() {
     toggle(popup, { display: 'grid', direction: 'normal' });
@@ -12,6 +12,6 @@ export default function headerMenu() {
     up(popup);
     document.body.style.overflow = 'visible';
   }
-  menu.addEventListener('click', toggleMenu);
+  buttonMenu.addEventListener('click', toggleMenu);
   breakPoint.addEventListener('change', closeMenu);
 }
