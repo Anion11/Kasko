@@ -20,6 +20,36 @@
       padding: 10px 16px 22px;
     }
   }
+  &__close {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    pointer-events: all;
+    cursor: pointer;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%) rotate(45deg);
+      width: 16px;
+      height: 2px;
+      background: $base-black;
+      transition: 0.3s;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%) rotate(-45deg);
+      width: 16px;
+      height: 2px;
+      background: $base-black;
+      transition: 0.3s;
+    }
+  }
   &__ui-input-search {
     margin-bottom: 8px;
   }
@@ -67,7 +97,7 @@
       color: $main-neutral-neutral-variant-50;
     }
   }
-  &__open{
+  &__open {
     position: relative;
     margin-left: 22px;
     &::after {
