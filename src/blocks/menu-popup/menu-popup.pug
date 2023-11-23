@@ -17,12 +17,13 @@ mixin menu-popup(mods)
       .menu-popup__more
         a(href="#").menu-popup__app
           .menu-popup__app-image
-            img(src="", alt="mobile-app")
+            img(src="../../images/popup-menu/mob-app.png", alt="mobile-app")
           +ui-p3("Мобильное приложение. Все функции под рукой", "--white")
         a(href="#").menu-popup__map
-          .menu-popup__map
-            img(src="", alt="map")
+          .menu-popup__map-image
+            img(src="../../images/popup-menu/map-pin.png", alt="map")
           +ui-p3("Москва")
+          .menu-popup__open
       .menu-popup__feedback
         +ui-h3("8-800-100-82-00", "--montserrat")
         +ui-p3("Федеральный контактный центр")

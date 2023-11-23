@@ -9,6 +9,13 @@ mixin tab-bar(mods)
       }
       allMods = allMods.trim()
     }
+    const tabBarMenu = [
+      { src: '../../images/tab-bar/main.png', alt: 'main', text: 'Главная', link: '#'},
+      { src: '../../images/tab-bar/chat.png', alt: 'chat', text: 'Чат', link: '#'},
+      { src: '../../images/tab-bar/menu.png', alt: 'menu', text: 'Меню'},
+      { src: '../../images/tab-bar/map.png', alt: 'map', text: 'Офисы', link: '#'},
+      { src: '../../images/tab-bar/login.png', alt: 'login', text: 'Войти', link: '#'}
+    ]
 
   .tab-bar(class=allMods)&attributes(attributes).tablet-disp
     .tab-bar__content
