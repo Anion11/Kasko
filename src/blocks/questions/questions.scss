@@ -1,12 +1,6 @@
 .questions {
-  padding: 50px 90px;
-  background: $new-ghost-2;
-  @include media-laptop {
-    padding: 40px 30px;
-  }
   @include media-tablet {
     margin: 0 calc($inner-pd * -1);
-    padding: 30px 16px 40px;
   }
   &__content {
     padding: 20px 90px 40px;

@@ -11,4 +11,32 @@
       margin: -40px -16px 0;
     }
   }
+  &--inner{
+    padding: 50px 90px;
+    @include media-laptop {
+      padding: 40px 30px;
+    }
+    @include media-tablet {
+      padding: 30px 16px;
+    }
+  }
+  &--filled {
+    background-color: $new-ghost-2;
+  }
+  &--white {
+    background-color: $base-white;
+  }
+  &--bg-image{
+    background-image: url('../../images/request/request-bg-laptop.png');
+    background-position: 100% 100%;
+    background-size: 42% 79%;
+    background-repeat: no-repeat;
+    @include media-laptop {
+      background-image: url('../../images/request/request-bg-tablet.png');
+      background-size: 380px 250px;
+    }
+    @include media-tablet {
+      background-image: none;
+    }
+  }
 }
