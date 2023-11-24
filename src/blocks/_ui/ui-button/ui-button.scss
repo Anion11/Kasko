@@ -9,7 +9,6 @@
   cursor: pointer;
   @include media-tablet {
     width: 100%;
-    // max-width: 328px;
     padding: 10px 70px;
   }
   &:disabled {
@@ -27,7 +26,6 @@
     padding: 14px 48px;
     @include media-tablet {
       width: 100%;
-      // max-width: 296px;
       padding: 10px 48px;
     }
   }
@@ -43,5 +41,9 @@
   }
   &--white {
     background: $base-white;
+  }
+  &--center {
+    display: block;
+    margin: 0 auto;
   }
 }

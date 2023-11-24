@@ -21,9 +21,7 @@
       background: $base-primary;
     }
   }
-}
-[class*='ui-ul'] {
-  &[class*='--white'] {
+  &--white{
     li {
       &::before {
         background: $base-white;

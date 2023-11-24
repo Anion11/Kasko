@@ -37,43 +37,42 @@
   &--white {
     color: $base-white;
   }
-}
-.ui-accordion--toggle-plus {
-      &__head {
-        &--active {
-          .ui-accordion__toggle {
-            &::before {
-              transform: translateY(-50%) rotate(180deg);
-            }
-          }
-        }
-      }
-      &__toggle {
-        flex-shrink: 0;
-        position: relative;
-        margin-left: 26px;
-        cursor: pointer;
-        &::after {
-          content: '';
-          position: absolute;
-          top: 50%;
-          right: 0;
-          transform: translateY(-50%);
-          width: 16px;
-          height: 2px;
-          background: $base-black;
-          transition: 0.3s;
-        }
+  &--toggle-plus{
+    .ui-accordion__head--active {
+      .ui-accordion__toggle {
         &::before {
-          content: '';
-          position: absolute;
-          top: 50%;
-          right: 0;
-          transform: translateY(-50%) rotate(90deg);
-          width: 16px;
-          height: 2px;
-          background: $base-black;
-          transition: 0.3s;
+          transform: translateY(-50%) rotate(180deg);
         }
       }
     }
+    .ui-accordion__toggle {
+      flex-shrink: 0;
+      position: relative;
+      margin-left: 26px;
+      cursor: pointer;
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: 16px;
+        height: 2px;
+        background: $base-black;
+        transition: 0.3s;
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%) rotate(90deg);
+        width: 16px;
+        height: 2px;
+        background: $base-black;
+        transition: 0.3s;
+      }
+    }
+  }
+}
+

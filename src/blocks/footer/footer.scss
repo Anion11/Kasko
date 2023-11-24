@@ -127,10 +127,10 @@
   }
   &__utils {
     position: absolute;
-    right: 0;
     bottom: 0;
+    right: 0;
     margin-right: 50px;
-    padding-bottom: 14px;
+    padding-bottom: 20px;
     @include media-laptop {
       position: static;
       display: flex;
@@ -179,10 +179,17 @@
     }
   }
   &__social-image {
+    display: flex;
+    align-items: center;
     width: 36px;
     padding: 8px;
     border-radius: 6px;
     background-color: $main-neutral-neutral-variant-30;
+    &:hover {
+      path {
+        fill: white;
+      }
+    }
   }
   &__app-image {
     margin-right: 16px;

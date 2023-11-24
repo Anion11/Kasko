@@ -1,13 +1,8 @@
 .choice {
   &__content {
     position: relative;
-    padding-bottom: 40px;
-    @include media-laptop {
-      padding-bottom: 30px;
-    }
     @include media-tablet {
-      padding-bottom: 24px;
-      margin-right: -16px;
+      margin: 0 calc($inner-pd * -1);
     }
   }
   &__wrapper {
@@ -42,13 +37,15 @@
       width: 100%;
       min-width: 130px;
       max-width: 178px;
+      height: 110px;
       margin: 0 auto 38px;
       @include media-laptop {
         margin-bottom: 30px;
       }
       @include media-tablet {
         max-width: 130px;
-        margin: 0;
+        height: 80px;
+        margin: 0 0 24px;
         padding: 0;
       }
     }
@@ -63,15 +60,12 @@
     }
   }
   &__ui-button {
-    display: block;
-    margin: 0 auto;
-  }
-  .swiper {
-    &-pagination {
-      display: none;
-      @include media-tablet {
-        display: block;
-      }
+    margin-top: 40px;
+    @include media-laptop {
+      margin-top: 30px;
+    }
+    @include media-tablet {
+      margin-top: 24px;
     }
   }
 }

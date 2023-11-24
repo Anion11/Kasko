@@ -4,10 +4,8 @@
     margin-bottom: 24px;
   }
   .ui-p2 {
-    width: 66%;
     padding-top: 18px;
     @include media-laptop {
-      width: 100%;
       padding-top: 12px;
     }
   }
@@ -17,6 +15,12 @@
     margin-bottom: 28px;
     @include media-laptop {
       margin-bottom: 24px;
+    }
+  }
+  &[class*='--half-width'] {
+    width: 66%;
+    @include media-laptop {
+      width: 100%;
     }
   }
 }

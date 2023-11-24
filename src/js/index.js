@@ -11,8 +11,8 @@ import uiTextarea from '../blocks/_ui/ui-textarea/ui-textarea';
 import uiTooltip from '../blocks/_ui/ui-tooltip/ui-tooltip';
 import gallery from '../blocks/gallery/gallery';
 import slider from '../blocks/slider/slider';
-import choiceSwiper from '../blocks/choice/choice-swiper';
-import bannerSwiper from '../blocks/banner/banner-swiper';
+import choice from '../blocks/choice/choice';
+import banner from '../blocks/banner/banner';
 import footerAccordion from '../blocks/footer/footer';
 import tabBarMenu from '../blocks/tab-bar/tab-bar';
 
@@ -29,8 +29,8 @@ document.addEventListener('DOMContentLoaded', function () {
   uiTooltip();
   gallery();
   slider();
-  bannerSwiper();
-  choiceSwiper();
+  banner();
+  choice();
   window.addEventListener('load', scrollBarWidth, false);
   window.addEventListener('resize', scrollBarWidth, false);
 });

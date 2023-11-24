@@ -1,6 +1,10 @@
 import Swiper from 'swiper/bundle';
 
-export default function choiceSwiper() {
+export default function choice() {
+  choiceSwiper();
+}
+
+function choiceSwiper() {
   const breakPoint = window.matchMedia('(max-width: 768px)');
   let choiceSwiper;
   function createSwiper() {
@@ -13,9 +17,7 @@ export default function choiceSwiper() {
       grabCursor: true,
       slidesPerView: 'auto',
       pagination: {
-        el: '.swiper-pagination',
-        dynamicBullets: true,
-        dynamicMainBullets: 3
+        el: '.swiper-pagination'
       },
       keyboard: {
         enabled: true

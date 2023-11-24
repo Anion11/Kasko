@@ -11,25 +11,21 @@ mixin useful(mods)
     }
     const usefulContent = [
       {
-        className:"accident",
         src:"../../images/useful/accident.png",
         title:"ДТП",
         desc:"даже если виновник вторая сторона и у него нет ОСАГО"
       },
       {
-        className:"transp",
         src:"../../images/useful/transportation.png",
         title:"Угон",
         desc:"и противоправные действия третьих лиц"
       },
       {
-        className:"parking",
         src:"../../images/useful/parking.png",
         title:"Повреждения на парковке",
         desc:"в том числе падение предметов"
       },
       {
-        className:"mask",
         src:"../../images/useful/fire.png",
         title:"Пожар, взрыв",
         desc:"особенно, если авто сгорел полностью"
@@ -42,8 +38,7 @@ mixin useful(mods)
       each usefulItem in usefulContent
         .useful-item
           .useful-item__header
-            div(class="useful-item__" + usefulItem.className)
-              img(src=usefulItem.src, alt=usefulItem.className)
+            img(src=usefulItem.src, alt=usefulItem.className)
           .useful-item__text
             +ui-p1(usefulItem.title, "useful-item, --semibold")
             +ui-p2(usefulItem.desc)

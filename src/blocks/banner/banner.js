@@ -1,6 +1,9 @@
 import Swiper from 'swiper/bundle';
+export default function banner() {
+  bannerSwiper();
+}
 
-export default function bannerSwiper() {
+function bannerSwiper() {
   const bannerSwiper = new Swiper('.banner .swiper', {
     direction: 'horizontal',
     loop: false,
