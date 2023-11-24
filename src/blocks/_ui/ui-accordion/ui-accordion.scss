@@ -38,9 +38,7 @@
     color: $base-white;
   }
 }
-[class*='ui-accordion'] {
-  &[class*='--toggle-plus'] {
-    .ui-accordion {
+.ui-accordion--toggle-plus {
       &__head {
         &--active {
           .ui-accordion__toggle {
@@ -79,5 +77,3 @@
         }
       }
     }
-  }
-}

@@ -83,24 +83,24 @@ footer.footer
                 div
                   a(href=menuItem.link).footer__menu-link
                     +ui-p3(menuItem.name)
-      .utils
-        .utils-item.tablet-disp
-          .utils-item__app
-            a(href="#").utils-item__app-image
+      .footer__utils
+        .footer__utils-item.tablet-disp
+          .footer__utils-app
+            a(href="#").footer__app-image
               img(src="../../images/footer/mob-app.png", alt="mob-app")
-            .utils-item__app-text
+            .footer__app-text
               +ui-p2("Мобильное приложение", "--white")
               +ui-p3("Загрузите приложение для iOS и Android", "--regular")
-        .utils-item
+        .footer__utils-item
           each versionItem in UtilsVersions
-            .utils-item__version
-              a(href=versionItem.link).utils__version-image
+            .footer__utils-version
+              a(href=versionItem.link).footer__version-image
                 img(src=versionItem.src, alt=versionItem.alt)
               a(href=versionItem.link)
                 +ui-p3(versionItem.text, "--white")
-          .utils-item__social
+          .footer__utils-social
             each socialItem in UtilsSocialButtons
-              a(href=socialItem.link onmouseover=`this.firstChild.src="${socialItem.src}-hover.png";` onmouseout=`this.firstChild.src="${socialItem.src}.png";`).utils-item__social-image
+              a(href=socialItem.link onmouseover=`this.firstChild.src="${socialItem.src}-hover.png";` onmouseout=`this.firstChild.src="${socialItem.src}.png";`).footer__social-image
                 img(src=socialItem.src + ".png", alt=socialItem.alt)
     .footer__copyrights
       +ui-p3(footerСopyrights)
