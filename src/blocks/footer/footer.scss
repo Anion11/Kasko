@@ -39,7 +39,7 @@
       }
     }
   }
-  &__feedback{
+  &__feedback {
     display: grid;
   }
   &__menu {
@@ -153,7 +153,7 @@
       @include media-tablet {
         padding-bottom: 24px;
         border-bottom: 1px solid $main-neutral-neutral-variant-30;
-      } 
+      }
     }
     &-version {
       display: grid;
@@ -182,13 +182,13 @@
     display: flex;
     align-items: center;
     width: 36px;
+    height: 36px;
     padding: 8px;
     border-radius: 6px;
     background-color: $main-neutral-neutral-variant-30;
+    color: #8f9bb3;
     &:hover {
-      path {
-        fill: white;
-      }
+      color: white !important;
     }
   }
   &__app-image {
