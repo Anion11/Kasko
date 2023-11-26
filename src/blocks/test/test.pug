@@ -10,15 +10,15 @@ mixin test(mods)
       allMods = allMods.trim()
     }
     const testItemsHead = [
-      {src: "../../images/test/first-card.png", text: "Оплата покупок"},
-      {src: "../../images/test/second-card.png", text: "Перевести деньги на подарок"},
-      {src: "../../images/test/third-card.png", text: "Купить билеты", trigger:"месяцы, следующие за месяцем открытия льготного периода"},
-      {src: "../../images/test/forth-card.png", text: "Купить игрушки"},
-      {src: "../../images/test/five-card.png", text: "Снять наличные"}
+      { src: "../../images/test/first-card.png", text: "Оплата покупок" },
+      { src: "../../images/test/second-card.png", text: "Перевести деньги на подарок" },
+      { src: "../../images/test/third-card.png", text: "Купить билеты" },
+      { src: "../../images/test/forth-card.png", text: "Купить игрушки" },
+      { src: "../../images/test/five-card.png", text: "Снять наличные" }
     ]
     const testItemsBottom = [
-      {src: "../../images/test/credit-card.png", content: {head: "Ежемесячный платеж 3%", text:"от задолженности", bottom: "до 25 числа"}},
-      {src: "../../images/test/credit-card-circle.png", content: {head: "Полное погашение задолженности", text:"не позднее последнего дня льготного периода"}}
+      { src: "../../images/test/credit-card.png", content: {head: "Ежемесячный платеж 3%", text:"от задолженности", bottom: "до 25 числа"} },
+      { src: "../../images/test/credit-card-circle.png", content: {head: "Полное погашение задолженности", text:"не позднее последнего дня льготного периода"} }
     ]
 
   .test(class=allMods)&attributes(attributes)
@@ -26,44 +26,36 @@ mixin test(mods)
         h2: "Льготный период на покупки, снятие наличных и переводы",
         p2: "длительность льготного периода определяется условиями заключенного договора"
       })
-    .test__content 
-      .test__head-mob.mob-disp
-          +ui-p3("месяц открытия льготного периода", "mob-disp, --filled, --center")
-          .test__arrow-wrapper
-            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="29" viewBox="0 0 9 29" fill="none">
-              <path d="M4.49938 27L8 23.266M4.49938 27L1 23.266M4.49938 27L4.49938 1" stroke="#999999" stroke-width="1.56" stroke-linecap="round"/>
-            </svg>
-            +ui-p3("Первая покупка открывает льготный период")
+    .test__content
+      .test__decore-bottom.mob-disp
       .test__head
-        .test__decore-top.mob-disp
         each headItem in testItemsHead
-          if headItem.trigger
-            +ui-p3(headItem.trigger, "mob-disp, --filled, --center").mob-disp
-            .test__decore-bottom.mob-disp
           .test__head-item
             .test__head-item__image
               img(src=headItem.src, alt="")
             .test__head-item__text
               +ui-p3(headItem.text)
-      .test__text.mob-hidden
-        .test__text-left
-          +ui-p3("месяц открытия льготного периода")
-        .test__text-right
-          +ui-p3("месяцы, следующие за месяцем открытия льготного периода")
-      .test__bottom
-        .test__arrow-wrapper.mob-hidden
-          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="50" viewBox="0 0 15 50" fill="none">
+      .test__text-left
+        +ui-p3("месяц открытия льготного периода")
+      .test__text-right
+        +ui-p3("месяцы, следующие за месяцем открытия льготного периода")
+      .test__arrow-wrapper
+          <svg class="mob-hidden" xmlns="http://www.w3.org/2000/svg" width="15" height="50" viewBox="0 0 15 50" fill="none">
             <path d="M7.50107 2L1.5 8.5M7.50107 2L13.5 8.5M7.50107 2V49" stroke="#999999" stroke-width="1.56" stroke-linecap="round"/>
           </svg>
+          <svg class="mob-disp" xmlns="http://www.w3.org/2000/svg" width="9" height="29" viewBox="0 0 9 29" fill="none">
+              <path d="M4.49938 27L8 23.266M4.49938 27L1 23.266M4.49938 27L4.49938 1" stroke="#999999" stroke-width="1.56" stroke-linecap="round"/>
+          </svg>
           +ui-p3("Первая покупка открывает льготный период")
+      .test__bottom
         .test__bottom-content
           each testItem in testItemsBottom
             .test__bottom-item
               .test__bottom-image
                 img(src=testItem.src, alt="credit-card")
               .test__bottom-text
-                +ui-h5(testItem.content.head, "--small")
+                +ui-h5(testItem.content.head)
                 +ui-p3(testItem.content.text)
                 if testItem.content.bottom
-                  +ui-h4(testItem.content.bottom, "--filled") 
-    block 
+                  +ui-h4(testItem.content.bottom, "--filled")
+    block
