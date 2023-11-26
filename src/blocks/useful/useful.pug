@@ -1,4 +1,4 @@
-mixin useful(mods)
+mixin useful(sectionHeadText, usefulContent, mods)
   -
     const baseName = 'useful'
     let allMods = ''
@@ -9,31 +9,10 @@ mixin useful(mods)
       }
       allMods = allMods.trim()
     }
-    const usefulContent = [
-      {
-        src:"../../images/useful/accident.png",
-        title:"ДТП",
-        desc:"даже если виновник вторая сторона и у него нет ОСАГО"
-      },
-      {
-        src:"../../images/useful/transportation.png",
-        title:"Угон",
-        desc:"и противоправные действия третьих лиц"
-      },
-      {
-        src:"../../images/useful/parking.png",
-        title:"Повреждения на парковке",
-        desc:"в том числе падение предметов"
-      },
-      {
-        src:"../../images/useful/fire.png",
-        title:"Пожар, взрыв",
-        desc:"особенно, если авто сгорел полностью"
-      }
-    ]
 
   .useful(class=allMods)&attributes(attributes)
-    +section-head({h2: "В каких случаях пригодится КАСКО"})
+    if sectionHeadText
+      +section-head({h2: sectionHeadText.h2})
     .useful__content
       each usefulItem in usefulContent
         .useful-item

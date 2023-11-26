@@ -9,22 +9,10 @@
   @include media-tablet {
     padding: 24px 16px 14px;
   }
-  &__ui-h2 {
-    margin-bottom: 18px;
+  &__section-head {
+    max-width: 680px;
     @include media-laptop {
-      margin-bottom: 12px;
-    }
-    @include media-tablet {
-      margin-bottom: 10px;
-    }
-  }
-  &__ui-p1 {
-    margin-bottom: 28px;
-    @include media-laptop {
-      margin-bottom: 24px;
-    }
-    @include media-tablet {
-      margin-bottom: 20px;
+      max-width: none;
     }
   }
   &__info {
@@ -36,13 +24,13 @@
     }
   }
   &__ui-ul {
-    padding-right: 44px;
+    padding-right: 90px;
     margin: 0;
   }
   &__content {
     display: grid;
     grid-template-columns: 1fr auto;
-    gap: 130px;
+    gap: 100px;
     @include media-laptop {
       display: block;
     }

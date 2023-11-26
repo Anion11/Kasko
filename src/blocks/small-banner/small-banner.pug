@@ -1,4 +1,4 @@
-mixin small-banner(mods)
+mixin small-banner(sectionHeadText, bannerImageSrc, mods)
   -
     const baseName = 'small-banner'
     let allMods = ''
@@ -9,19 +9,12 @@ mixin small-banner(mods)
       }
       allMods = allMods.trim()
     }
-    const smallBannerListItems = [
-      { title: 'Эвакуация с места ДТП и ремонт деталей без износа'},
-      { title: 'Ремонт фары, зеркала или стекла без справок (до 1 раз в год)'},
-      { title: 'Можно получить полную стоимость автомобиля без учета износа при угоне или тотальном повреждении' },
-      { title: 'Подходят для кредитных авто, как новых, так и б/у'},
-      { title: 'Можно выбрать программу с базовым набором рисков с выгодой до 70%'}
-    ]
-    
+
   .small-banner(class=allMods)&attributes(attributes)
     .small-banner__content
       .small-banner__info
-        +section-head({h2: "Преимущества КАСКО в «Югории»", p2:"Наши программы предлагают разные возможности"}, "--xs")
-        +ui-ul(smallBannerListItems, "small-banner, --white")
+        +section-head({h2: sectionHeadText.h2, p2: sectionHeadText.p2}, "small-banner,--xs")
+        block smallBannerInfo
       .small-banner__image
-        img(src="../../images/small-banner/small-banner-photo.png", alt="small-banner-image")
-    block
+        img(src=bannerImageSrc, alt="small-banner-image")
+

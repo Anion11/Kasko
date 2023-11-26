@@ -1,4 +1,4 @@
-mixin choice(mods)
+mixin choice(sectionHeadText, cardItems, buttonText, mods)
   -
     const baseName = 'choice'
     let allMods = ''
@@ -9,43 +9,11 @@ mixin choice(mods)
       }
       allMods = allMods.trim()
     }
-    const cardItems = [
-      {
-        title:'Классик',
-        text:'Полная защита авто без ограничений по возрасту и стажу вождения',
-        src:'../../images/choice/classic.png'
-      },
-      {
-        title:'Оптима',
-        text:'Полная защита автомобиля с экономией до 30% для уверенных водителей',
-        src:'../../images/choice/optima.png'
-      },
-      {
-        title:'Формула 50+',
-        text:'КАСКО с двумя платежами: вторую часть вносите при наступлении страхового случая',
-        src:'../../images/choice/formula.png'
-      },
-      {
-        title:'Профи',
-        text:'Выгода до 70% для водителей со стажем',
-        src:'../../images/choice/profi.png'
-      },
-      {
-        title:'Легкое КАСКО',
-        text:'Базовые риски всего за 1900 ₽',
-        src:'../../images/choice/lightKASKO.png'
-      },
-      {
-        title:'Помощь',
-        text:'Защита автомобиля по вине другого участника, даже если у того нет ОСАГО, всего от 1990 ₽',
-        src:'../../images/choice/help.png'
-      }
-    ]
 
   .choice(class=allMods)&attributes(attributes)
     +section-head({
-        h2: "Выберите программу КАСКО",
-        p2: "Вы можете получить индивидуальное предложение либо выбрать одну из наших программ — в зависимости от стажа, стиля вождения и состояния автомобиля"
+        h2: sectionHeadText.h2,
+        p2: sectionHeadText.p2
       }, "--half-width")
     .choice__content.swiper
       .choice__wrapper.swiper-wrapper
@@ -53,8 +21,10 @@ mixin choice(mods)
           .choice-item.swiper-slide
             .choice-item__image
               img(src=item.src, alt="card-image")
-            +ui-h4(item.title, "choice-item, --semibold")
-            +ui-p2(item.text)
+            .choice-item__text
+              +ui-h4(item.title, "choice-item, --semibold")
+              +ui-p2(item.text)
       +ui-swiper-bullets("--mobile")
-    +ui-button({p2: "Сравнить программы"}, "choice, --border, --center")
+    if buttonText
+      +ui-button({p2: buttonText}, "choice, --border, --center")
     block

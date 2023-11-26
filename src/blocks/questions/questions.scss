@@ -1,7 +1,4 @@
 .questions {
-  @include media-tablet {
-    margin: 0 calc($inner-pd * -1);
-  }
   &__content {
     padding: 20px 90px 40px;
     background: $base-white;
@@ -16,11 +13,11 @@
   }
   &-item__ui-accordion {
     @include media-laptop {
-      &:last-child{
+      &:last-child {
         border-bottom: 1px solid $main-neutral-neutral-variant-90;
       }
     }
-    &:not(:last-child){
+    &:not(:last-child) {
       border-bottom: 1px solid $main-neutral-neutral-variant-90;
     }
   }

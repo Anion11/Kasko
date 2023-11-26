@@ -1,4 +1,4 @@
-mixin advantages(mods)
+mixin advantages(sectionHeadText, advantageItems, mods)
   -
     const baseName = 'advantages'
     let allMods = ''
@@ -9,15 +9,10 @@ mixin advantages(mods)
       }
       allMods = allMods.trim()
     }
-    const advantageItems = [
-      {label: "11 место", text:"Среди крупнейших страховщиков по КАСКО", link: "#"},
-      {label: "ТОП 3", text:"По качеству сервиса", link: "#"},
-      {label: "21 <span class='ui-h4 ui-h4--semibold'>год +</span>", text:"Работаем для вас"},
-      {label: "24/7", text:"Круглосуточная поддержка"}
-    ]
+
 
   .advantages(class=allMods)&attributes(attributes)
-    +section-head({h2: "Преимущества «Югории»"})
+    +section-head({h2: sectionHeadText.h2})
     .advantages__content
       each item in advantageItems
         if item.link

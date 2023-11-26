@@ -1,4 +1,4 @@
-mixin questions(mods)
+mixin questions(sectionHeadText, questionItems, mods)
   -
     const baseName = 'questions'
     let allMods = ''
@@ -9,30 +9,13 @@ mixin questions(mods)
       }
       allMods = allMods.trim()
     }
-    const questionItems = [
-      {title: "Что нужно для оформления?", text: "Какой-то текст"},
-      {title: "Как продлить?", text: "Какой-то текст"},
-      {title: "Вернут ли оставшуюся премию при продаже авто?", text: "Какой-то текст"},
-      {title: "Когда не выплатят по Каско?", ulItems: [
-          {title:"Если вред автомобилю был нанесен преднамеренно"},
-          {title:"Если машина использовалась в целях, не предусмотренных договором (например, в соревнованиях, в прокате, для обучения вождению или для совершения преступления)"},
-          {title:"Если авто управлялось лицом, которое не имело на это прав"}
-        ],
-        text: "Более подробный перечень ограничений смотрите в Правилах страхования, а также в вашем договоре."
-      },
-      {title: "Как производится ремонт по Каско?", text: "Какой-то текст"},
-      {title: "Сколько водителей можно вписать в полис Каско?", text: "Какой-то текст"},
-      {title: "Как получить компенсацию по Каско?", text: "Какой-то текст"},
-      {title: "Максимальная сумма выплаты по Каско", text: "Какой-то текст"},
-      {title: "Выплата по Каско если сам виноват", text: "Какой-то текст"}
-    ]
 
   .questions(class=allMods)&attributes(attributes)
-    +section-head({h2: "Частые вопросы по КАСКО"})
+    +section-head({h2: sectionHeadText.h2})
     .questions__content
       each questionItem in questionItems
         +ui-accordion({h5: questionItem.title}, "questions-item, --toggle-plus")
           if questionItem.ulItems
-            +ui-ul(questionItem.ulItems, "questions__text")
+            +ui-ul(questionItem.ulItems)
           +ui-p2(questionItem.text)
     block

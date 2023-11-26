@@ -1,4 +1,4 @@
-mixin sale(mods)
+mixin sale(saleContent, mods)
   -
     const baseName = 'sale'
     let allMods = ''
@@ -9,12 +9,7 @@ mixin sale(mods)
       }
       allMods = allMods.trim()
     }
-    const saleContent = [
-      {title:"от <span class='ui-label'>1990</span> ₽", text:"большой выбор программ"},
-      {title:"скидки до <span class='ui-label'>70</span> %", text:"для водителей со стажем"},
-      {title:"Экономия времени <span class='ui-label'></span>", text:"подберем выгодный полис"}
-    ]
-    
+
   .sale(class=allMods)&attributes(attributes)
     .sale__content
       each saleItem in saleContent

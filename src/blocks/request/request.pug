@@ -1,4 +1,4 @@
-mixin request(id, mods)
+mixin request(sectionHeadText, id, mods)
   -
     const baseName = 'request'
     let allMods = ''
@@ -12,7 +12,7 @@ mixin request(id, mods)
 
   .request(class=allMods)&attributes(attributes)
     .request__content
-      +section-head({h2: "Оставьте заявку на полис КАСКО", p2:"Оставьте свои данные - мы поможем подобрать для вас программу на самых выгодных условиях."}, "--xs")
+      +section-head({h2: sectionHeadText.h2, p2: sectionHeadText.p2}, "--xs")
       form(action="").request__form
         .request__input-wrapper
           +ui-input(id + 'Surname', 'Фамилия')(required)

@@ -1,6 +1,6 @@
 .banner {
   position: relative;
-  height: 500px;
+  height: 440px;
   &::before {
     content: '';
     position: absolute;
@@ -14,11 +14,11 @@
     }
   }
   @include media-laptop {
-    height: 485px;
+    height: 420px;
     background: $new-gradient-1;
   }
   @include media-tablet {
-    height: 470px;
+    height: 452px;
   }
   &__content {
     position: relative;
@@ -52,9 +52,18 @@
       margin-right: 0;
     }
   }
+  &__ui-button {
+    margin-top: 30px;
+    @include media-laptop {
+      margin-top: 100px;
+    }
+    @include media-tablet {
+      margin-top: 30px;
+    }
+  }
   &__image {
     position: absolute;
-    top: 0;
+    bottom: 0;
     right: 0;
     width: 100%;
     max-width: 732px;
@@ -62,13 +71,27 @@
     @include media-laptop {
       max-width: 470px;
       max-height: 282px;
-      top: 25%;
     }
     @include media-tablet {
       position: static;
       max-width: 360px;
       max-height: 216px;
       margin: 0 auto;
+    }
+  }
+  &--xl {
+    height: 500px;
+    @include media-laptop {
+      height: 485px;
+    }
+    @include media-tablet {
+      height: 470px;
+    }
+    .banner__image {
+      top: 0;
+      @include media-laptop {
+        top: 25%;
+      }
     }
   }
   .swiper {

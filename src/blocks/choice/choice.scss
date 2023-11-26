@@ -68,4 +68,34 @@
       margin-top: 24px;
     }
   }
+  &--leftImage {
+    .choice-item {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: center;
+      gap: 30px;
+      text-align: left;
+      @include media-laptop {
+        display: block;
+        text-align: center;
+      }
+      @include media-tablet {
+        text-align: left;
+      }
+      &__image {
+        margin: 0;
+        @include media-laptop {
+          margin: 0 auto 30px;
+        }
+        @include media-tablet {
+          margin: 0 0 30px;
+        }
+      }
+    }
+  }
+  &--xs {
+    .choice__wrapper {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 }

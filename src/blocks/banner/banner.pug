@@ -1,4 +1,4 @@
-mixin banner(mods)
+mixin banner(bannerItems, mods)
   -
     const baseName = 'banner'
     let allMods = ''
@@ -9,13 +9,6 @@ mixin banner(mods)
       }
       allMods = allMods.trim()
     }
-    const bannerItems = [
-      {
-        title: "Оформить полис КАСКО",
-        text: "КАСКО – это ваша финансовая защита при угоне, ДТП или неожиданном повреждении автомобиля. Выберите лучшую программу КАСКО, отвечающую всем вашим требованиям - не выходя из дома.",
-        src: "../../images/banner/banner-image.png"
-      }
-    ]
 
   .banner(class=allMods)&attributes(attributes)
     .swiper
@@ -25,6 +18,8 @@ mixin banner(mods)
             .banner__info
               +ui-h1(bannerItem.title, "banner, --semibold, --white")
               +ui-p2(bannerItem.text, "banner, --white")
+              if bannerItem.buttonText
+                +ui-button({p2: bannerItem.buttonText}, "banner, --white, --xs")
             .banner__image
               img(src=bannerItem.src, alt="banner-image")
       +ui-swiper-buttons()

@@ -48,4 +48,10 @@
       }
     }
   }
+  &--union {
+    margin-top: 24px;
+    @include media-tablet {
+      margin-top: 16px;
+    }
+  }
 }
