@@ -11,10 +11,7 @@ mixin choice(sectionHeadText, cardItems, buttonText, mods)
     }
 
   .choice(class=allMods)&attributes(attributes)
-    +section-head({
-        h2: sectionHeadText.h2,
-        p2: sectionHeadText.p2
-      }, "--half-width")
+    +section-head({ h2: sectionHeadText.h2,p2: sectionHeadText.p2 }, "--half-width")
     .choice__content.swiper
       .choice__wrapper.swiper-wrapper
         each item in cardItems
