@@ -1,4 +1,4 @@
-mixin menu-popup(mods)
+mixin menu-popup(menuPopupContent, mods)
   -
     const baseName = 'menu-popup'
     let allMods = ''
@@ -12,18 +12,26 @@ mixin menu-popup(mods)
 
   .menu-popup(class=allMods)&attributes(attributes)
     .menu-popup__content
-      .menu-popup__close
+      .menu-popup__head
+        .menu-popup__close-drag
+        input(type="checkbox", name="closeMenuPopUp" id="closeMenuPopUp")
+        label(for="closeMenuPopUp").menu-popup__close-cross
       +ui-input-search("helper", "Чем вам помочь?", "menu-popup, --popup")
+      .menu-popup__info
+        each infoItem in menuPopupContent
+          a(href=infoItem.link).menu-popup__info-item
+            +ui-p2(infoItem.text, "--semibold")
+            .menu-popup__link
       .menu-popup__more
         a(href="#").menu-popup__app
           .menu-popup__app-image
             img(src="../../images/popup-menu/mob-app.png", alt="mobile-app")
-          +ui-p3("Мобильное приложение. Все функции под рукой", "--white")
+          +ui-p3("Мобильное приложение. Все функции под рукой", "--white, --semibold")
         a(href="#").menu-popup__map
           .menu-popup__map-image
             img(src="../../images/popup-menu/map-pin.png", alt="map")
-          +ui-p3("Москва")
-          .menu-popup__open
+          +ui-p3("Москва", "--semibold")
+          .menu-popup__link
       .menu-popup__feedback
         +ui-h3("8-800-100-82-00", "--montserrat")
         +ui-p3("Федеральный контактный центр")

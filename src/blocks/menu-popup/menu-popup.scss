@@ -14,25 +14,40 @@
   &__content {
     display: none;
     margin-top: auto;
-    padding: 10px 20px 28px;
+    padding: 20px 20px 28px;
     background: $base-white;
     border-radius: 6px 6px 0px 0px;
     @include media-tablet {
-      padding: 10px 16px 22px;
+      padding: 20px 16px 22px;
     }
   }
-  &__close {
+  &__head {
     position: relative;
-    width: 24px;
-    height: 24px;
-    flex-shrink: 0;
+    margin-bottom: 16px;
+    input {
+      display: none;
+    }
+  }
+  &__close-drag {
+    position: absolute;
+    left: 50%;
+    top: -5px;
+    transform: translateX(-50%);
+    width: 57px;
+    height: 5px;
+    border-radius: 67px;
+    background: $base-ghost;
+    pointer-events: all;
+    cursor: pointer;
+  }
+  &__close-cross {
     pointer-events: all;
     cursor: pointer;
     &::after {
       content: '';
       position: absolute;
-      top: 50%;
-      left: 50%;
+      right: 0;
+      top: -2px;
       transform: translateY(-50%) translateX(-50%) rotate(45deg);
       width: 16px;
       height: 2px;
@@ -42,10 +57,10 @@
     &::before {
       content: '';
       position: absolute;
-      top: 50%;
-      left: 50%;
+      right: 0;
       transform: translateY(-50%) translateX(-50%) rotate(-45deg);
       width: 16px;
+      top: -2px;
       height: 2px;
       background: $base-black;
       transition: 0.3s;
@@ -53,6 +68,41 @@
   }
   &__ui-input-search {
     margin-bottom: 8px;
+  }
+  &__info {
+    margin: 24px;
+  }
+  &__info-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+    border-bottom: 1px solid $main-neutral-neutral-variant-90;
+    &:last-child {
+      padding: 16px 0 0;
+      border: none;
+    }
+    &:first-child {
+      padding: 0 0 16px;
+    }
+  }
+  &__link {
+    flex-shrink: 0;
+    position: relative;
+    margin-left: 22px;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%) rotate(-90deg);
+      width: 18px;
+      height: 18px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='10' fill='none'%3E%3Cpath stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m15 1.5-7 7-7-7'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-size: contain;
+      transition: 0.3s;
+    }
   }
   &__more {
     display: grid;
@@ -69,9 +119,12 @@
     grid-template-columns: auto 1fr;
     align-items: center;
     gap: 14px;
-    padding: 15px;
+    padding: 15px 60px 15px 15px;
     background: $new-gradient-1;
     border-radius: 4px;
+    @include media-tablet {
+      padding: 15px 15px 15px 15px;
+    }
     &-image {
       padding: 14px;
       border: 1.5px solid rgba(255, 255, 255, 0.4);
@@ -96,23 +149,6 @@
     }
     .ui-p3 {
       color: $main-neutral-neutral-variant-50;
-    }
-  }
-  &__open {
-    position: relative;
-    margin-left: 22px;
-    &::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      right: 0;
-      transform: translateY(-50%) rotate(270deg);
-      width: 18px;
-      height: 18px;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='10' fill='none'%3E%3Cpath stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m15 1.5-7 7-7-7'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-size: contain;
-      transition: 0.3s;
     }
   }
 }

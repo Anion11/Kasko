@@ -17,6 +17,12 @@
       { text: 'Здоровье', link: '#'},
       { text: 'Путешествия', link: '#'}
   ]
+  const menuPopupContent = [
+      { text: "Частным клиентам", link: "#" },
+      { text: "Корпоративным клиентам", link: "#" },
+      { text: "Партнерам", link: "#" },
+      { text: "О компании", link: "#" }
+    ]
 
 header.header
   .header__top.tablet-hidden
@@ -50,5 +56,5 @@ header.header
             +ui-p3("Страховой случай")
           +ui-button({p2: "Войти"}, "--white, --xxs, header")(href='').mob-hidden
   +tab-bar()
-  +menu-popup()
+  +menu-popup(menuPopupContent)
 
