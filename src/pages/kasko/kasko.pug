@@ -108,7 +108,15 @@ block variables
 block content
   main.main
     .inner
+      .breadcrumbs__mob.mob-disp
+        +breadcrumbs()
+            +breadcrumbs-item('ГЛАВНАЯ', '/')
+            +breadcrumbs-item('КАСКО')
       +banner(bannerContent, "--xl")
+        block breadcrumbs
+          +breadcrumbs("banner, --filled").mob-hidden
+            +breadcrumbs-item('ГЛАВНАЯ', '/')
+            +breadcrumbs-item('КАСКО')
       +section("--first, --inner, --white, --mob-full")
         +request({ h2: "Оставьте заявку на полис КАСКО", p2: "Оставьте свои данные - мы поможем подобрать для вас программу на самых выгодных условиях." }, "Оставить заявку", "form-1-", "--white")
       +section()

@@ -6,8 +6,8 @@
   }
   &__item {
     position: relative;
-    margin-right: 5px;
-    padding-right: 10px;
+    padding-right: 7px;
+    margin-right: 7px;
     font-size: 14px;
     white-space: nowrap;
     &::after {
@@ -16,12 +16,9 @@
       top: 50%;
       right: 0;
       transform: translateY(-50%);
-      width: 6px;
-      height: 1px;
-      background: #aaa;
-    }
-    @include media-tablet {
-      font-size: 12px;
+      width: 1px;
+      height: 10px;
+      background: $base-ghost;
     }
     &:last-child {
       margin-right: 0;
@@ -31,13 +28,23 @@
       }
     }
   }
-  &__link {
-    color: #575757;
-    &:hover {
-      color: teal;
-    }
-  }
   &__text {
-    color: #aaa;
+    color: $base-ghost;
+  }
+  &__link {
+    color: $base-black;
+  }
+  &--filled {
+    .breadcrumbs__text {
+      color: $main-neutral-neutral-variant-80;
+    }
+    .breadcrumbs__link {
+      color: $base-white;
+    }
+    .breadcrumbs__item {
+      &::after {
+        background: $main-neutral-neutral-variant-80;
+      }
+    }
   }
 }

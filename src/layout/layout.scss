@@ -93,6 +93,9 @@ button {
     padding-bottom: $section-mg;
   }
 }
+.breadcrumbs__mob {
+  padding-bottom: 10px;
+}
 .mob-hidden {
   @include media-tablet {
     display: none !important;

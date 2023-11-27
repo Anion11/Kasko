@@ -11,6 +11,7 @@ mixin banner(bannerItems, mods)
     }
 
   .banner(class=allMods)&attributes(attributes)
+    block breadcrumbs
     .swiper
       .swiper-wrapper
         each bannerItem in bannerItems
