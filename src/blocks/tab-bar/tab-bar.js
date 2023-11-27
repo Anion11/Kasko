@@ -16,6 +16,9 @@ export default function tabBarMenu() {
     up(popup.firstElementChild, { duration: 300 });
     document.body.style.overflow = 'visible';
   }
+  popup.addEventListener('click', (event) => {
+    if (event.target === popup) closeMenu();
+  });
   popupCloseCross.addEventListener('click', closeMenu);
   buttonMenu.addEventListener('click', toggleMenu);
   breakPoint.addEventListener('change', closeMenu);
