@@ -51,7 +51,7 @@
       { name: 'Карьера в Югории', link: '#' },
       { name: 'Охрана труда', link: '#' },
       { name: 'Сообщить о фактах коррупции', link: '#' }
-    ]}
+    ], last: "true"}
   ]
   const UtilsSocialButtons = [
     { name:"tg", link:"#" },
@@ -83,25 +83,26 @@ footer.footer
                 li
                   a(href=menuItem.link).footer__menu-link
                     +ui-p3(menuItem.name)
-      .footer__utils
-        .footer__utils-item.tablet-disp
-          .footer__utils-app
-            a(href="#").footer__app-image
-              img(src="../../images/footer/mob-app.png", alt="mob-app")
-            .footer__app-text
-              +ui-p2("Мобильное приложение", "--white")
-              +ui-p3("Загрузите приложение для iOS и Android", "--regular")
-        .footer__utils-item
-          each versionItem in UtilsVersions
-            .footer__utils-version
-              a(href=versionItem.link).footer__version-image
-                img(src=versionItem.src, alt=versionItem.alt)
-              a(href=versionItem.link)
-                +ui-p3(versionItem.text, "--white")
-          .footer__utils-social
-            each socialItem in UtilsSocialButtons
-              a(href=socialItem.link).footer__social-image
-                +ui-svg("footer/" + socialItem.name)
+            if menu.last
+              .footer__utils
+                .footer__utils-item.tablet-disp
+                  .footer__utils-app
+                    a(href="#").footer__app-image
+                      img(src="../../images/footer/mob-app.png", alt="mob-app")
+                    .footer__app-text
+                      +ui-p2("Мобильное приложение", "--white")
+                      +ui-p3("Загрузите приложение для iOS и Android", "--regular")
+                .footer__utils-item
+                  each versionItem in UtilsVersions
+                    .footer__utils-version
+                      a(href=versionItem.link).footer__version-image
+                        img(src=versionItem.src, alt=versionItem.alt)
+                      a(href=versionItem.link)
+                        +ui-p3(versionItem.text, "--white")
+                  .footer__utils-social
+                    each socialItem in UtilsSocialButtons
+                      a(href=socialItem.link).footer__social-image
+                        +ui-svg("footer/" + socialItem.name)
     .footer__copyrights
       +ui-p3(footerСopyrights)
       +ui-p3("Сделано в <a href='#' class='ui-p3 ui-p3--white'>D’Terra</a>")
