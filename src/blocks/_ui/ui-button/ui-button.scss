@@ -51,6 +51,10 @@
       background: $main-secondary-secondary-100;
       color: $main-primary-primary-40;
     }
+    &:active {
+      background: $main-secondary-secondary-90;
+      color: $main-primary-primary-40;
+    }
   }
   &--white {
     background: $base-white;
