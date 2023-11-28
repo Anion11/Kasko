@@ -64,6 +64,9 @@ block variables
 block content
   main.main
     .inner
+      +breadcrumbs("banner, --filled")
+        +breadcrumbs-item('ГЛАВНАЯ', '/')
+        +breadcrumbs-item('Страхование квартир')
       +banner(bannerContent)
       +section()
         +choice({ h2: "Программы страхования квартир в «Югории»", p2: "Мы предлагаем несколько вариантов страхования квартир:" }, choiceContent, "", "--leftImage, --xs")
