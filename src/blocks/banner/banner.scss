@@ -21,9 +21,12 @@
     height: 452px;
   }
   &__breadcrumbs {
+    position: absolute;
     padding-top: 20px;
+    z-index: 3;
     @include media-tablet {
-      padding-top: 10px;
+      position: static;
+      padding: 0 0 10px;
     }
   }
   &__content {
@@ -31,11 +34,11 @@
     z-index: 0;
   }
   &__info {
-    padding-top: 50px;
+    padding-top: 90px;
     @include media-laptop {
-      padding-top: 24px;
+      padding-top: 64px;
     }
-    @include media-laptop {
+    @include media-tablet {
       padding-top: 30px;
     }
   }

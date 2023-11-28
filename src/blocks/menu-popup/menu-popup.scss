@@ -48,7 +48,7 @@
       position: absolute;
       right: 0;
       top: -2px;
-      transform: translateY(-50%) translateX(-50%) rotate(45deg);
+      transform: translateY(-50%) rotate(45deg);
       width: 16px;
       height: 2px;
       background: $base-black;
@@ -58,7 +58,7 @@
       content: '';
       position: absolute;
       right: 0;
-      transform: translateY(-50%) translateX(-50%) rotate(-45deg);
+      transform: translateY(-50%) rotate(-45deg);
       width: 16px;
       top: -2px;
       height: 2px;

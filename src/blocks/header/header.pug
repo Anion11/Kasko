@@ -23,7 +23,13 @@
       { text: "Партнерам", link: "#" },
       { text: "О компании", link: "#" }
     ]
-
+  const searchPopupContent = [
+    { text: 'Санкт-Петербург' },
+    { text: 'Москва' },
+    { text: 'Екатеринбург' },
+    { text: 'Ростов-на-Дону' }
+    
+  ]
 header.header
   .header__top.tablet-hidden
     .inner
@@ -36,7 +42,7 @@ header.header
               a(href=navItem.link).nav__link.ui-p3=navItem.text
           .header__nav-search
             each navItem in headerNavSearch
-              a(href=navItem.link).ui-p2.nav__link
+              a(href=navItem.link).ui-p2.nav__link#searchButton
                 if navItem.src
                   .nav__icon
                     img(src=navItem.src, alt="nav-image")
@@ -57,4 +63,5 @@ header.header
           +ui-button({p2: "Войти"}, "--white, --xxs, header")(href='').mob-hidden
   +tab-bar()
   +menu-popup(menuPopupContent)
+  +search-popup(searchPopupContent)
 

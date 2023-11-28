@@ -15,6 +15,7 @@ import choice from '../blocks/choice/choice';
 import banner from '../blocks/banner/banner';
 import footerAccordion from '../blocks/footer/footer';
 import tabBarMenu from '../blocks/tab-bar/tab-bar';
+import SearchPopup from '../blocks/search-popup/search-popup';
 
 document.addEventListener('DOMContentLoaded', function () {
   uiAccordion();
@@ -26,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
   uiTab();
   footerAccordion();
   uiTextarea();
+  SearchPopup();
   uiTooltip();
   gallery();
   slider();

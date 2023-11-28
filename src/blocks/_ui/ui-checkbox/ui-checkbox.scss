@@ -1,6 +1,5 @@
 .ui-checkbox {
   position: relative;
-  z-index: 10;
   input {
     display: none;
     &:checked + label {

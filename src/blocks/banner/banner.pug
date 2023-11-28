@@ -11,7 +11,6 @@ mixin banner(bannerItems, mods)
     }
 
   .banner(class=allMods)&attributes(attributes)
-    block breadcrumbs
     .swiper
       .swiper-wrapper
         each bannerItem in bannerItems
@@ -20,7 +19,7 @@ mixin banner(bannerItems, mods)
               +ui-h1(bannerItem.title, "banner, --semibold, --white")
               +ui-p2(bannerItem.text, "banner, --white")
               if bannerItem.buttonText
-                +ui-button({p2: bannerItem.buttonText}, "banner, --white, --xs")
+                +ui-button({p2: bannerItem.buttonText}, "banner, --white, --bgFilled, --xs")
             .banner__image
               img(src=bannerItem.src, alt="banner-image")
       +ui-swiper-buttons()

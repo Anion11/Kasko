@@ -127,7 +127,7 @@
       transform: translateY(-50%) translateX(-50%) rotate(45deg);
       width: 16px;
       height: 2px;
-      background: $base-black;
+      background: $base-ghost;
       transition: 0.3s;
     }
     &::before {
@@ -138,7 +138,7 @@
       transform: translateY(-50%) translateX(-50%) rotate(-45deg);
       width: 16px;
       height: 2px;
-      background: $base-black;
+      background: $base-ghost;
       transition: 0.3s;
     }
   }

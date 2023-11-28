@@ -140,6 +140,10 @@
       .ui-p3 {
         display: inline;
       }
+      &:hover,
+      &:active {
+        color: $base-white !important;
+      }
     }
   }
   &__utils {

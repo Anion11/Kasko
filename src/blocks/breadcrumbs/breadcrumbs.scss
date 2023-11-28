@@ -46,5 +46,18 @@
         background: $main-neutral-neutral-variant-80;
       }
     }
+    @include media-tablet {
+      .breadcrumbs__text {
+        color: $base-ghost;
+      }
+      .breadcrumbs__link {
+        color: $base-black;
+      }
+      .breadcrumbs__item {
+        &::after {
+          background: $base-ghost;
+        }
+      }
+    }
   }
 }

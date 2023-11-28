@@ -33,7 +33,7 @@ a {
   color: $base-black;
   transition: 0.3s;
   &:hover {
-    color: $base-primary !important;
+    color: $base-primary;
   }
 }
 ul {

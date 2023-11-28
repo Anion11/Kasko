@@ -39,12 +39,22 @@
   &--border {
     border: 1px solid $main-primary-primary-60;
   }
+  &--border-white {
+    border: 1px solid $base-white;
+  }
   &--filled {
     color: $base-white;
     background: $main-primary-primary-50;
   }
+  &--bgFilled {
+    &:hover {
+      background: $main-secondary-secondary-100;
+      color: $main-primary-primary-40;
+    }
+  }
   &--white {
     background: $base-white;
+    color: $main-primary-primary-60;
   }
   &--center {
     display: block;
