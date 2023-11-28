@@ -7,7 +7,7 @@
       { text: 'Блог', link: '#' }
   ]
   const headerNavSearch = [
-      { text: 'Москва', link: '#', src: '../../images/header/geo.png'},
+      { text: 'Москва', link: '#', src: '../../images/header/geo.png', searchButton: true},
       { text: 'Офисы', link: '#'},
       { text: 'Поиск', link: '#', src: '../../images/header/search.png'}
   ]
@@ -29,7 +29,7 @@
     { text: 'Екатеринбург' },
     { text: 'Ростов-на-Дону' }
   ]
-  
+
 header.header
   .header__top.tablet-hidden
     .inner
@@ -42,7 +42,7 @@ header.header
               a(href=navItem.link).nav__link.ui-p3=navItem.text
           .header__nav-search
             each navItem in headerNavSearch
-              a(href=navItem.link).ui-p2.nav__link#searchButton
+              a(href=navItem.link class=navItem.searchButton && "searchButton").ui-p2.nav__link
                 if navItem.src
                   .nav__icon
                     img(src=navItem.src, alt="nav-image")

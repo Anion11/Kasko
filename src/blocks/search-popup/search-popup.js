@@ -2,7 +2,7 @@ import { down, up } from 'slide-element';
 
 export default function SearchPopup() {
   const popup = document.querySelector('.search-popup');
-  const buttonSearch = document.querySelector('#searchButton');
+  const buttonSearch = document.querySelectorAll('.searchButton');
   const popupCloseCross = document.querySelector('.search-popup__close-cross');
   const inputSearch = document.querySelector('#search-popup');
   function closePopup() {
@@ -19,5 +19,9 @@ export default function SearchPopup() {
     if (event.target === popup) closePopup();
   });
   popupCloseCross.addEventListener('click', closePopup);
-  buttonSearch.addEventListener('click', openPopup);
+  if (buttonSearch) {
+    for (const buttonSearchItem of buttonSearch) {
+      buttonSearchItem.addEventListener('click', openPopup);
+    }
+  }
 }
