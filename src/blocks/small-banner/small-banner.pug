@@ -1,4 +1,4 @@
-mixin small-banner(sectionHeadText, bannerImageSrc, mods)
+mixin small-banner(bannerContent, mods)
   -
     const baseName = 'small-banner'
     let allMods = ''
@@ -13,8 +13,7 @@ mixin small-banner(sectionHeadText, bannerImageSrc, mods)
   .small-banner(class=allMods)&attributes(attributes)
     .small-banner__content
       .small-banner__info
-        +section-head({h2: sectionHeadText.h2, p2: sectionHeadText.p2}, "small-banner,--xs")
         block smallBannerInfo
       .small-banner__image
-        img(src=bannerImageSrc, alt="small-banner-image")
+        img(src=bannerContent.image, alt="small-banner-image")
 

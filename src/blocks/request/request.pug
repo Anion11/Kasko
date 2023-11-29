@@ -1,4 +1,4 @@
-mixin request(sectionHeadText, buttonText, id, mods)
+mixin request(requestContent, id, mods)
   -
     const baseName = 'request'
     let allMods = ''
@@ -12,7 +12,6 @@ mixin request(sectionHeadText, buttonText, id, mods)
 
   .request(class=allMods)&attributes(attributes)
     .request__content
-      +section-head({h2: sectionHeadText.h2, p2: sectionHeadText.p2}, "--xs")
       form(action="").request__form
         .request__input-wrapper
           +ui-input(id + 'Surname', 'Фамилия')(required)
@@ -20,5 +19,5 @@ mixin request(sectionHeadText, buttonText, id, mods)
           +ui-input(id + 'phone', 'Номер телефона', "", "phone")(required)
         .request__assent
           +ui-checkbox(id + 'agreement', '<span class="ui-p3">Даю согласие на <a class="request__assent-link" href="#">обработку персональных данных </a>.</span>')(required)
-        +ui-button({p2: buttonText}, "--filled")
+        +ui-button({p2: requestContent.buttonText}, "--filled")
     block

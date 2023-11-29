@@ -1,4 +1,4 @@
-mixin banner(bannerItems, mods)
+mixin banner(bannerContent, mods)
   -
     const baseName = 'banner'
     let allMods = ''
@@ -13,7 +13,7 @@ mixin banner(bannerItems, mods)
   .banner(class=allMods)&attributes(attributes)
     .swiper
       .swiper-wrapper
-        each bannerItem in bannerItems
+        each bannerItem in bannerContent.items
           .swiper-slide.banner__content
             .banner__info
               +ui-h1(bannerItem.title, "banner, --semibold, --white")

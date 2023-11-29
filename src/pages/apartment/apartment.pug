@@ -2,64 +2,91 @@ extends ../../layout/layout
 
 block variables
   -
-    const bannerContent = [
-      {
-        title: "Страхование квартир в «Югории»",
-        text: "Страхование квартир и имущества от пожара, затопления, взлома и других рисков от 500 ₽",
-        src: "../../images/banner/apartment-banner-image.png",
-        buttonText: "Подробнее"
+    const bannerData = {
+      sectionHead: {},
+      content: {
+        items: [
+          {
+            title: "Страхование квартир в «Югории»",
+            text: "Страхование квартир и имущества от пожара, затопления, взлома и других рисков от 500 ₽",
+            src: "../../images/banner/apartment-banner-image.png",
+            buttonText: "Подробнее"
+          }
+        ]
       }
-    ]
-    const choiceContent = [
-      {
-        title:'Легкое решение',
-        text:'Дополнение к ипотечному полису от 790 ₽. Нужен только ваш паспорт и адрес квартиры',
-        src:'../../images/choice/apartment-firstcard.png'
-      },
-      {
-        title:'Оптимальное решение',
-        text:'Больше страховая сумма при оптимальном наборе рисков. Без осмотра',
-        src:'../../images/choice/apartment-secondcard.png'
-      },
-      {
-        title:'Квартиры: Комфорт',
-        text:'Можно выбрать что застраховать и на какую сумму самому, без описи и осмотра',
-        src:'../../images/choice/apartment-thirdcard.png'
-      },
-      {
-        title:'Югория Квартира',
-        text:'Индивидуальная настройка полиса под ваши нужды. Доступна рассрочка на 4 платежа',
-        src:'../../images/choice/apartment-fourthcard.png'
+    }
+    const choiceData = {
+      sectionHead: { h2: "Программы страхования квартир в «Югории»", p2: "Мы предлагаем несколько вариантов страхования квартир:" },
+      content: {
+        items: [
+          {
+            title:'Легкое решение',
+            text:'Дополнение к ипотечному полису от 790 ₽. Нужен только ваш паспорт и адрес квартиры',
+            src:'../../images/choice/apartment-firstcard.png'
+          },
+          {
+            title:'Оптимальное решение',
+            text:'Больше страховая сумма при оптимальном наборе рисков. Без осмотра',
+            src:'../../images/choice/apartment-secondcard.png'
+          },
+          {
+            title:'Квартиры: Комфорт',
+            text:'Можно выбрать что застраховать и на какую сумму самому, без описи и осмотра',
+            src:'../../images/choice/apartment-thirdcard.png'
+          },
+          {
+            title:'Югория Квартира',
+            text:'Индивидуальная настройка полиса под ваши нужды. Доступна рассрочка на 4 платежа',
+            src:'../../images/choice/apartment-fourthcard.png'
+          }
+        ]
       }
-    ]
-    const usefulContent = [
-      {
-        src:"../../images/useful/briefcase.png",
-        title:"Полный набор рисков",
-        desc:"Можно включить даже уборку после страхового случая"
-      },
-      {
-        src:"../../images/useful/calendar.png",
-        title:"Рассрочка",
-        desc:"Можно разбить платеж на 4 части"
-      },
-      {
-        src:"../../images/useful/Ruble.png",
-        title:"Выгодная цена",
-        desc:"Есть разные варианты полисов по цене от 500 ₽"
-      },
-      {
-        src:"../../images/useful/clock.png",
-        title:"Легко оформить",
-        desc:"Можно оформить за 5 минут без описи, осмотра и документов на квартиру"
+    }
+    const smallBannerData = {
+      sectionHead: { h2: "Почему стоит застраховать квартиру в «Югории»"},
+      content: {
+        text: "Мы предлагаем разные варианты программ, вы можете сами решить, что хотите застраховать, какие риски включить и на какую сумму и срок. Мы сделали процесс оформления максимально простым и удобным, зачастую вам даже не нужно предоставлять документы, подтверждающие право собственности (но они понадобятся для оформления выплаты).<br /><br /> Застрахуйте вашу квартиру от пожара, аварии, взлома, удара молнии, землетрясения. Если у вас протечет кровля или вы затопите соседей, мы также компенсируем вам ущерб. Дополнительно вы можете включить такие риски, как теракт, бой стекол или поломку бытовой техники в результате короткого замыкания или перебоя с сетью.",
+        image: "../../images/small-banner/apartment-small-banner-photo.png"
       }
-    ]
-    const questionContent = [
-      { title: "Какие документы нужны для оформления", text: "Какой-то текст" },
-      { title: "Что влияет на стоимость полиса", text: "Какой-то текст" },
-      { title: "Можно ли застраховать недостроенные объекты?", text: "Какой-то текст" },
-      { title: "Что можно застраховать?", text: "Более подробный перечень ограничений смотрите в Правилах страхования, а также в вашем договоре." }
-    ]
+    }
+    const usefulData = {
+      sectionHead: { h2: "В каких случаях пригодится КАСКО" },
+      content: {
+        items: [
+          {
+            src:"../../images/useful/briefcase.png",
+            title:"Полный набор рисков",
+            desc:"Можно включить даже уборку после страхового случая"
+          },
+          {
+            src:"../../images/useful/calendar.png",
+            title:"Рассрочка",
+            desc:"Можно разбить платеж на 4 части"
+          },
+          {
+            src:"../../images/useful/Ruble.png",
+            title:"Выгодная цена",
+            desc:"Есть разные варианты полисов по цене от 500 ₽"
+          },
+          {
+            src:"../../images/useful/clock.png",
+            title:"Легко оформить",
+            desc:"Можно оформить за 5 минут без описи, осмотра и документов на квартиру"
+          }
+        ]
+      }
+    }
+    const questionData = {
+      sectionHead: { h2: "Частые вопросы по КАСКО" },
+      content: {
+        items: [
+          { title: "Какие документы нужны для оформления", text: "Какой-то текст" },
+          { title: "Что влияет на стоимость полиса", text: "Какой-то текст" },
+          { title: "Можно ли застраховать недостроенные объекты?", text: "Какой-то текст" },
+          { title: "Что можно застраховать?", text: "Более подробный перечень ограничений смотрите в Правилах страхования, а также в вашем договоре." }
+        ]
+      }
+    }
 
 block content
   main.main
@@ -67,15 +94,17 @@ block content
       +breadcrumbs("banner, --filled")
         +breadcrumbs-item('ГЛАВНАЯ', '/')
         +breadcrumbs-item('Страхование квартир')
-      +banner(bannerContent)
+      +banner(bannerData.content)
       +section()
-        +choice({ h2: "Программы страхования квартир в «Югории»", p2: "Мы предлагаем несколько вариантов страхования квартир:" }, choiceContent, "", "--leftImage, --xs")
-      +section()
-        +small-banner({ h2: "Почему стоит застраховать квартиру в «Югории»" },
-         "../../images/small-banner/apartment-small-banner-photo.png")
+        +section-head(choiceData.sectionHead, "--half-width")
+        +choice(choiceData.content, "--leftImage, --xs")
+      +section("--inner, --filled-primary")
+        +section-head(smallBannerData.sectionHead, "small-banner, --white")
+        +small-banner(smallBannerData.content)
          block smallBannerInfo
-          +ui-p2("Мы предлагаем разные варианты программ, вы можете сами решить, что хотите застраховать, какие риски включить и на какую сумму и срок. Мы сделали процесс оформления максимально простым и удобным, зачастую вам даже не нужно предоставлять документы, подтверждающие право собственности (но они понадобятся для оформления выплаты).<br /><br />Застрахуйте вашу квартиру от пожара, аварии, взлома, удара молнии, землетрясения. Если у вас протечет кровля или вы затопите соседей, мы также компенсируем вам ущерб. Дополнительно вы можете включить такие риски, как теракт, бой стекол или поломку бытовой техники в результате короткого замыкания или перебоя с сетью.",
-           "small-banner, --white")
-        +useful("", usefulContent, "--union")
-      +section("--inner, --filled, --mob-full")
-        +questions({ h2: "Ответы на самые частые вопросы по страхованию квартир" }, questionContent)
+          +ui-p2(smallBannerData.content.text, "--white")
+      +section("--mt-xs")
+        +useful(usefulData.content)
+      +section("--inner, --filled-ghost, --mob-full")
+        +section-head(questionData.sectionHead)
+        +questions(questionData.content)

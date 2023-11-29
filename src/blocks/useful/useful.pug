@@ -1,4 +1,4 @@
-mixin useful(sectionHeadText, usefulContent, mods)
+mixin useful(usefulContent, mods)
   -
     const baseName = 'useful'
     let allMods = ''
@@ -11,10 +11,8 @@ mixin useful(sectionHeadText, usefulContent, mods)
     }
 
   .useful(class=allMods)&attributes(attributes)
-    if sectionHeadText
-      +section-head({h2: sectionHeadText.h2})
     .useful__content
-      each usefulItem in usefulContent
+      each usefulItem in usefulContent.items
         .useful-item
           .useful-item__header
             img(src=usefulItem.src, alt=usefulItem.className)

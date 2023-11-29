@@ -12,7 +12,7 @@ mixin sale(saleContent, mods)
 
   .sale(class=allMods)&attributes(attributes)
     .sale__content
-      each saleItem in saleContent
+      each saleItem in saleContent.items
         .sale__item
           +ui-h4(saleItem.title, "sale, --semibold")
           +ui-p1(saleItem.text)

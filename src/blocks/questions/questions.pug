@@ -1,4 +1,4 @@
-mixin questions(sectionHeadText, questionItems, mods)
+mixin questions(questionContent, mods)
   -
     const baseName = 'questions'
     let allMods = ''
@@ -11,9 +11,8 @@ mixin questions(sectionHeadText, questionItems, mods)
     }
 
   .questions(class=allMods)&attributes(attributes)
-    +section-head({h2: sectionHeadText.h2})
     .questions__content
-      each questionItem in questionItems
+      each questionItem in questionContent.items
         +ui-accordion({h5: questionItem.title}, "questions-item, --toggle-plus")
           if questionItem.ulItems
             +ui-ul(questionItem.ulItems)

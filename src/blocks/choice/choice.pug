@@ -1,4 +1,4 @@
-mixin choice(sectionHeadText, cardItems, buttonText, mods)
+mixin choice(choiceContent, mods)
   -
     const baseName = 'choice'
     let allMods = ''
@@ -11,10 +11,9 @@ mixin choice(sectionHeadText, cardItems, buttonText, mods)
     }
 
   .choice(class=allMods)&attributes(attributes)
-    +section-head({ h2: sectionHeadText.h2,p2: sectionHeadText.p2 }, "--half-width")
     .choice__content.swiper
       .choice__wrapper.swiper-wrapper
-        each item in cardItems
+        each item in choiceContent.items
           .choice-item.swiper-slide
             .choice-item__image
               img(src=item.src, alt="card-image")
@@ -22,6 +21,4 @@ mixin choice(sectionHeadText, cardItems, buttonText, mods)
               +ui-h4(item.title, "choice-item, --semibold")
               +ui-p2(item.text)
       +ui-swiper-bullets("--mobile")
-    if buttonText
-      +ui-button({p2: buttonText}, "choice, --border, --center")
     block

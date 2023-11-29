@@ -1,4 +1,4 @@
-mixin pros(prosItems, imageSrc, mods)
+mixin pros(prosContent, mods)
   -
     const baseName = 'pros'
     let allMods = ''
@@ -13,10 +13,10 @@ mixin pros(prosItems, imageSrc, mods)
   .pros(class=allMods)&attributes(attributes)
     .pros__content
       .pros__info
-        each prosItem in prosItems
+        each prosItem in prosContent.items
           .pros-item
             +ui-h4(prosItem.title, "pros-item, --semibold")
             +ui-p2(prosItem.text)
       .pros__image
-        img(src=imageSrc, alt="prosImage")
+        img(src=prosContent.image, alt="prosImage")
     block

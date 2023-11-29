@@ -1,4 +1,4 @@
-mixin advantages(sectionHeadText, advantageItems, mods)
+mixin advantages(advantageContent, mods)
   -
     const baseName = 'advantages'
     let allMods = ''
@@ -12,9 +12,8 @@ mixin advantages(sectionHeadText, advantageItems, mods)
 
 
   .advantages(class=allMods)&attributes(attributes)
-    +section-head({h2: sectionHeadText.h2})
     .advantages__content
-      each item in advantageItems
+      each item in advantageContent.items
         if item.link
           .advantages-item
             +ui-label(item.label, "advantages-item")

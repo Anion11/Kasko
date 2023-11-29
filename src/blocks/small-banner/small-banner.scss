@@ -1,14 +1,6 @@
 .small-banner {
-  padding: 35px 90px;
-  background: $main-primary-primary-60;
   border-radius: 6px;
   color: $base-white;
-  @include media-laptop {
-    padding: 40px 30px 17px;
-  }
-  @include media-tablet {
-    padding: 24px 16px 14px;
-  }
   &__section-head {
     max-width: 680px;
     @include media-laptop {
@@ -16,7 +8,9 @@
     }
   }
   &__info {
+    margin-right: 510px;
     @include media-laptop {
+      margin-right: 0;
       margin-bottom: 35px;
     }
     @include media-tablet {
@@ -26,22 +20,22 @@
   &__ui-ul {
     padding-right: 90px;
     margin: 0;
-  }
-  &__content {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 100px;
     @include media-laptop {
-      display: block;
+      padding: 0;
     }
   }
   &__image {
-    margin: auto;
-    max-width: 410px;
-    max-height: 320px;
+    position: absolute;
+    top: 17px;
+    right: 51px;
+    width: 100%;
+    max-width: 454px;
+    max-height: 338px;
     @include media-laptop {
+      position: static;
       max-width: 329px;
       max-height: 257px;
+      margin: 0 auto;
     }
     @include media-tablet {
       max-width: 271px;

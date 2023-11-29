@@ -35,6 +35,12 @@
       background: $new-gradient-1, linear-gradient(91deg, #5a6bff 0.89%, #0054e6 99.35%);
       background-clip: text;
       -webkit-text-fill-color: transparent;
+      @include media-laptop {
+        margin-bottom: 40px;
+      }
+      @include media-tablet {
+        margin-bottom: 24px;
+      }
     }
     &__ui-p1 {
       position: relative;

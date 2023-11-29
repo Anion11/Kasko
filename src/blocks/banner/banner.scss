@@ -20,26 +20,13 @@
   @include media-tablet {
     height: 452px;
   }
-  &__breadcrumbs {
-    position: absolute;
-    padding-top: 20px;
-    z-index: 3;
-    @include media-tablet {
-      position: static;
-      padding: 0 0 10px;
-    }
-  }
-  &__content {
-    position: relative;
-    z-index: 0;
-  }
   &__info {
-    padding-top: 90px;
+    padding: 90px 825px 0 0;
     @include media-laptop {
-      padding-top: 64px;
+      padding: 64px 303px 0 0;
     }
     @include media-tablet {
-      padding-top: 30px;
+      padding: 30px 0 0 0;
     }
   }
   &__ui-h1 {
@@ -52,12 +39,10 @@
     }
   }
   &__ui-p2 {
-    margin-right: 825px;
     @include media-laptop {
-      margin-right: 440px;
+      margin-right: 140px;
     }
     @include media-tablet {
-      margin-bottom: 24px;
       margin-right: 0;
     }
   }
@@ -85,7 +70,7 @@
       position: static;
       max-width: 360px;
       max-height: 216px;
-      margin: 0 auto;
+      margin: 16px auto 0;
     }
   }
   &--xl {
@@ -105,5 +90,34 @@
   }
   .swiper {
     height: 100%;
+  }
+  &__breadcrumbs {
+    position: absolute;
+    padding-top: 20px;
+    z-index: 3;
+    @include media-tablet {
+      position: static;
+      padding: 0 0 10px;
+    }
+    .breadcrumbs__text {
+      color: $main-neutral-neutral-variant-80;
+      @include media-tablet {
+        color: $base-ghost;
+      }
+    }
+    .breadcrumbs__link {
+      color: $base-white;
+      @include media-tablet {
+        color: $base-black;
+      }
+    }
+    .breadcrumbs__item {
+      &::after {
+        background: $main-neutral-neutral-variant-80;
+        @include media-tablet {
+          background: $base-ghost;
+        }
+      }
+    }
   }
 }

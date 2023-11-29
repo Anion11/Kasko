@@ -1,7 +1,7 @@
 .section-head {
-  margin-bottom: 35px;
+  padding-bottom: 35px;
   @include media-laptop {
-    margin-bottom: 24px;
+    padding-bottom: 24px;
   }
   .ui-p2 {
     padding-top: 18px;
@@ -9,15 +9,16 @@
       padding-top: 12px;
     }
   }
-}
-[class*='section-head'] {
-  &[class*='--xs'] {
-    margin-bottom: 28px;
+  &--pd-xs {
+    padding-bottom: 28px;
     @include media-laptop {
-      margin-bottom: 24px;
+      padding-bottom: 24px;
     }
   }
-  &[class*='--half-width'] {
+  &--white {
+    color: $base-white;
+  }
+  &--half-width {
     width: 66%;
     @include media-laptop {
       width: 100%;
