@@ -1,25 +1,25 @@
-import { toggle, up } from 'slide-element';
+import { toggle, up } from 'slide-element'
 
 export default function tabBarMenu() {
-  const breakPoint = window.matchMedia('(max-width: 1440px)');
-  const buttonMenu = document.querySelector('.tab-bar__main');
-  const popup = document.querySelector('.menu-popup');
-  const popupCloseCross = document.querySelector('.menu-popup__close-cross');
+  const breakPoint = window.matchMedia('(max-width: 1440px)')
+  const buttonMenu = document.querySelector('.tab-bar__main')
+  const popup = document.querySelector('.menu-popup')
+  const popupCloseCross = document.querySelector('.menu-popup__close-cross')
   function toggleMenu() {
-    if (popup.style.display === 'none' || popup.style.display === '') popup.style.display = 'grid';
-    else toggle(popup, { delay: 250, duration: 0 });
-    toggle(popup.firstElementChild, { duration: 300 });
-    document.body.style.overflow = document.body.style.overflow === 'hidden' ? 'visible' : 'hidden';
+    if (popup.style.display === 'none' || popup.style.display === '') popup.style.display = 'grid'
+    else toggle(popup, { delay: 250, duration: 0 })
+    toggle(popup.firstElementChild, { duration: 300 })
+    document.body.style.overflow = document.body.style.overflow === 'hidden' ? 'visible' : 'hidden'
   }
   function closeMenu() {
-    up(popup, { delay: 250, duration: 0 });
-    up(popup.firstElementChild, { duration: 300 });
-    document.body.style.overflow = 'visible';
+    up(popup, { delay: 250, duration: 0 })
+    up(popup.firstElementChild, { duration: 300 })
+    document.body.style.overflow = 'visible'
   }
   popup.addEventListener('click', (event) => {
-    if (event.target === popup) closeMenu();
-  });
-  popupCloseCross.addEventListener('click', closeMenu);
-  buttonMenu.addEventListener('click', toggleMenu);
-  breakPoint.addEventListener('change', closeMenu);
+    if (event.target === popup) closeMenu()
+  })
+  popupCloseCross.addEventListener('click', closeMenu)
+  buttonMenu.addEventListener('click', toggleMenu)
+  breakPoint.addEventListener('change', closeMenu)
 }

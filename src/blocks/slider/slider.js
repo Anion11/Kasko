@@ -1,4 +1,4 @@
-import Swiper from 'swiper/bundle';
+import Swiper from 'swiper/bundle'
 
 export default function slider() {
   const swiperSlider = new Swiper('.slider .swiper', {
@@ -12,5 +12,5 @@ export default function slider() {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
     }
-  });
+  })
 }

@@ -1,6 +1,6 @@
-import Swiper from 'swiper/bundle';
+import Swiper from 'swiper/bundle'
 export default function banner() {
-  bannerSwiper();
+  bannerSwiper()
 }
 
 function bannerSwiper() {
@@ -14,5 +14,5 @@ function bannerSwiper() {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
     }
-  });
+  })
 }
