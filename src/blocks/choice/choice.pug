@@ -17,3 +17,23 @@ mixin choice(choiceContent, mods)
           +choice-item(item).swiper-slide
       +ui-swiper-bullets("--mobile")
     block
+    
+mixin choice-item(item, mods)
+  -
+    const baseName = 'choice-item'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .choice-item(class=allMods)&attributes(attributes)
+    .choice-item__image
+      img(src=item.src, alt="card-image")
+    .choice-item__text
+      +ui-h4(item.title, "choice-item, --semibold")
+      +ui-p2(item.text)
+    block
