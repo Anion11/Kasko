@@ -12,14 +12,11 @@ mixin search-popup(searchContent, mods)
 
   .search-popup(class=allMods)&attributes(attributes)
     .search-popup__content
-      .search-popup__head
-        input(type="checkbox", name="closeMenuPopUp" id="closeSearchPopUp")
-        label(for="closeMenuPopUp").search-popup__close-cross
-      .search-popup__info
-        +ui-h2("Выберите город", "--semibold")
-        +ui-input-search("search-popup", "Введите название города", "search-popup, --popup")
-        .search-popup__help
-          each searchItem in searchContent
-            .search-popup__item
-              +ui-p3(searchItem.text)
+      .search-popup__close
+      +ui-h2("Выберите город", "--semibold")
+      +ui-input-search("search-popup", "Введите название города", "search-popup, --popup")
+      .search-popup__help
+        each searchItem in searchContent
+          .search-popup__item
+            +ui-p3(searchItem.text)
     block

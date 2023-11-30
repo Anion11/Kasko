@@ -34,7 +34,8 @@ mixin ui-input-search(id, label, mods, type)
     if label
       label(for=id)
         .ui-input-search__wrapper
-          img(src="../../images/ui-input/search.png", alt="search")
-          +ui-p2(label)
+          .ui-input-search__icon
+            img(src="../../images/ui-input/search.png", alt="search")
+          +ui-p2(label, "ui-input-search")
         .ui-input-search__close
     block

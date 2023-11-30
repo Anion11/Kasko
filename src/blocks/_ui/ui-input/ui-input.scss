@@ -109,7 +109,12 @@
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
+    overflow: hidden;
     gap: 10px;
+  }
+  &__icon {
+    width: 24px;
+    height: 24px;
   }
   &__close {
     position: relative;
@@ -141,6 +146,9 @@
       background: $base-ghost;
       transition: 0.3s;
     }
+  }
+  &__ui-p2 {
+    width: max-content;
   }
   &-footer {
     font-size: 18px;
