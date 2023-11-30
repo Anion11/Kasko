@@ -22,6 +22,9 @@
     @include media-laptop {
       padding: 50px 40px;
     }
+    @include media-tablet {
+      padding: 30px 16px;
+    }
   }
   &__close {
     position: absolute;
@@ -58,7 +61,6 @@
     margin: 28px 0 20px;
   }
   &__help {
-    width: auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, max-content));
     gap: 13px;
