@@ -64,6 +64,10 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, max-content));
     gap: 13px;
+    @include media-tablet {
+      justify-content: center;
+      grid-template-columns: repeat(auto-fit, minmax(150px, max-content));
+    }
   }
   &__item {
     display: flex;
