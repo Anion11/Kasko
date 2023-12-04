@@ -23,6 +23,9 @@ body {
   -webkit-tap-highlight-color: transparent;
   margin: 0;
 }
+.popup-active {
+  overflow: hidden;
+}
 img {
   display: block;
   width: 100%;

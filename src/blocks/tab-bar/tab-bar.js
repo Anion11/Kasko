@@ -9,12 +9,12 @@ export default function tabBarMenu() {
     if (popup.style.display === 'none' || popup.style.display === '') popup.style.display = 'grid'
     else toggle(popup, { delay: 250, duration: 0 })
     toggle(popup.firstElementChild, { duration: 300 })
-    document.body.style.overflow = document.body.style.overflow === 'hidden' ? 'visible' : 'hidden'
+    document.body.classList.toggle("popup-active");
   }
   function closeMenu() {
     up(popup, { delay: 250, duration: 0 })
     up(popup.firstElementChild, { duration: 300 })
-    document.body.style.overflow = 'visible'
+    document.body.classList.remove("popup-active");
   }
   popup.addEventListener('click', (event) => {
     if (event.target === popup) closeMenu()

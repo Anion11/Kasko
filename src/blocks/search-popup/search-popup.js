@@ -4,18 +4,19 @@ export default function SearchPopup() {
   const popup = document.querySelector('.search-popup')
   const popupButtons = document.querySelectorAll('.search__popup-open')
   const input = popup.querySelector('input')
-  let count = 0
+  let flag = false
+  function checkOpenPopup() {
+    return document.body.classList.value === "popup-active"
+  }
   function openPopup() {
-    count++
     input.value = ''
     input.dispatchEvent(new Event('input'))
     down(popup, { display: 'grid', duration: 0 })
-    document.body.style.overflow = 'hidden'
+    !checkOpenPopup ? document.body.classList.add("popup-active") : flag = true;
   }
   function closePopup() {
     up(popup, { duration: 0 })
-    count--
-    if (count === 0) document.body.style.overflow = 'visible'
+    !flag && document.body.classList.remove("popup-active")
   }
   for (const popupButton of popupButtons) {
     popupButton.addEventListener('click', () => {
