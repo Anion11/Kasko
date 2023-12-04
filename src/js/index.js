@@ -14,7 +14,7 @@ import slider from '../blocks/slider/slider'
 import choice from '../blocks/choice/choice'
 import banner from '../blocks/banner/banner'
 import footerAccordion from '../blocks/footer/footer'
-import tabBarMenu from '../blocks/tab-bar/tab-bar'
+import menuPopup from '../blocks/menu-popup/menu-popup'
 import SearchPopup from '../blocks/search-popup/search-popup'
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
   uiInput()
   uiRange()
   uiSelect()
-  tabBarMenu()
+  menuPopup()
   uiTab()
   footerAccordion()
   uiTextarea()

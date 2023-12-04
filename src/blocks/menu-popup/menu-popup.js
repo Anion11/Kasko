@@ -1,6 +1,6 @@
 import { toggle, up } from 'slide-element'
 
-export default function tabBarMenu() {
+export default function menuPopup() {
   const breakPoint = window.matchMedia('(max-width: 1440px)')
   const buttonMenu = document.querySelector('.tab-bar__main')
   const popup = document.querySelector('.menu-popup')
