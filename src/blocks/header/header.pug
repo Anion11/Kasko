@@ -36,7 +36,7 @@ header.header
               a(href=navItem.link).nav__link.ui-p3=navItem.text
           .header__nav-search
             each navItem in headerNavSearch
-              a(href=navItem.link class=navItem.searchButton && "search__popup-open").ui-p2.nav__link
+              a(href=!navItem.searchButton && navItem.link class=navItem.searchButton && "search-popup__open").ui-p2.nav__link
                 if navItem.src
                   .nav__icon
                     img(src=navItem.src, alt="nav-image")
