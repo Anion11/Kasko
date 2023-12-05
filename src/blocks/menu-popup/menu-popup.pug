@@ -12,10 +12,8 @@ mixin menu-popup(menuPopupContent, mods)
 
   .menu-popup(class=allMods)&attributes(attributes)
     .menu-popup__content
-      .menu-popup__head
-        .menu-popup__close-drag
-        input(type="checkbox", name="closeMenuPopUp" id="closeMenuPopUp")
-        label(for="closeMenuPopUp").menu-popup__close-cross
+      .menu-popup__close-drag
+      .menu-popup__close-cross
       +ui-input-search("helper", "Чем вам помочь?", "menu-popup, --popup")
       .menu-popup__info
         each infoItem in menuPopupContent
