@@ -2,7 +2,12 @@
   // fonts
   --font-montserrat: 'Montserrat', 'Arial', sans-serif;
   --font-unbounded: 'Unbounded', 'Arial', sans-serif;
-
+  // z-index
+  --z-index-menu: 4;
+  --z-index-modal: 3;
+  --z-index-top-top: 2;
+  --z-index-top: 1;
+  --z-index-bot: 0;
   // colors
   --base-bg: #f6f7f8;
   --base-black: #272727;
@@ -44,6 +49,13 @@
 $font-Montserrat: var(--font-montserrat);
 $font-Unbounded: var(--font-unbounded);
 $font: var(--font-montserrat);
+
+  // z-index
+$z-index-menu: var(--z-index-menu);
+$z-index-modal: var(--z-index-modal);
+$z-index-top-top: var(--z-index-top-top);
+$z-index-top: var(--z-index-top);
+$z-index-bot: var(--z-index-bot);
 
 // colors
 $base-bg: var(--base-bg);

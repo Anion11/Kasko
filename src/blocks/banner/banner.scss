@@ -1,6 +1,7 @@
 .banner {
   position: relative;
   height: 440px;
+  z-index: $z-index-bot;
   &::before {
     content: '';
     position: absolute;
@@ -15,18 +16,20 @@
   }
   @include media-laptop {
     height: 420px;
-    background: $new-gradient-1;
   }
   @include media-tablet {
     height: 452px;
   }
   &__info {
-    padding: 90px 825px 0 0;
+    margin-top: 90px;
+    padding-right: 825px;
     @include media-laptop {
-      padding: 64px 303px 0 0;
+      margin-top: 64px;
+      padding-right: 303px;
     }
     @include media-tablet {
-      padding: 30px 0 0 0;
+      margin-top: 30px;
+      padding-right: 0;
     }
   }
   &__ui-h1 {
@@ -94,7 +97,7 @@
   &__breadcrumbs {
     position: absolute;
     padding-top: 20px;
-    z-index: 3;
+    z-index: $z-index-top;
     @include media-tablet {
       position: static;
       padding: 0 0 10px;

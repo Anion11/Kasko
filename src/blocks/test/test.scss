@@ -240,7 +240,7 @@
     bottom: 6.5%;
     height: calc(100% - 315px);
     flex-shrink: 0;
-    z-index: 0;
+    z-index: $z-index-bot;
   }
   .ui-h4--filled {
     background: var(--Orange-Yellow-Gradient, linear-gradient(73deg, #fe5000 15.71%, #fca92a 89.05%));
