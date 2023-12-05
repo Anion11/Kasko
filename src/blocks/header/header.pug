@@ -23,6 +23,12 @@
       { text: "Партнерам", link: "#" },
       { text: "О компании", link: "#" }
     ]
+  const searchPopupContent = [
+      { text: 'Санкт-Петербург' },
+      { text: 'Москва' },
+      { text: 'Екатеринбург' },
+      { text: 'Ростов-на-Дону' }
+    ]
 
 header.header
   .header__top.tablet-hidden
@@ -57,4 +63,5 @@ header.header
           +ui-button({p2: "Войти"}, "--white, --xxs, header")(href='').mob-hidden
   +tab-bar()
   +menu-popup(menuPopupContent)
+  +search-popup(searchPopupContent)
 
