@@ -16,6 +16,8 @@ mixin ui-accordion(text, mods)
         +ui-h5(text.h5, "--semibold")
       else if text.p2 
         +ui-p2(text.p2, "--semibold")
+      else if text.p1
+        +ui-p1(text.p1)
       .ui-accordion__toggle
     .ui-accordion__body
       block

@@ -1,0 +1,36 @@
+mixin menu-popup-top(data, mods)
+  -
+    const baseName = 'menu-popup-top'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .menu-popup-top(class=allMods)&attributes(attributes)
+    .menu-popup-top__content
+      .menu-popup-top__close-drag
+      .menu-popup-top__close-cross
+      .menu-popup-top__close-back
+        .menu-popup-top__close-back__image
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path d="M2.31344 9.35355C2.11818 9.15829 2.11818 8.84171 2.31344 8.64645L5.49542 5.46447C5.69068 5.2692 6.00726 5.2692 6.20253 5.46447C6.39779 5.65973 6.39779 5.97631 6.20253 6.17157L3.3741 9L6.20253 11.8284C6.39779 12.0237 6.39779 12.3403 6.20253 12.5355C6.00726 12.7308 5.69068 12.7308 5.49542 12.5355L2.31344 9.35355ZM16.0003 8.5C16.2765 8.5 16.5003 8.72386 16.5003 9C16.5003 9.27614 16.2765 9.5 16.0003 9.5L16.0003 8.5ZM2.66699 8.5L16.0003 8.5L16.0003 9.5L2.66699 9.5L2.66699 8.5Z" fill="#8F9BB3"/>
+          </svg>
+        +ui-p3("Назад", "--ghost")
+      .menu-popup-top__info
+        each item in data
+          .menu-popup-top__item
+            .menu-popup-top__image
+              img(src=item.src, alt="")
+            if item.link
+              a(href=item.link).menu-popup-top__item-info
+                +ui-p1(item.title)
+            else 
+              +ui-accordion({p1: item.title}, 'menu-popup-top').menu-popup-top__item-info
+                each info in item.content
+                  a(href=info.link)
+                    +ui-p2(info.text, "--neutral50")
+    block

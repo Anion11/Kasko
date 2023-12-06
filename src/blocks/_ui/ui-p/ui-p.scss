@@ -47,4 +47,10 @@
   &[class*='--white'] {
     color: $base-white;
   }
+  &[class*='--neutral50'] {
+    color: $main-neutral-neutral-variant-50;
+  }
+  &[class*='--ghost'] {
+    color: $base-ghost;
+  }
 }

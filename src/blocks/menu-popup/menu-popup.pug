@@ -10,6 +10,26 @@ mixin menu-popup(menuPopupContent, mods)
       allMods = allMods.trim()
     }
 
+    const menuPopupTopData = [
+      { title: 'Ипотека', link: '#', src: '../../images/menu-popup-top/icon_glass-1.png' },
+      { title: 'КАСКО', content: [
+        { text: 'Классик', link: '#' },
+        { text: 'Оптима', link: '#' },
+        { text: 'Формула 50+', link: '#' },
+        { text: 'Профи', link: '#' },
+        { text: 'Легкое КАСКО', link: '#' },
+        { text: 'Помощь', link: '#' }
+      ], src: '../../images/menu-popup-top/icon_glass-2.png'},
+      { title: 'ОСАГО', link: '#', src: '../../images/menu-popup-top/icon_glass-3.png' },
+      { title: 'Несчастный случай', link: '#', src: '../../images/menu-popup-top/icon_glass-4.png' },
+      { title: 'Страхование путешественников', link: '#', src: '../../images/menu-popup-top/icon_glass-5.png' },
+      { title: 'Страхование имущества физических лиц', link: '#', src: '../../images/menu-popup-top/icon_glass-6.png' },
+      { title: 'Антиклещ', link: '#', src: '../../images/menu-popup-top/icon_glass-7.png' },
+      { title: 'Зеленая карта', link: '#', src: '../../images/menu-popup-top/icon_glass-8.png' },
+      { title: 'Cтрахование мигрантов', link: '#', src: '../../images/menu-popup-top/icon_glass-9.png' },
+      { title: 'Телемедицина', link: '#', src: '../../images/menu-popup-top/icon_glass-10.png' }
+    ]
+
   .menu-popup(class=allMods)&attributes(attributes)
     .menu-popup__content
       .menu-popup__close-drag
@@ -17,7 +37,7 @@ mixin menu-popup(menuPopupContent, mods)
       +ui-input-search("helper", "Чем вам помочь?", "menu-popup, --popup")
       .menu-popup__info
         each infoItem in menuPopupContent
-          a(href=infoItem.link).menu-popup__info-item
+          div(class='menu-popup__' + infoItem.class).menu-popup__info-item
             +ui-p2(infoItem.text, "--semibold")
             .menu-popup__link
       .menu-popup__more
@@ -33,3 +53,4 @@ mixin menu-popup(menuPopupContent, mods)
       .menu-popup__feedback
         +ui-h3("8-800-100-82-00", "--montserrat")
         +ui-p3("Федеральный контактный центр")
+      +menu-popup-top(menuPopupTopData)

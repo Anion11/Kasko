@@ -80,19 +80,20 @@
   }
   &__info {
     margin: 24px;
-  }
-  &__info-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px 0;
-    border-bottom: 1px solid $main-neutral-neutral-variant-90;
-    &:last-child {
-      padding: 16px 0 0;
-      border: none;
-    }
-    &:first-child {
-      padding: 0 0 16px;
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+      border-bottom: 1px solid $main-neutral-neutral-variant-90;
+      cursor: pointer;
+      &:last-child {
+        padding: 16px 0 0;
+        border: none;
+      }
+      &:first-child {
+        padding: 0 0 16px;
+      }
     }
   }
   &__link {
