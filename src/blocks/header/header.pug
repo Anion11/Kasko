@@ -6,23 +6,45 @@
       { text: 'О компании', link: '#' },
       { text: 'Блог', link: '#' }
   ]
+
   const headerNavSearch = [
       { text: 'Москва', link: '#', src: '../../images/header/geo.png', searchButton: true},
       { text: 'Офисы', link: '#'},
       { text: 'Поиск', link: '#', src: '../../images/header/search.png'}
   ]
+
   const headerNavMenu = [
       { text: 'Автомобили', link: '#'},
       { text: 'Имущество', link: '#'},
       { text: 'Здоровье', link: '#'},
       { text: 'Путешествия', link: '#'}
   ]
+
   const menuPopupContent = [
-      { text: "Частным клиентам", class: "private" },
+      { text: "Частным клиентам", class: "private", popup: [
+        { title: 'Ипотека', link: '#', src: '../../images/menu-popup-nav/icon_glass-1.png' },
+        { title: 'КАСКО', content: [
+          { text: 'Классик', link: '#' },
+          { text: 'Оптима', link: '#' },
+          { text: 'Формула 50+', link: '#' },
+          { text: 'Профи', link: '#' },
+          { text: 'Легкое КАСКО', link: '#' },
+          { text: 'Помощь', link: '#' }
+        ], src: '../../images/menu-popup-nav/icon_glass-2.png'},
+        { title: 'ОСАГО', link: '#', src: '../../images/menu-popup-nav/icon_glass-3.png' },
+        { title: 'Несчастный случай', link: '#', src: '../../images/menu-popup-nav/icon_glass-4.png' },
+        { title: 'Страхование путешественников', link: '#', src: '../../images/menu-popup-nav/icon_glass-5.png' },
+        { title: 'Страхование имущества физических лиц', link: '#', src: '../../images/menu-popup-nav/icon_glass-6.png' },
+        { title: 'Антиклещ', link: '#', src: '../../images/menu-popup-nav/icon_glass-7.png' },
+        { title: 'Зеленая карта', link: '#', src: '../../images/menu-popup-nav/icon_glass-8.png' },
+        { title: 'Cтрахование мигрантов', link: '#', src: '../../images/menu-popup-nav/icon_glass-9.png' },
+        { title: 'Телемедицина', link: '#', src: '../../images/menu-popup-nav/icon_glass-10.png' }
+      ] },
       { text: "Корпоративным клиентам", class: "corporative" },
       { text: "Партнерам", class: "partners" },
       { text: "О компании", class: "company" }
     ]
+
   const searchPopupContent = [
       { text: 'Санкт-Петербург' },
       { text: 'Москва' },

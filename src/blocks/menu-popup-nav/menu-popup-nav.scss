@@ -1,6 +1,6 @@
-.menu-popup-top {
+.menu-popup-nav {
   display: none;
-  z-index: $z-index-modal;
+  z-index: 22;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -15,14 +15,14 @@
     position: relative;
     display: none;
     margin-top: auto;
-    padding: 48px 20px 28px;
+    padding-top: 48px;
     background: $base-white;
-    border-radius: 6px 6px 0px 0px;
+    border-radius: 6px 6px 0 0;
     @include media-tablet {
-      padding: 48px 16px 22px;
+      padding-top: 48px;
     }
   }
-  &__close-drag {
+  &__drag {
     position: absolute;
     left: 50%;
     top: 15px;
@@ -44,7 +44,7 @@
       transition: 0.3s;
     }
   }
-  &__close-cross {
+  &__close {
     position: absolute;
     right: 14px;
     top: 12px;
@@ -75,24 +75,48 @@
       transition: 0.3s;
     }
   }
-  &__close-back {
+  &__back {
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 4px;
+    margin-bottom: 12px;
     cursor: pointer;
+    &-image {
+      height: 18px;
+      width: 18px;
+    }
   }
   &__item {
     display: grid;
     grid-template-columns: auto 1fr;
-    align-items: center;
     gap: 20px;
+    padding: 16px 20px;
+    @include media-tablet {
+      padding: 16px;
+    }
+    &:not(:last-child) {
+      border-bottom: 1px solid $main-neutral-neutral-variant-90;
+    }
+    &-link {
+      display: block;
+      margin-bottom: 12px;
+    }
+    &-text {
+      display: grid;
+      align-items: center;
+    }
   }
   &__info {
     overflow: scroll;
-    height: 500px;
+    max-height: 75vh;
   }
   &__image {
     width: 44px;
     height: 44px;
+  }
+  &__ui-accordion {
+    .ui-accordion__head--active {
+      padding-bottom: 12px;
+    }
   }
 }

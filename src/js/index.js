@@ -16,7 +16,7 @@ import banner from '../blocks/banner/banner'
 import footerAccordion from '../blocks/footer/footer'
 import menuPopup from '../blocks/menu-popup/menu-popup'
 import SearchPopup from '../blocks/search-popup/search-popup'
-import menuPopupTop from '../blocks/menu-popup-top/menu-popup-top'
+import menuPopupNav from '../blocks/menu-popup-nav/menu-popup-nav'
 
 document.addEventListener('DOMContentLoaded', function () {
   uiAccordion()
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
   uiInput()
   uiRange()
   uiSelect()
-  menuPopupTop()
+  menuPopupNav()
   menuPopup()
   uiTab()
   footerAccordion()

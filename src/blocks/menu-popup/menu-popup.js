@@ -6,14 +6,20 @@ export default function menuPopup() {
   const popup = document.querySelector('.menu-popup')
   const popupCloseCross = document.querySelector('.menu-popup__close-cross')
   const popupCloseDrag = document.querySelector('.menu-popup__close-drag')
+  const popupNav = document.querySelector('.menu-popup-nav')
   let touchStart
   let touchPosition
   let currentPosition
   function toggleMenu() {
+    closeMenuNav()
     if (popup.style.display === 'none' || popup.style.display === '') popup.style.display = 'grid'
     else toggle(popup, { delay: 250, duration: 0 })
     toggle(popup.firstElementChild, { duration: 300 })
     document.body.classList.toggle('popup-active')
+  }
+  function closeMenuNav() {
+    up(popupNav, { delay: 250, duration: 0 })
+    up(popupNav.firstElementChild, { duration: 300 })
   }
   function closeMenu() {
     up(popup, { delay: 250, duration: 0 })
@@ -57,5 +63,6 @@ export default function menuPopup() {
     TouchEnd()
   })
   buttonMenu.addEventListener('click', toggleMenu)
+  breakPoint.addEventListener('change', closeMenuNav)
   breakPoint.addEventListener('change', closeMenu)
 }

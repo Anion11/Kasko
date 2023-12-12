@@ -1,0 +1,34 @@
+mixin menu-popup-nav(data, mods)
+  -
+    const baseName = 'menu-popup-nav'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .menu-popup-nav(class=allMods)&attributes(attributes)
+    .menu-popup-nav__content
+      .menu-popup-nav__drag
+      .menu-popup-nav__close
+      .menu-popup-nav__back
+        .menu-popup-nav__back-image
+          +ui-svg('menu-popup-nav/close-back')
+        +ui-p3("Назад", "--ghost")
+      .menu-popup-nav__info
+        each item in data
+          .menu-popup-nav__item
+            .menu-popup-nav__image
+              img(src=item.src, alt="")
+            if item.link
+              a(href=item.link).menu-popup-nav__item-text
+                +ui-p1(item.title)
+            else 
+              +ui-accordion({p1: item.title}, 'menu-popup-nav').menu-popup-nav__item-text
+                each info in item.content
+                  a(href=info.link).menu-popup-nav__item-link
+                    +ui-p2(info.text, "--neutral50")
+    block
