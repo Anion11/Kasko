@@ -15,11 +15,11 @@
     position: relative;
     display: none;
     margin-top: auto;
-    padding-top: 48px;
+    padding: 48px 0 0 20px;
     background: $base-white;
     border-radius: 6px 6px 0 0;
     @include media-tablet {
-      padding-top: 48px;
+      padding: 48px 0 0 16px;
     }
   }
   &__drag {
@@ -90,9 +90,10 @@
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 20px;
-    padding: 16px 20px;
+    padding: 16px 0;
+    margin-right: 20px;
     @include media-tablet {
-      padding: 16px;
+      margin-right: 16px;
     }
     &:not(:last-child) {
       border-bottom: 1px solid $main-neutral-neutral-variant-90;
