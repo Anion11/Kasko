@@ -5,7 +5,6 @@ export default function menuPopupNav() {
 }
 
 function menuPopup() {
-  const breakPoint = window.matchMedia('(max-width: 1440px)')
   const navItems = document.querySelectorAll('.menu-popup__info-item')
   const popupNav = document.querySelector('.menu-popup-nav')
   const popupClose = document.querySelector('.menu-popup-nav__close')
@@ -14,12 +13,10 @@ function menuPopup() {
   let touchStart
   let touchPosition
   let currentPosition
-  function openMenuNav(event) {
-    if (event.target === document.querySelector('.menu-popup__info-item')) {
-      if (popupNav.style.display === 'none' || popupNav.style.display === '') popupNav.style.display = 'grid'
-      else down(popupNav, { delay: 250, duration: 0 })
-      down(popupNav.firstElementChild, { duration: 300 })
-    }
+  function openMenuNav() {
+    if (popupNav.style.display === 'none' || popupNav.style.display === '') popupNav.style.display = 'grid'
+    else down(popupNav, { delay: 250, duration: 0 })
+    down(popupNav.firstElementChild, { duration: 300 })
   }
   function closeMenuNav() {
     up(popupNav, { delay: 250, duration: 0 })
@@ -63,9 +60,8 @@ function menuPopup() {
     TouchEnd()
   })
   for (const navItem of navItems) {
-    navItem.addEventListener('click', (event) => {
-      openMenuNav(event)
+    navItem.addEventListener('click', () => {
+      openMenuNav()
     })
   }
-  breakPoint.addEventListener('change', closeMenuNav)
 }
