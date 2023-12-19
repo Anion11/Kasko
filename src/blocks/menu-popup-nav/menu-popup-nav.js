@@ -48,7 +48,9 @@ function menuPopup() {
   popupNav.addEventListener('click', (event) => {
     if (event.target === popupNav) closeMenuNav()
   })
-  popupBack.addEventListener('click', closeMenuNav)
+  popupBack.addEventListener('click', (event) => {
+    if (event.target !== popupBack) closeMenuNav()
+  })
   popupClose.addEventListener('click', closeMenuNav)
   popupDrag.addEventListener('touchstart', (event) => {
     TouchStart(event)
@@ -60,8 +62,8 @@ function menuPopup() {
     TouchEnd()
   })
   for (const navItem of navItems) {
-    navItem.addEventListener('click', () => {
-      openMenuNav()
+    navItem.addEventListener('click', (event) => {
+      if (event.target === navItem) openMenuNav()
     })
   }
 }
