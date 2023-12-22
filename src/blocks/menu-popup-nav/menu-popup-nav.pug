@@ -10,7 +10,7 @@ mixin menu-popup-nav(data, mods)
       allMods = allMods.trim()
     }
 
-  .menu-popup-nav(class=allMods)&attributes(attributes)
+  .menu-popup-nav(class=allMods data-name-popup = data.name)&attributes(attributes)
     .menu-popup-nav__content
       .menu-popup-nav__drag
       .menu-popup-nav__close
@@ -19,7 +19,7 @@ mixin menu-popup-nav(data, mods)
           +ui-svg('menu-popup-nav/close-back')
         +ui-p3("Назад", "--ghost")
       .menu-popup-nav__info
-        each item in data
+        each item in data.content
           .menu-popup-nav__item
             .menu-popup-nav__image
               img(src=item.src, alt="")

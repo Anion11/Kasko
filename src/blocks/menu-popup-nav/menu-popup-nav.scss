@@ -1,7 +1,6 @@
 .menu-popup-nav {
-  pointer-events: none;
   display: none;
-  z-index: 22;
+  z-index: $z-index-modal;
   position: fixed;
   bottom: 0;
   left: 0;

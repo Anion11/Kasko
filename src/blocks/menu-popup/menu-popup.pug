@@ -17,11 +17,9 @@ mixin menu-popup(menuPopupContent, mods)
       +ui-input-search("helper", "Чем вам помочь?", "menu-popup, --popup")
       .menu-popup__info
         each infoItem in menuPopupContent
-          .menu-popup__info-item(class='menu-popup__' + infoItem.class)
+          .menu-popup__info-item(class='menu-popup__' + infoItem.class data-open-popup = infoItem.popup)
             +ui-p2(infoItem.text, "--semibold")
             .menu-popup__link
-            if infoItem.popup
-              +menu-popup-nav(infoItem.popup)
       .menu-popup__more
         a(href="#").menu-popup__app
           .menu-popup__app-image

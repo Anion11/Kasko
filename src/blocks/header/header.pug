@@ -21,29 +21,34 @@
   ]
 
   const menuPopupContent = [
-      { text: "Частным клиентам", class: "private", popup: [
-        { title: 'Ипотека', link: '#', src: '../../images/menu-popup-nav/icon_glass-1.png' },
-        { title: 'КАСКО', content: [
-          { text: 'Классик', link: '#' },
-          { text: 'Оптима', link: '#' },
-          { text: 'Формула 50+', link: '#' },
-          { text: 'Профи', link: '#' },
-          { text: 'Легкое КАСКО', link: '#' },
-          { text: 'Помощь', link: '#' }
-        ], src: '../../images/menu-popup-nav/icon_glass-2.png'},
-        { title: 'ОСАГО', link: '#', src: '../../images/menu-popup-nav/icon_glass-3.png' },
-        { title: 'Несчастный случай', link: '#', src: '../../images/menu-popup-nav/icon_glass-4.png' },
-        { title: 'Страхование путешественников', link: '#', src: '../../images/menu-popup-nav/icon_glass-5.png' },
-        { title: 'Страхование имущества физических лиц', link: '#', src: '../../images/menu-popup-nav/icon_glass-6.png' },
-        { title: 'Антиклещ', link: '#', src: '../../images/menu-popup-nav/icon_glass-7.png' },
-        { title: 'Зеленая карта', link: '#', src: '../../images/menu-popup-nav/icon_glass-8.png' },
-        { title: 'Cтрахование мигрантов', link: '#', src: '../../images/menu-popup-nav/icon_glass-9.png' },
-        { title: 'Телемедицина', link: '#', src: '../../images/menu-popup-nav/icon_glass-10.png' }
-      ] },
-      { text: "Корпоративным клиентам", class: "corporative" },
+      { text: "Частным клиентам", class: "private", popup: 'privatePopup'},
+      { text: "Корпоративным клиентам", class: "corporative", popup: 'corporativePopup' },
       { text: "Партнерам", class: "partners" },
       { text: "О компании", class: "company" }
     ]
+
+  const popupNav = [
+    { name: 'privatePopup',
+      content: [
+      { title: 'Ипотека', link: '#', src: '../../images/menu-popup-nav/icon_glass-1.png' },
+      { title: 'КАСКО', content: [
+        { text: 'Классик', link: '#' },
+        { text: 'Оптима', link: '#' },
+        { text: 'Формула 50+', link: '#' },
+        { text: 'Профи', link: '#' },
+        { text: 'Легкое КАСКО', link: '#' },
+        { text: 'Помощь', link: '#' }
+      ], src: '../../images/menu-popup-nav/icon_glass-2.png'},
+      { title: 'ОСАГО', link: '#', src: '../../images/menu-popup-nav/icon_glass-3.png' },
+      { title: 'Несчастный случай', link: '#', src: '../../images/menu-popup-nav/icon_glass-4.png' },
+      { title: 'Страхование путешественников', link: '#', src: '../../images/menu-popup-nav/icon_glass-5.png' },
+      { title: 'Страхование имущества физических лиц', link: '#', src: '../../images/menu-popup-nav/icon_glass-6.png' },
+      { title: 'Антиклещ', link: '#', src: '../../images/menu-popup-nav/icon_glass-7.png' },
+      { title: 'Зеленая карта', link: '#', src: '../../images/menu-popup-nav/icon_glass-8.png' },
+      { title: 'Cтрахование мигрантов', link: '#', src: '../../images/menu-popup-nav/icon_glass-9.png' },
+      { title: 'Телемедицина', link: '#', src: '../../images/menu-popup-nav/icon_glass-10.png' }] 
+    },
+  ]
 
   const searchPopupContent = [
       { text: 'Санкт-Петербург' },
@@ -86,4 +91,6 @@ header.header
   +tab-bar()
   +menu-popup(menuPopupContent)
   +search-popup(searchPopupContent)
+  each popupNavItem in popupNav
+    +menu-popup-nav(popupNavItem)
 
